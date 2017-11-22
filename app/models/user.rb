@@ -6,10 +6,6 @@ class User < ApplicationRecord
 
     attr_reader :password
 
-    def ensure_session_token
-        self.session_token ||= SecureRandom.urlsafe_base64(16)
-    end
-
     def reset_session_token!
         self.session_token = SecureRandom.urlsafe_base64(16)
         self.save!
@@ -28,5 +24,10 @@ class User < ApplicationRecord
     def self.find_by_credentials(username, password)
         @user = User.find_by(username: username)
         @user && @user.valid_password?(password) ? @user : nil
+    end
+
+    private
+    def ensure_session_token
+        self.session_token ||= SecureRandom.urlsafe_base64(16)
     end
 end
