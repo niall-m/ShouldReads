@@ -28,6 +28,10 @@
     "postinstall": "webpack",
     "webpack": "webpack --watch"
   },
+  "engines": {
+    "node": "6.10.1",
+    "npm": "5.5.1"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC"
