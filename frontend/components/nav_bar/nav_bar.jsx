@@ -15,11 +15,11 @@ export default ({ currentUser, logout }) => {
     );
 
     return (
-        <header className="nav-bar">
+        <nav className="nav-bar">
             <h1 className="logo">ShouldReads</h1>
             <div>
                 {display}
             </div>
-        </header>
+        </nav>
     );
 };

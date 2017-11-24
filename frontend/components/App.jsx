@@ -14,9 +14,9 @@ const App = () => (
     <div>
         <header>
             <Route path="/" component={NavBarContainer} />
+        </header>
             <AuthRoute path="/signup" component={SignupContainer} />
             <AuthRoute path="/login" component={LoginContainer} />
-        </header>
     </div>
 );
 

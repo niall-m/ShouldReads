@@ -8,9 +8,6 @@ import { login, logout, signup } from './actions/session_actions';
 document.addEventListener("DOMContentLoaded", () => {
     const root = document.getElementById("root");
     const store = configureStore();
-    window.login = login;
-    window.logout = logout;
-    window.signup = signup;
     window.getState = store.getState;
     window.dispatch = store.dispatch;
     let preloadedState = undefined;
