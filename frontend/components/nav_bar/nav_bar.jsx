@@ -16,7 +16,7 @@ export default ({ currentUser, logout }) => {
 
     return (
         <nav className="nav-bar">
-            <h1 className="logo">ShouldReads</h1>
+            <Link className="logo" to="/">should<span>Reads</span></Link>
             <div>
                 {display}
             </div>

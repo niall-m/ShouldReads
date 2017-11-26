@@ -11,7 +11,7 @@ import {
 
 const App = () => (
     <div>
-        <header>
+        <header className="nav-header">
             <Route path="/" component={NavBarContainer} />
         </header>
             <AuthRoute path="/signup" component={SignupContainer} />
