@@ -19,20 +19,38 @@ class Signup extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.signup(this.state)
-            .then(() => this.props.history.push('/books'));
+        this.props.signup(this.state);
+            // .then(() => this.props.history.push('/books'));
+    }
+
+    errors() {
+        if (this.props.errors) {
+            return (
+                <ul>
+                    {this.props.errors.map((error, idx) => (
+                        <li key={`error-${idx}`}>
+                            {error}
+                        </li>
+                    ))}
+                </ul>
+            );
+        }
     }
 
     render () {
         return (
             <div className="session-form">
-                <h2>Sign Up!</h2>
+                <h2 className="session-form-title">Sign Up</h2>
+                <div className="session-form-errors">
+                    {this.errors()}
+                </div>
                 <form>
                     <label>Username:
                         <input
                             type="text"
                             value={this.state.username}
                             onChange={this.handleInput('username')}
+                            placeholder="username"
                         />
                     </label>
                     <label>Email:
@@ -40,6 +58,7 @@ class Signup extends React.Component {
                             type="text"
                             value={this.state.email}
                             onChange={this.handleInput('email')}
+                            placeholder="email"
                         />
                     </label>
                     <label>Password:
@@ -47,9 +66,10 @@ class Signup extends React.Component {
                             type="password"
                             value={this.state.password}
                             onChange={this.handleInput('password')}
+                            placeholder="password"
                         />
                     </label>
-                    <button onClick={this.handleSubmit}>Sign Up!</button>
+                    <button onClick={this.handleSubmit}>Submit</button>
                 </form>
             </div>
         );

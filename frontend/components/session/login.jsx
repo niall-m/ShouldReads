@@ -8,6 +8,11 @@ class Login extends React.Component {
             password: '',
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleInput = this.handleInput.bind(this);
+    }
+
+    componentWillMount() {
+        this.props.clearErrors();
     }
 
     handleInput(type) {
@@ -22,16 +27,34 @@ class Login extends React.Component {
             // .then(() => this.props.history.push('/books'));
     }
 
+    errors() {
+        if (this.props.errors) {
+            return (
+                <ul>
+                    {this.props.errors.map((error, idx) => (
+                        <li key={`error-${idx}`}>
+                            {error}
+                        </li>
+                    ))}
+                </ul>
+            );
+        }
+    }
+
     render() {
         return (
             <div className="session-form">
-                <h2>Log In!</h2>
+                <h2 className="session-form-title">Log In</h2>
+                <div className="session-form-errors">
+                    {this.errors()}
+                </div>
                 <form>
                     <label>Username:
                         <input
                             type="text"
                             value={this.state.username}
                             onChange={this.handleInput('username')}
+                            placeholder="username"
                         />
                     </label>
                     <label>Password:
@@ -39,9 +62,10 @@ class Login extends React.Component {
                             type="password"
                             value={this.state.password}
                             onChange={this.handleInput('password')}
+                            placeholder="password"
                         />
                     </label>
-                    <button onClick={this.handleSubmit}>Log In!</button>
+                    <button onClick={this.handleSubmit} className="session-btn">Submit</button>
                 </form>
             </div>
         );
