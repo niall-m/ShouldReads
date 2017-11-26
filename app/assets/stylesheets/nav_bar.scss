@@ -1,14 +1,16 @@
 @import 'colors';
 
 .nav-header {
+    // position: absolute; makes forms disappear
     background-color: $cream;
+    color: $word;
     display: flex;
     justify-content: center;
+    align-content: center;
     width: 100%;
-    margin: 0 auto;
+    height: 88px;
     font-family: 'Times New Roman', Times, serif;
     border-bottom: 1px solid $boarders;
-    color: $word;
 }
 
 .nav-bar {
@@ -22,19 +24,19 @@
 .nav-bar .logo {
     margin-left: 30px;
     font-size: 30px;
-    font-weight: 200;
+    font-weight: 100;
     transition: text-shadow .3s;
-}
-
-.nav-bar .logo span {
-    font-weight: 800;
 }
 
 .nav-bar .logo:hover {
     text-shadow: 1px 0px black;
 }
 
-.nav-bar .btn {
+.nav-bar .logo span {
+    font-weight: 900;
+}
+
+.nav-bar .btn {    
     margin-right: 30px;
     border: 1px solid $boarders;
     border-radius: 4px;
@@ -47,4 +49,14 @@
 .nav-bar .btn:hover {
     background-color: #463021c7;
     color: white;
+}
+
+.session-greeting {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.session-greeting h3 {
+    padding-right: 15px;
 }
