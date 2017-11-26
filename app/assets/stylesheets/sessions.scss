@@ -1,0 +1,58 @@
+@import 'colors';
+
+.session-background {
+    background-image: url("http://www.thisiscolossal.com/wp-content/uploads/2017/06/library-1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: fixed;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    top: 85px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+.session-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 25%;
+    height: 62.5%;
+    display: flex;
+    background-color: $word;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid black;
+    border-radius: 4px;
+    box-shadow: inset 0 0 1em $cream, 0 0 2em black;
+    font-family: 'Times New Roman', Times, serif;    
+    color: $cream;
+}
+
+.field {
+    display: flex;
+    align-items: center;
+}
+
+.session-form-title {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.session-btn {
+    padding: 5px 15px;
+    margin-top: 20px;
+    background-color: $cream;
+    color: $word;
+    font-size: 18px;
+    font-weight: 500;
+    transition: background-color .3s;
+}
+
+.session-btn:hover {
+    background-color: rgba(242, 240, 229, 0.842);
+}

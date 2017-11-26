@@ -39,38 +39,40 @@ class Signup extends React.Component {
 
     render () {
         return (
-            <div className="session-form">
-                <h2 className="session-form-title">Sign Up</h2>
-                <div className="session-form-errors">
-                    {this.errors()}
+            <div className="session-background">
+                <div className="session-form-container">
+                    <h2 className="session-form-title">Sign Up</h2>
+                    <div className="session-form-errors">
+                        {this.errors()}
+                    </div>
+                    <form className="session-form">
+                        <label className="field">Username:
+                            <input
+                                type="text"
+                                value={this.state.username}
+                                onChange={this.handleInput('username')}
+                                placeholder="username"
+                            />
+                        </label>
+                        <label className="field">Email:
+                            <input
+                                type="text"
+                                value={this.state.email}
+                                onChange={this.handleInput('email')}
+                                placeholder="email"
+                            />
+                        </label>
+                        <label className="field">Password:
+                            <input
+                                type="password"
+                                value={this.state.password}
+                                onChange={this.handleInput('password')}
+                                placeholder="password"
+                            />
+                        </label>
+                        <button onClick={this.handleSubmit} className="session-btn">Submit</button>
+                    </form>
                 </div>
-                <form>
-                    <label>Username:
-                        <input
-                            type="text"
-                            value={this.state.username}
-                            onChange={this.handleInput('username')}
-                            placeholder="username"
-                        />
-                    </label>
-                    <label>Email:
-                        <input
-                            type="text"
-                            value={this.state.email}
-                            onChange={this.handleInput('email')}
-                            placeholder="email"
-                        />
-                    </label>
-                    <label>Password:
-                        <input
-                            type="password"
-                            value={this.state.password}
-                            onChange={this.handleInput('password')}
-                            placeholder="password"
-                        />
-                    </label>
-                    <button onClick={this.handleSubmit}>Submit</button>
-                </form>
             </div>
         );
     }   
