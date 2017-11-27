@@ -1,7 +1,8 @@
 @import 'colors';
 
 .nav-header {
-    // position: absolute; makes forms disappear
+    position: absolute; 
+    z-index: 100;
     background-color: $cream;
     color: $word;
     display: flex;

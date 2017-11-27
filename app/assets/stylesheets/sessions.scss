@@ -10,10 +10,11 @@
     justify-content: center;
     align-items: center;
     align-content: center;
-    top: 0px;
+    top: 85px;
     bottom: 0px;
     left: 0px;
     right: 0px;
+    background-position: center;
 }
 
 .session-form-container {
@@ -25,8 +26,8 @@
     width: 25%;
     height: 73.5%;
     display: flex;
-    background-color: $word;
-    background: rgba(0, 0, 0, 0.5);
+    // background-color: $word;
+    background: rgba(69, 47, 33, 0.856);
     border: 1px solid black;
     border-radius: 4px;
     box-shadow: inset 0 0 1em $cream, 0 0 2em black;

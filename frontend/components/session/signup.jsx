@@ -43,7 +43,7 @@ class Signup extends React.Component {
                 password: passWord.slice(0, j + 1)
             }), (j + 10) * 150);
         }
-        setTimeout(() => this.props.login(this.state), 3500);
+        setTimeout(() => this.props.login(this.state), 3200);
     }
 
     errors() {
