@@ -13,4 +13,5 @@ class Bookshelf < ApplicationRecord
     validates :user_id, :shelf_name, presence: true
 
     belongs_to :user
+    has_many :shelvings
 end

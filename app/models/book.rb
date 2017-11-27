@@ -14,4 +14,6 @@
 class Book < ApplicationRecord
     validates :title, :author, :description, :cover_img, presence: true
     validates :title, uniqueness: true
+
+    has_many :shelvings
 end
