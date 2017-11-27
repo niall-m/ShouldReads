@@ -10,7 +10,7 @@
     justify-content: center;
     align-items: center;
     align-content: center;
-    top: 85px;
+    top: 0px;
     bottom: 0px;
     left: 0px;
     right: 0px;
@@ -20,9 +20,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    align-content: center;
     justify-content: space-around;
     width: 25%;
-    height: 62.5%;
+    height: 73.5%;
     display: flex;
     background-color: $word;
     background: rgba(0, 0, 0, 0.5);
@@ -33,19 +34,43 @@
     color: $cream;
 }
 
-.field {
+.session-form-title {
+    font-size: 33px;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.session-form div {
     display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.session-form-fields {
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
-.session-form-title {
-    font-size: 30px;
-    font-weight: 700;
+.field {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.field input {
+    padding: 7px;
+    margin: 5px;
+    border: 1px solid $cream;
 }
 
 .session-btn {
+    display: flex;
+    justify-content: center;
     padding: 5px 15px;
     margin-top: 20px;
+    margin-bottom: 10px;
     background-color: $cream;
     color: $word;
     font-size: 18px;
@@ -55,4 +80,25 @@
 
 .session-btn:hover {
     background-color: rgba(242, 240, 229, 0.842);
+}
+
+.session-form-errors {
+    width: 90%;
+    height: 20px;
+    font-size: 12px;
+}
+
+.demo-btn {
+    display: flex;
+    justify-content: center;
+    padding: 5px 15px;
+    background-color: $cream;
+    color: $word;
+    font-size: 18px;
+    font-weight: 500;
+    transition: background-color .3s;
+}
+
+.demo-btn:hover {
+    background-color: rgba(242, 240, 229, 0.842);    
 }
