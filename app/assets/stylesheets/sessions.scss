@@ -4,6 +4,7 @@
     background-image: url("http://www.thisiscolossal.com/wp-content/uploads/2017/06/library-1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     position: fixed;
     overflow: hidden;
     display: flex;
@@ -14,7 +15,6 @@
     bottom: 0px;
     left: 0px;
     right: 0px;
-    background-position: center;
 }
 
 .session-form-container {
