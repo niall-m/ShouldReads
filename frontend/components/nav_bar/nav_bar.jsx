@@ -15,11 +15,13 @@ export default ({ currentUser, logout }) => {
     );
 
     return (
-        <nav className="nav-bar">
-            <Link className="logo" to="/">should<span>Reads</span></Link>
-            <div>
-                {display}
-            </div>
-        </nav>
+        <header className="nav-header">
+            <nav className="nav-bar">
+                <Link className="logo" to="/">should<span>Reads</span></Link>
+                <div>
+                    {display}
+                </div>
+            </nav>
+        </header>
     );
 };

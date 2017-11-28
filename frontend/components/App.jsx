@@ -11,13 +11,11 @@ import {
 
 const App = () => (
     <div>
-        <header className="nav-header">
-            <Route path="/" component={NavBarContainer} />
-        </header>
+        <Route path="/" component={NavBarContainer} />
         <Route exact path="/" component={Splash} />
         <AuthRoute path="/signup" component={SignupContainer} />
         <AuthRoute path="/login" component={LoginContainer} />
     </div>
 );
 
-export default App;
+export default App; 
