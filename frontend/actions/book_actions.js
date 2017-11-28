@@ -22,3 +22,15 @@ export const fetchBook = bookId => dispatch => (
     BookApiUtil.fetchBook(bookId)
         .then(book => dispatch(receiveBook(book)))
 );
+
+// export const RECEIVE_SEARCH_RESULTS = 'RECEIVE_SEARCH_RESULTS';
+
+// const receiveSearchResults = (searchResults) => ({
+//     type: RECEIVE_SEARCH_RESULTS,
+//     searchResults
+// });
+
+// export const searchDatabase = (query) => dispatch => (
+//     BookApiUtil.searchBookDatabase(query)
+//         .then(results => dispatch(receiveSearchResults))
+// );

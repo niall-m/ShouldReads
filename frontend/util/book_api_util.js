@@ -19,3 +19,11 @@ export const updateBook = book => (
         data: { book }
     })
 );
+
+// export const searchBookDatabase = (query) => (
+//     $.ajax({
+//         method: 'GET',
+//         url: 'api/book_searches',
+//         data: { search: { query } }
+//     })
+// );
