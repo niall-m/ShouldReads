@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 import NavBarContainer from './nav_bar/nav_bar_container';
+import Splash from './splash/splash';
 import SignupContainer from './session/signup_container';
 import LoginContainer from './session/login_container';
 import { 
@@ -13,6 +14,7 @@ const App = () => (
         <header className="nav-header">
             <Route path="/" component={NavBarContainer} />
         </header>
+        <Route exact path="/" component={Splash} />
         <AuthRoute path="/signup" component={SignupContainer} />
         <AuthRoute path="/login" component={LoginContainer} />
     </div>

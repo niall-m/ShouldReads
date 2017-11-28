@@ -1,0 +1,52 @@
+@import 'colors';
+
+.splash-background {
+    background-image: url("http://www.thisiscolossal.com/wp-content/uploads/2017/06/library-1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: fixed;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    top: 85px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-position: center;
+}
+
+.splash-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+    color: $cream;
+    height: 85%;
+    width: 90%;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.catchphrase {
+    font-size: 40px;
+}
+
+.about-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+}
+
+.about-catalogue, .about-tracking, .about-reviews {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    background: rgba(69, 47, 33, 0.856);
+    padding: 15px;
+}
