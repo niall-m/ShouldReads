@@ -3,19 +3,19 @@ import { RECEIVE_ALL_BOOKS,
          RECEIVE_BOOK 
 } from '../actions/book_actions';
 
-const BooksReducer = (oldState = {}, action) => {
-    Object.freeze(oldState);
+const booksReducer = (state = {}, action) => {
+    Object.freeze(state);
     switch (action.type) {
         case RECEIVE_ALL_BOOKS:
-            return merge({}, oldState, action.books);
+            return merge({}, state, action.books);
         case RECEIVE_BOOK:
-            return merge({}, oldState, { [action.book.id]: action.book });
+            return merge({}, state, { [action.book.id]: action.book });
         default:
-            return oldState;
+            return state;
     }
 };
 
-export default BooksReducer;
+export default booksReducer;
 
 // export const SearchReducer = (state = {}, action) => {
 //     Object.freeze(state);
