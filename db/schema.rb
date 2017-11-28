@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 20171127233045) do
   create_table "reviews", force: :cascade do |t|
     t.integer "book_id", null: false
     t.integer "user_id", null: false
+    t.text "body", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["book_id"], name: "index_reviews_on_book_id"
