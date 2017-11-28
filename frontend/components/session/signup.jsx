@@ -36,14 +36,14 @@ class Signup extends React.Component {
         for ( let i = 0; i < userName.length; i++ ) {
             setTimeout(() => this.setState({
                 username: userName.slice(0, i + 1)
-            }), i * 150);
+            }), i * 50);
         }
         for ( let j = 0; j < passWord.length; j++ ) {
             setTimeout(() => this.setState({
                 password: passWord.slice(0, j + 1)
-            }), (j + 10) * 150);
+            }), (j + 10) * 50);
         }
-        setTimeout(() => this.props.login(this.state), 3200);
+        setTimeout(() => this.props.login(this.state), 1300);
     }
 
     errors() {
