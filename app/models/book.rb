@@ -16,4 +16,5 @@ class Book < ApplicationRecord
     validates :title, uniqueness: true
 
     has_many :shelvings
+    has_many :reviews
 end
