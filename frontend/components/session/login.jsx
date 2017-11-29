@@ -42,7 +42,8 @@ class Login extends React.Component {
                 password: passWord.slice(0, j + 1)
             }), (j + 10) * 50);
         }
-        setTimeout(() => this.props.login(this.state), 1300);
+        setTimeout(() => this.props.login(this.state)
+            .then(() => this.props.history.push('/books')), 1300);
     }
 
     errors() {
