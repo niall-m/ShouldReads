@@ -4,6 +4,7 @@ import NavBarContainer from './nav_bar/nav_bar_container';
 import Splash from './splash/splash';
 import SignupContainer from './session/signup_container';
 import LoginContainer from './session/login_container';
+import BookIndexContainer from './books/book_index_container';
 import { 
     AuthRoute,
     ProtectedRoute
@@ -11,8 +12,9 @@ import {
 
 const App = () => (
     <div>
-        <Route path="/" component={NavBarContainer} />
+        <NavBarContainer/>
         <Route exact path="/" component={Splash} />
+        <Route path="/books" component={BookIndexContainer} />
         <AuthRoute path="/signup" component={SignupContainer} />
         <AuthRoute path="/login" component={LoginContainer} />
     </div>
