@@ -12,11 +12,11 @@ import {
 
 const App = () => (
     <div>
-        <NavBarContainer/>
+        <Route path="/" component={NavBarContainer} />
         <Route exact path="/" component={Splash} />
-        <Route path="/books" component={BookIndexContainer} />
         <AuthRoute path="/signup" component={SignupContainer} />
         <AuthRoute path="/login" component={LoginContainer} />
+        <ProtectedRoute path="/books" component={BookIndexContainer} />
     </div>
 );
 

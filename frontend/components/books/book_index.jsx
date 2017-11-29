@@ -1,22 +1,27 @@
 import React from 'react';
+import BookIndexItem from './book_index_item';
 
 class BookIndex extends React.Component {
+    constructor(props) {
+        super(props);
+    }
 
     componentDidMount() {
         this.props.fetchBooks();
     }
 
     render () {
+        const { books } = this.props;
         return (
             <div className="book-index-container">
                 <ul className="book-index">
                     {
-                        this.props.books.map(book => (
+                        books.map(book => (
                             <BookIndexItem
-                                key={book.id}
-                                book={book}
-                            />
-                        ))
+                            key={book.id}
+                            book={book} />
+                            )
+                        )
                     }
                 </ul>
             </div>
