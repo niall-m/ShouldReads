@@ -13,7 +13,7 @@ class BookIndex extends React.Component {
     render () {
         const { books } = this.props;
         return (
-            <div className="book-index-container">
+            <div className="book-index-background">
                 <ul className="book-index">
                     {
                         books.map(book => (

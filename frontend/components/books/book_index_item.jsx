@@ -1,11 +1,11 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default ({ book }) => {
     return (
-        <li>
+        <li className="book-index-item">
             <Link to={`/books/${book.id}`}>
-                {book.title}
+                <img className="book-cover-img" src={book.cover_img} alt={book.title} />
             </Link>
         </li>
     );

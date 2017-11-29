@@ -1,0 +1,37 @@
+@import 'colors';
+
+.book-index-background {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    padding-top: 105px;
+    padding-bottom: 20px;
+    background-color: $index;
+}
+
+.book-index {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.book-index-item {
+    padding: 30px;
+}
+
+.book-cover-img {
+    width: 300px;
+    height: 400px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15);    
+    transition: all .2s ease-in-out;
+}
+
+.book-cover-img:hover {
+    transform: scale(1.1);
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.5);    
+}
