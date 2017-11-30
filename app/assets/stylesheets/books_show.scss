@@ -1,0 +1,76 @@
+@import 'colors';
+
+.book-show-background {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    padding-top: 105px;
+    padding-bottom: 20px;
+    background-color: $index;
+    font-family: 'Times New Roman', Times, serif;    
+    color: $word;    
+}
+
+.book-show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 90%;
+    padding: 40px;
+}
+
+.show-top-container {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    min-height: 400px;
+    width: 100%;
+}
+
+.book-shelves {
+    flex: 1;
+    display: flex;
+    align-content: flex-start;
+    justify-content: center;
+}
+
+.book-show-pic {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.book-details {
+    flex: 4;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column; 
+    height: 200px;   
+}
+
+.book-details h1 {
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.show-bottom-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;    
+    min-height: 100px;
+    width: 100%;
+    border-top: 1px solid $boarders;
+}
+
+.book-reviews {
+    flex: 2;
+}

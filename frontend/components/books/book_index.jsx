@@ -11,7 +11,7 @@ class BookIndex extends React.Component {
     }
 
     render () {
-        const { books } = this.props;
+        const books = this.props.books;
         return (
             <div className="book-index-background">
                 <ul className="book-index">
