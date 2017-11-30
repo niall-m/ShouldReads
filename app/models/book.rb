@@ -16,12 +16,13 @@ class Book < ApplicationRecord
     validates :title, uniqueness: true
 
     has_many :shelvings
+    has_many :bookshelves, through: :shelvings
     has_many :reviews
 
-    def self.top_five_results(query_param)
-        param= '%' + query_param.downcase + '%'
-        Book.where('lower(title) LIKE ?', param).limit(5)
-    end
+    # def self.top_five_results(query_param)
+    #     param= '%' + query_param.downcase + '%'
+    #     Book.where('lower(title) LIKE ?', param).limit(5)
+    # end
 end
 
 # # in controller:

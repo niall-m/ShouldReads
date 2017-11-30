@@ -10,8 +10,10 @@
 #
 
 class Bookshelf < ApplicationRecord
-    validates :user_id, :shelf_name, presence: true
+    validates :shelf_name, :user_id, presence: true
+    validates :shelf_name, uniqueness: { scope: :user_id }     
 
     belongs_to :user
     has_many :shelvings
+    has_many :books, through: :shelvings
 end
