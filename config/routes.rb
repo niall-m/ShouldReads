@@ -1,5 +1,25 @@
 Rails.application.routes.draw do
 
+  namespace :api do
+    get 'bookshelves/index'
+  end
+
+  namespace :api do
+    get 'bookshelves/show'
+  end
+
+  namespace :api do
+    get 'bookshelves/create'
+  end
+
+  namespace :api do
+    get 'bookshelves/update'
+  end
+
+  namespace :api do
+    get 'bookshelves/destroy'
+  end
+
   namespace :api, defaults: {format: :json} do
     resource :session, only: [:create, :destroy]
     resources :users, only: [:create]
