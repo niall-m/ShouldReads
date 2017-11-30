@@ -1,29 +1,10 @@
 Rails.application.routes.draw do
 
-  namespace :api do
-    get 'bookshelves/index'
-  end
-
-  namespace :api do
-    get 'bookshelves/show'
-  end
-
-  namespace :api do
-    get 'bookshelves/create'
-  end
-
-  namespace :api do
-    get 'bookshelves/update'
-  end
-
-  namespace :api do
-    get 'bookshelves/destroy'
-  end
-
   namespace :api, defaults: {format: :json} do
     resource :session, only: [:create, :destroy]
     resources :users, only: [:create]
     resources :books, only: [:index, :show]
+    resources :bookshelves, only: [:index, :show, :create, :update, :destroy]
   end
   
   root "static_pages#root"
