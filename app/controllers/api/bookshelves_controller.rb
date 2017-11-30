@@ -1,6 +1,7 @@
 class Api::BookshelvesController < ApplicationController
   def index
     @bookshelves = User.find(params[:user_id]).bookshelves
+    render :index
   end
 
   def show
@@ -11,6 +12,7 @@ class Api::BookshelvesController < ApplicationController
 
   def create
     @bookshelf = Bookshelf.new(bookshelf_params)
+    @bookshelf.user_id = current_user.id
     if @bookshelf.save
       render :show
     else
@@ -20,6 +22,7 @@ class Api::BookshelvesController < ApplicationController
 
   def update
     @bookshelf = Bookshelf.find(params[:id])
+    @bookshelf.user_id = current_user.id
     if @bookshelf.update_attributes(bookshelf_params)
       render :show
     else

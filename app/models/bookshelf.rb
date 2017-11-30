@@ -14,6 +14,9 @@ class Bookshelf < ApplicationRecord
     validates :shelf_name, uniqueness: { scope: :user_id }     
 
     belongs_to :user
-    has_many :shelvings
+    has_many :shelvings,
+        primary_key: :id,
+        foreign_key: :shelf_id,
+        class_name: :Shelving
     has_many :books, through: :shelvings
 end
