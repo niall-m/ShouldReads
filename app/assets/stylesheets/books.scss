@@ -3,7 +3,6 @@
 .book-index-background {
     display: flex;
     align-items: center;
-    align-content: center;
     justify-content: center;
     width: 100%;
     padding-top: 105px;
@@ -16,8 +15,7 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    margin-left: 20px;
-    margin-right: 20px;
+    width: 90%;
 }
 
 .book-index-item {
