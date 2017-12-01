@@ -16,14 +16,19 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
 
+.bookshelves-index-form-container h2 {
+    padding: 5px;
+    font-weight: 800;
+    font-size: 22px;
+    text-decoration: underline
 }
 
 .bookshelves-index-form input {
-    padding: 7px;
+    padding: 7px 15px;
     margin: 10px;
     border: 1px solid $cream;
-
 }
 
 .create-bookshelf-btn {
@@ -32,7 +37,6 @@
     color: $word;
     font-weight: 500;
     transition: background-color .3s;
-
 }
 
 .create-bookshelf-btn:hover {
@@ -44,11 +48,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
+    flex-direction: column;
+    font-size: 20px;
+    max-height: 300px;
+    overflow: scroll;
+    padding: 10px;
 }
 
 .bookshelf-index-item {
-
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .bookshelf-index-shelf-name {
@@ -56,5 +67,5 @@
 }
 
 .delete-bookshelf-btn {
-
+    padding: 7px;
 }

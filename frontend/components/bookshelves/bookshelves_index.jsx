@@ -34,13 +34,16 @@ class BookshelvesIndex extends React.Component {
         return (
             <div className="bookshelves-index-container">
                 <form className="bookshelves-index-form">
-                    <input
-                        type="text"
-                        value={this.state.shelf_name}
-                        onChange={this.handleInput('shelf_name')}
-                        placeholder="Shelf Name" />
-                    <button className="create-bookshelf-btn" 
-                        onClick={this.handleSubmit}>Create New Bookshelf</button>
+                    <div className="bookshelves-index-form-container">
+                        <h2>My Bookshelves</h2>
+                        <input
+                            type="text"
+                            value={this.state.shelf_name}
+                            onChange={this.handleInput('shelf_name')}
+                            placeholder="Shelf Name" />
+                        <button className="create-bookshelf-btn" 
+                            onClick={this.handleSubmit}>Create New Bookshelf</button>
+                    </div>
                 </form>
                 <ul className="bookshelves-index-list">
                     {
