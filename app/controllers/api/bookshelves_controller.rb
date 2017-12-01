@@ -1,19 +1,23 @@
 class Api::BookshelvesController < ApplicationController
   def index
-    @bookshelves = User.find(params[:user_id]).bookshelves
+    @bookshelves = current_user.bookshelves
     render :index
   end
 
   def show
-    user = User.find(params[:user_id])
-    @bookshelf = user.bookshelves.find_by(shelf_name: params[:shelf_name])
-    render :show
+    shelf_name = Bookshelf.find(params[:id]).shelf_name
+    @bookshelf = current_user.bookshelves.find_by(shelf_name: shelf_name)
+    if @bookshelf
+      render :show
+    else
+      render json: ["Couldn't find it"]
+    end
   end
 
   def create
     @bookshelf = Bookshelf.new(bookshelf_params)
     @bookshelf.user_id = current_user.id
-    if @bookshelf.save
+    if @bookshelf.save!
       render :show
     else
       render json: @bookshelf.errors.full_messages, status: 422

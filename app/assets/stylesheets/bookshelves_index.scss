@@ -1,0 +1,60 @@
+@import 'colors';
+
+.bookshelves-index-container {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+    flex-direction: column;
+    background-color: $index;
+    min-height: 400px;
+}
+
+.bookshelves-index-form {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.bookshelves-index-form input {
+    padding: 7px;
+    margin: 10px;
+    border: 1px solid $cream;
+
+}
+
+.create-bookshelf-btn {
+    padding: 7px 12px;
+    background-color: $cream;
+    color: $word;
+    font-weight: 500;
+    transition: background-color .3s;
+
+}
+
+.create-bookshelf-btn:hover {
+    background-color: rgba(242, 240, 229, 0.842);
+}
+
+.bookshelves-index-list {
+    flex: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.bookshelf-index-item {
+
+}
+
+.bookshelf-index-shelf-name {
+
+}
+
+.delete-bookshelf-btn {
+
+}

@@ -1,21 +1,21 @@
 export const fetchBooks = () => (
     $.ajax({
-        url: 'api/books',
         method: 'GET',
+        url: 'api/books',
     })
 );
 
 export const fetchBook = id => (
     $.ajax({
-        url: `api/books/${id}`,
         method: 'GET',
+        url: `api/books/${id}`,
     })
 );
 
 export const updateBook = book => (
     $.ajax({
-        url: `api/books/${book.id}`,
         method: 'PATCH',
+        url: `api/books/${book.id}`,
         data: { book }
     })
 );

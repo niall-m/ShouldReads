@@ -1,36 +1,36 @@
 export const fetchBookshelves = () => (
     $.ajax({
-        url: 'api/bookshelves',
         method: 'GET',
+        url: 'api/bookshelves',
     })
 );
 
 export const fetchBookshelf = id => (
     $.ajax({
-        url: `api/bookshelves/${id}`,
         method: 'GET',
+        url: `api/bookshelves/${id}`,
     })
 );
 
 export const createBookshelf = bookshelf => (
     $.ajax({
-        url: 'api/bookshelves',
         method: 'POST',
+        url: 'api/bookshelves',
         data: { bookshelf }
     })
 );
 
 export const updateBookshelf = bookshelf => (
     $.ajax({
-        url: `api/bookshelves/${bookshelf.id}`,
         method: 'PATCH',
+        url: `api/bookshelves/${bookshelf.id}`,
         data: { bookshelf }
     })
 );
 
 export const deleteBookshelf = id => (
     $.ajax({
-        url: `api/bookshelves/${id}`,
         method: 'DELETE',
+        url: `api/bookshelves/${id}`,
     })
 );
