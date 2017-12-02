@@ -4,7 +4,7 @@
 
 ShouldReads is a personal project by Niall Mahford.
 
-![ShouldReads Home Page](ShouldReads home page: https://stark-coast-59940.herokuapp.com)
+![ShouldReads Home Page](https://stark-coast-59940.herokuapp.com)
 
 ## Features
 - User accounts with secure authentication
