@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-class BookshelvesIndexItem extends React.Component {
+class ReviewsIndexItem extends React.Component {
     constructor(props) {
         super(props);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -9,20 +9,19 @@ class BookshelvesIndexItem extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.deleteBookshelf(this.props.bookshelf.id);
+        this.props.deleteReview(this.props.review.id);
     }
 
     render() {
-        const { bookshelf, deleteBookshelf } = this.props;
+        const { review, deleteReview } = this.props;
         return (
-            <li className="bookshelf-index-item">
-                {/* <Link to={`/bookshelves/${bookshelf.id}`}> */}
+            <li className="review-index-item">
                 <div>
-                    <h2 className="bookshelf-index-shelf-name">
-                        {bookshelf.shelf_name}
+                    <h2 className="review-index-username">
+                        {review.user.username}
                     </h2>
+                    <p className="review-index-body">{review.body}</p>
                 </div>
-                {/* </Link> */}
                 <button className="delete-btn" onClick={this.handleSubmit}>
                     <i className="fa fa-times" aria-hidden="true"></i>
                 </button>
@@ -31,4 +30,4 @@ class BookshelvesIndexItem extends React.Component {
     }
 }
 
-export default BookshelvesIndexItem;
+export default ReviewsIndexItem;

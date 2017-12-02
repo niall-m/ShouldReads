@@ -1,6 +1,6 @@
 @import 'colors';
 
-.bookshelves-index-container {
+.reviews-index-container {
     display: flex;
     align-items: center;
     align-content: center;
@@ -10,7 +10,7 @@
     min-height: 400px;
 }
 
-.bookshelves-index-form {
+.reviews-index-form {
     flex: 1;
     display: flex;
     align-items: center;
@@ -18,7 +18,14 @@
     flex-direction: column;
 }
 
-.bookshelves-index-form-container h2 {
+.reviews-index-form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.reviews-index-form-container h2 {
     position: relative;
     padding: 5px;
     font-weight: 800;
@@ -26,13 +33,18 @@
     text-decoration: underline
 }
 
-.bookshelves-index-form input {
+.reviews-index-form-container textarea {
     padding: 7px 15px;
     margin: 10px;
     border: 1px solid $cream;
 }
 
-.create-bookshelf-btn {
+.create-review-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 500;
     padding: 7px 12px;
     background-color: $cream;
     color: $word;
@@ -44,7 +56,7 @@
     background-color: rgba(242, 240, 229, 0.842);
 }
 
-.bookshelves-index-list {
+.reviews-index-list {
     flex: 3;
     display: flex;
     align-items: center;
@@ -56,15 +68,21 @@
     padding: 10px;
 }
 
-.bookshelf-index-item {
+.review-index-item {
     padding: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column
 }
 
-.bookshelf-index-shelf-name {
+.review-index-username {
+    font-weight: bold;
+    text-decoration: underline;
+}
 
+.review-index-body {
+    padding: 15px;
 }
 
 .delete-btn {

@@ -56,6 +56,7 @@ class BookshelvesIndex extends React.Component {
                         )
                     }
                 </ul>
+                {/* <Route path="/bookshelves/:bookshelfId" component={BookshelfShowContainer} /> */}
             </div>
         );
     }

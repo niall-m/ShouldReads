@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import BookshelvesIndexContainer from '../bookshelves/bookshelves_index_container';
-// import ReviewContainer from '../reviews/review_container';
+import ReviewsIndexContainer from '../reviews/reviews_index_container.jsx';
 
 class BookShow extends React.Component {
     componentDidMount() {
@@ -34,8 +34,7 @@ class BookShow extends React.Component {
                     </div>
                     <div className="show-bottom-container">
                         <div className="book-reviews">
-                            <p>ReviewsContainer will go here.</p>
-                            {/* <ReviewContainer /> */}
+                            <ReviewsIndexContainer />
                         </div>
                     </div>
                 </div>

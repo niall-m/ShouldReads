@@ -3,7 +3,7 @@ import {
     RECEIVE_ALL_REVIEWS,
     RECEIVE_REVIEW,
     REMOVE_REVIEW
-} from '../actions/bookshelf_actions';
+} from '../actions/review_actions';
 
 const reviewsReducer = (state = {}, action) => {
     Object.freeze(state);
@@ -11,7 +11,7 @@ const reviewsReducer = (state = {}, action) => {
         case RECEIVE_ALL_REVIEWS:
             return merge({}, action.reviews);
         case RECEIVE_REVIEW:
-            return merge({}, state, { [action.review.id]: action.review });
+            return Object.assign({}, state, { [action.review.id]: action.review });
         case REMOVE_REVIEW:
             let newState = merge({}, state);
             delete newState[action.reviewId];

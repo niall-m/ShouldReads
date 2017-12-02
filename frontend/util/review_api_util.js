@@ -1,8 +1,8 @@
-export const fetchReviews = book_id => (
+export const fetchReviews = bookId => (
     $.ajax({
         method: 'GET',
         url: 'api/reviews',
-        data: { book_id }
+        data: { bookId }
     })
 );
   
