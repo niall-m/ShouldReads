@@ -18,8 +18,8 @@ ShouldReads was designed and built in 2 weeks.
 A proposal was drafted to help provide an implementation timeline during the development process.
 Relevant items of the proposal included:
 
-+ [MVP list](mvp-list)
-+ [Wireframes](wireframes)
++ [MVP list](https://github.com/niall-m/ShouldReads/wiki/mvp-list)
++ [Wireframes](/wiki/wireframes)
 + [Component Hierarchy](component-hierarchy)
 + [Sample State](sample-state)
 + [Routes](routes)
