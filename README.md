@@ -4,8 +4,6 @@
 
 ShouldReads is a personal project by Niall Mahford.
 
-![ShouldReads Home Page](https://stark-coast-59940.herokuapp.com)
-
 ## Features
 - User accounts with secure authentication
 - Peruse a catalogue index of books
@@ -19,12 +17,13 @@ ShouldReads was designed and built in 2 weeks.
 
 A proposal was drafted to help provide an implementation timeline during the development process.
 Relevant items of the proposal included:
-- An [MVP list][mvp-list] detailing all basic features.
-- [Wireframes][wireframes].
-- A [component hierarchy][component-hierarchy].
-- A [sample state][sample-state] for the React store.
-- A [routes][routes] scheme.
-- A [database schema][schema].
+
++ [MVP list](mvp-list)
++ [Wireframes](wireframes)
++ [Component Hierarchy](component-hierarchy)
++ [Sample State](sample-state)
++ [Routes](routes)
++ [Schema](schema)
 
 ## Technology
 
