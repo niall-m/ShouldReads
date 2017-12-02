@@ -53,7 +53,8 @@ Frontend dependencies:
 ShouldReads does not yet reach the MVP standard.
 
 The features that will be added include:
-- Implementing Shelving
+- Implement the Shelving joins-table, allowing users to add books to the shelves
+- Display a "Read Status" for each book
 - Liking Books
 - Adding Book Tags for genres
 - Search for books or authors
