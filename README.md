@@ -19,11 +19,11 @@ A proposal was drafted to help provide an implementation timeline during the dev
 Relevant items of the proposal included:
 
 + [MVP list](https://github.com/niall-m/ShouldReads/wiki/mvp-list)
-+ [Wireframes](/wiki/wireframes)
-+ [Component Hierarchy](component-hierarchy)
-+ [Sample State](sample-state)
-+ [Routes](routes)
-+ [Schema](schema)
++ [Wireframes](https://github.com/niall-m/ShouldReads/wiki/wireframes)
++ [Component Hierarchy](https://github.com/niall-m/ShouldReads/wiki/component-hierarchy)
++ [Sample State](https://github.com/niall-m/ShouldReads/wiki/sample-state)
++ [Routes](https://github.com/niall-m/ShouldReads/wiki/routes)
++ [Schema](https://github.com/niall-m/ShouldReads/wiki/schema)
 
 ## Technology
 
