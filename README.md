@@ -1,24 +1,59 @@
-# README
+# ShouldReads
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[ShouldReads](https://stark-coast-59940.herokuapp.com), a personal project by Niall Mahford, is a web application inspired by GoodReads for users to create their own personal online library.
 
-Things you may want to cover:
+## Features
+- User accounts with secure authentication
+- Peruse a catalogue index of books
+- View individual book details
+- Create and manage bookshelves
+- Write book reviews
 
-* Ruby version
+## Project Design
 
-* System dependencies
+ShouldReads was designed and built in 2 weeks.
 
-* Configuration
+A proposal was drafted to help provide an implementation timeline during the development process.
+Relevant items of the proposal included:
 
-* Database creation
++ [MVP list](https://github.com/niall-m/ShouldReads/wiki/mvp-list)
++ [Wireframes](https://github.com/niall-m/ShouldReads/wiki/wireframes)
++ [Component Hierarchy](https://github.com/niall-m/ShouldReads/wiki/component-hierarchy)
++ [Sample State](https://github.com/niall-m/ShouldReads/wiki/sample-state)
++ [Routes](https://github.com/niall-m/ShouldReads/wiki/routes)
++ [Schema](https://github.com/niall-m/ShouldReads/wiki/schema)
 
-* Database initialization
+## Technology
 
-* How to run the test suite
+ShouldReads is a single-page application.
 
-* Services (job queues, cache servers, search engines, etc.)
+The backend was built with Ruby on Rails (RoR).
+RoR provides RESTful API routes and JSON data retrieval from the database.
 
-* Deployment instructions
+Backend dependencies:
+- Heroku: a cloud platform for hosting apps
+- PostgreSQL RDBMS: database management
+- BCrypt: password-salting and hashing for secure authentication
 
-* ...
+The frontend was built with React.js, which allows the 'single-page application'.
+
+Frontend dependencies:
+- Webpack: bundles all frontend/Redux components
+- jQuery: used to make AJAX requests with the RoR server
+- Sass: used to style the html elements
+- Babel for transpiling JSX into Javascript
+- Redux: API utilities, action creators, dispatcher, reducers, and stores
+    - React Dom
+    - React Router
+
+## Future Implementations
+
+ShouldReads does not yet reach the MVP standard.
+
+The features that will be added include:
+- Implement the Shelving joins-table, allowing users to add books to the shelves
+- Display a "Read Status" for each book
+- Liking Books
+- Adding Book Tags for genres
+- Search for books or authors
+- Index books by author
