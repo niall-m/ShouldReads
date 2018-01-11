@@ -29,6 +29,8 @@ class BookShow extends React.Component {
                         </div>
                         <div className="book-details">
                             <h1>{book.title}</h1>
+                            <h3>by: {book.author}</h3>
+                            <br />
                             <p>{book.description}</p>
                         </div>
                     </div>

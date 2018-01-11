@@ -120,7 +120,7 @@ book19 = Book.create!(
     :title => "Heart of Darkness",
     :author => "Joseph Conrad",
     :description => "Marlow, a seaman and wanderer, recounts his physical and psychological journey in search of the infamous ivory trader Kurtz. Travelling up river to the heart of the African continent, he gradually becomes obsessed by the enigmatic, wraith-like figure. Marlow's discovery of how Kurtz has gained his position of power over the local people involves him in a radical questioning, not only of his own nature and values, but those of Western civilization. A haunting and hugely influential Modernist masterpiece, Heart of Darkness (1899) explores the limits of human existence as well as the nightmarish realities of imperialism.",
-    :cover_img => "https://static1.squarespace.com/static/586c5b786b8f5b6deb3be50d/586c5beb9f7456a21273a7ac/5875336a46c3c4eed18c34e4/1488398990995/Heart+Of+Darkness+Book+Cover.jpg?format=1000w"
+    :cover_img => "https://i.pinimg.com/736x/b1/d3/e5/b1d3e59ef429e897224b6fa19d065bf1--heart-of-darkness-book-design.jpg"
 )
 book20 = Book.create!(
     :title => "The Call of the Wild",

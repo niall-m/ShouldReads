@@ -8,7 +8,7 @@
     width: 100%;
     padding-top: 105px;
     padding-bottom: 20px;
-    background-color: $index;
+    background-color: $background;
     font-family: 'Times New Roman', Times, serif;    
     color: $word;    
 }
@@ -51,7 +51,8 @@
 .book-details {
     flex: 3;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    text-align: left;
     justify-content: space-around;
     flex-direction: column; 
     height: 200px;
@@ -62,6 +63,10 @@
 .book-details h1 {
     font-weight: 700;
     font-size: 30px;
+}
+
+.book-details h3 {
+    margin: 0;
 }
 
 .show-bottom-container {

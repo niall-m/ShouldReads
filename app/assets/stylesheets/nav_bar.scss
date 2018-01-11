@@ -41,9 +41,10 @@
     margin-right: 30px;
     border: 1px solid $boarders;
     border-radius: 4px;
-    color: $cream;
-    background-color: $word;
+    color: $word;
+    background-color: $cream;
     padding: 5px 15px;
+    text-transform: uppercase;
     transition: background-color .3s;
 }
 
