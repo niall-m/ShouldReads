@@ -48,6 +48,12 @@
     justify-content: center;
 }
 
+.book-cover-img-show {
+    width: 300px;
+    height: 400px;
+    border-radius: 5px;
+}
+
 .book-details {
     flex: 3;
     display: flex;
@@ -67,6 +73,7 @@
 
 .book-details h3 {
     margin: 0;
+    font-style: italic;
 }
 
 .show-bottom-container {

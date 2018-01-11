@@ -6,7 +6,7 @@ export default ({ book }) => {
         <li className="book-index-item">
             <Link to={`/books/${book.id}`}>
                 <img 
-                className="book-cover-img" 
+                className="book-cover-img-index" 
                 src={book.cover_img} 
                 alt={book.title} />
             </Link>

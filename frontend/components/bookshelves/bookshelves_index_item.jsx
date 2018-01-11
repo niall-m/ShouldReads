@@ -16,13 +16,13 @@ class BookshelvesIndexItem extends React.Component {
         const { bookshelf, deleteBookshelf } = this.props;
         return (
             <li className="bookshelf-index-item">
-                {/* <Link to={`/bookshelves/${bookshelf.id}`}> */}
+                <Link to={`/bookshelves/${bookshelf.id}`}>
                 <div>
                     <h2 className="bookshelf-index-shelf-name">
                         {bookshelf.shelf_name}
                     </h2>
                 </div>
-                {/* </Link> */}
+                </Link>
                 <button className="delete-btn" onClick={this.handleSubmit}>
                     <i className="fa fa-times" aria-hidden="true"></i>
                 </button>

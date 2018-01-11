@@ -22,7 +22,7 @@
     padding: 30px;
 }
 
-.book-cover-img {
+.book-cover-img-index {
     width: 300px;
     height: 400px;
     border-radius: 5px;
@@ -30,7 +30,7 @@
     transition: all .2s ease-in-out;
 }
 
-.book-cover-img:hover {
+.book-cover-img-index:hover {
     transform: scale(1.01);
     box-shadow: 5px 5px 20px rgba(0,0,0,0.5);    
 }

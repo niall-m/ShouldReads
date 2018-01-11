@@ -18,20 +18,20 @@ class BookShow extends React.Component {
             <div className="book-show-background">
                 <div className="book-show">
                     <div className="show-top-container">
-                        <div className="book-shelves">
-                            <BookshelvesIndexContainer />
-                        </div>
                         <div className="book-show-pic">
                             <img 
-                            className="book-cover-img" 
+                            className="book-cover-img-show" 
                             src={book.cover_img} 
                             alt={book.title} />
                         </div>
                         <div className="book-details">
                             <h1>{book.title}</h1>
-                            <h3>by: {book.author}</h3>
+                            <h3>{book.author}</h3>
                             <br />
                             <p>{book.description}</p>
+                        </div>
+                        <div className="book-shelves">
+                            <BookshelvesIndexContainer />
                         </div>
                     </div>
                     <div className="show-bottom-container">
