@@ -46,27 +46,24 @@
 
 .bookshelves-index-list {
     flex: 3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
     font-size: 20px;
     max-height: 300px;
-    overflow: scroll;
+    min-height: 300px;
     padding: 10px;
+    overflow: scroll;
 }
 
 .bookshelf-index-item {
     padding: 5px;
     display: flex;
     align-items: center;
-    justify-content: center;
-}
-
-.bookshelf-index-shelf-name {
-
+    justify-content: flex-end;
 }
 
 .delete-btn {
     padding: 7px;
+}
+
+.delete-btn:hover {
+    color: $hoverword;
 }

@@ -45,12 +45,13 @@
     background-color: $cream;
     padding: 5px 15px;
     text-transform: uppercase;
-    transition: background-color .3s;
+    transition: background-color .5s;
+    transition: color .1s;
 }
 
 .nav-bar .btn:hover {
-    background-color: #463021c7;
-    color: white;
+    background-color: $background;
+    color: $hoverword;
 }
 
 .session-greeting {

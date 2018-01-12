@@ -16,7 +16,7 @@ class BookshelvesIndexItem extends React.Component {
         const { bookshelf, deleteBookshelf } = this.props;
         return (
             <li className="bookshelf-index-item">
-                <Link to={`/bookshelves/${bookshelf.id}`}>
+                <Link to={`/bookshelves/${bookshelf.id}`} className="bookshelf-link">
                 <div>
                     <h2 className="bookshelf-index-shelf-name">
                         {bookshelf.shelf_name}
