@@ -17,11 +17,11 @@ class BookshelvesIndexItem extends React.Component {
         return (
             <li className="bookshelf-index-item">
                 <Link to={`/bookshelves/${bookshelf.id}`} className="bookshelf-link">
-                <div>
-                    <h2 className="bookshelf-index-shelf-name">
-                        {bookshelf.shelf_name}
-                    </h2>
-                </div>
+                    <div>
+                        <h2 className="bookshelf-index-shelf-name">
+                            {bookshelf.shelf_name}
+                        </h2>
+                    </div>
                 </Link>
                 <button className="delete-btn" onClick={this.handleSubmit}>
                     <i className="fa fa-times" aria-hidden="true"></i>
