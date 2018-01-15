@@ -36,7 +36,9 @@
 .reviews-index-form-container textarea {
     padding: 7px 15px;
     margin: 10px;
-    border: 1px solid $cream;
+    border: 1px solid $boarders;
+    min-height: 150px;
+    min-width: 300px;
 }
 
 .create-review-btn {
@@ -49,11 +51,12 @@
     background-color: $cream;
     color: $word;
     font-weight: 500;
-    transition: background-color .3s;
+    transition: background-color .3s, color .3s;
 }
 
-.create-bookshelf-btn:hover {
-    background-color: rgba(242, 240, 229, 0.842);
+.create-review-btn:hover {
+    background-color: $boarders;
+    color: $cream;
 }
 
 .reviews-index-list {
@@ -64,7 +67,7 @@
     flex-direction: column;
     font-size: 20px;
     max-height: 300px;
-    overflow: scroll;
+    overflow: auto;
     padding: 10px;
 }
 

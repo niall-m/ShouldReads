@@ -37,11 +37,12 @@
     background-color: $cream;
     color: $word;
     font-weight: 500;
-    transition: background-color .3s;
+    transition: background-color .3s, color .3s;
 }
 
 .create-bookshelf-btn:hover {
-    background-color: rgba(242, 240, 229, 0.842);
+    background-color: $boarders;
+    color: $cream;
 }
 
 .bookshelves-index-list {
@@ -50,7 +51,7 @@
     max-height: 300px;
     min-height: 300px;
     padding: 10px;
-    overflow: scroll;
+    overflow: auto;
 }
 
 .bookshelf-index-item {
