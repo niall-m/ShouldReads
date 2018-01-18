@@ -44,7 +44,7 @@
     align-items: center;
     justify-content: center;
     min-width: 100%;
-    min-height: 150px;
+    min-height: 200px;
     background-color: $cream;
 }
 
@@ -110,4 +110,26 @@
 .book-reviews {
     flex: 2;
     padding: 30px;
+}
+
+.show-shelf-btn {
+    border: 1px solid $boarders;
+    border-radius: 4px;
+    color: $word;
+    background-color: $cream;
+    padding: 5px 15px;
+    transition: background-color .3s, color .3s;
+}
+
+.show-shelf-btn:hover {
+    background-color: $boarders;
+    color: $cream;
+}
+
+.show-shelvings-per-book {
+
+}
+
+.show-shelving {
+    
 }
