@@ -7,7 +7,6 @@
     justify-content: center;
     width: 100%;
     padding-top: 105px;
-    padding-bottom: 20px;
     background-color: $background;
     font-family: 'Times New Roman', Times, serif;    
     color: $word;    
@@ -18,18 +17,35 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 90%;
-    padding: 40px;
+    width: 100%;
 }
 
-.show-top-container {
+.show-main {
     flex: 2;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 30px;
+    flex-direction: column;
+
     min-height: 400px;
     width: 100%;
+}
+
+.show-main-top {
+    flex: 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.show-main-bottom {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100%;
+    min-height: 150px;
+    background-color: $cream;
 }
 
 .book-shelves {
@@ -66,6 +82,10 @@
     padding: 30px;
 }
 
+.book-details p {
+    line-height: 2.8vh;
+}
+
 .book-details h1 {
     font-weight: 700;
     font-size: 30px;
@@ -76,17 +96,18 @@
     font-style: italic;
 }
 
-.show-bottom-container {
+.show-reviews {
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 30px;    
     min-height: 100px;
     width: 100%;
-    border-top: 1px solid $boarders;
+    // border-top: 1px solid $boarders;
+    background-color: $green;
 }
 
 .book-reviews {
     flex: 2;
+    padding: 30px;
 }
