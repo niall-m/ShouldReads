@@ -127,9 +127,14 @@
 }
 
 .show-shelvings-per-book {
-
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 100%;
 }
 
 .show-shelving {
-    
+    color: $word;
+    padding: 0 10px;
 }
