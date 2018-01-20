@@ -36,6 +36,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    // padding: 5vh;
 }
 
 .show-main-bottom {
@@ -46,6 +47,8 @@
     min-width: 100%;
     min-height: 200px;
     background-color: $cream;
+    padding: 5vh 0;
+
 }
 
 .book-shelves {
@@ -62,6 +65,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 5vh;
 }
 
 .book-cover-img-show {
@@ -77,13 +81,13 @@
     text-align: left;
     justify-content: space-around;
     flex-direction: column; 
-    height: 200px;
     max-height: 400px;
-    padding: 30px;
+    padding: 5vh;
 }
 
 .book-details p {
     line-height: 2.8vh;
+    max-width: 90vh;
 }
 
 .book-details h1 {
@@ -134,7 +138,15 @@
     width: 100%;
 }
 
-.show-shelving {
-    color: $word;
-    padding: 0 10px;
+// .show-shelving {
+//     color: $word;
+//     padding: 0 10px;
+// }
+
+.shelving-item {
+
+}
+
+.show-shelving-name {
+    
 }

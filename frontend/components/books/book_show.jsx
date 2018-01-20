@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 // import BookshelvesIndexContainer from '../bookshelves/bookshelves_index_container';
-import ShelvingsContainer from '../bookshelves/shelvings_container';
+import ShelvingsContainer from '../book_shelvings/shelvings_container';
 import ReviewsIndexContainer from '../reviews/reviews_index_container.jsx';
 
 class BookShow extends React.Component {
