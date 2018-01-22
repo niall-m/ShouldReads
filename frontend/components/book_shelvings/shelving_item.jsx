@@ -9,15 +9,18 @@ class ShelvingItem extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        // this.props.deleteShelving(this.props.bookshelf.id);
+        let shelving = {
+            book_id: this.props.bookId,
+            shelf_id: this.props.shelfId
+        };
+        this.props.deleteShelving(shelving);
     }
 
     render() {
-        console.log(this.props);
-        const { key, name, deleteShelving } = this.props;
+        const { shelfId, name, deleteShelving } = this.props;
         return (
             <li className="shelving-item">
-                <Link to={`/bookshelves/${key}`} className="bookshelf-link">
+                <Link to={`/bookshelves/${shelfId}`} className="bookshelf-link">
                     <div>
                         <h2 className="show-shelving-name">
                             {name}

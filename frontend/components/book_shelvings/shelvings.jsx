@@ -30,8 +30,7 @@ class Shelvings extends React.Component {
     }
 
     render() {
-        // console.log(this.props);
-        const { bookshelves, deleteShelving } = this.props;
+        const { book, bookshelves, deleteShelving } = this.props;
         const shelvings = this.props.book.bookshelves;
         return (
             <section className="show-shelves-container">
@@ -58,6 +57,8 @@ class Shelvings extends React.Component {
                         shelvings.map(shelf => (
                             <ShelvingItem
                                 key={shelf.id}
+                                shelfId={shelf.id}
+                                bookId={book.id}
                                 name={shelf.shelf_name}
                                 deleteShelving={deleteShelving} />
                             )
