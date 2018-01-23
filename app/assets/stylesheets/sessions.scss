@@ -36,22 +36,22 @@
 }
 
 .session-form-title {
-    font-size: 33px;
+    font-size: 22px;
     font-weight: 700;
-    margin-top: 20px;
 }
 
 .session-form div {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin: 10px;
+    margin: 5px;
 }
 
 .session-form-fields {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .field {
@@ -63,24 +63,25 @@
 .field input {
     padding: 7px;
     margin: 5px;
-    border: 1px solid $cream;
+    border: 1px solid $boarders;
 }
 
 .session-btn {
     display: flex;
     justify-content: center;
     padding: 5px 15px;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    margin: 1vh;
     background-color: $cream;
-    color: $word;
+    border: 1px solid $boarders;
+    border-radius: 4px;
     font-size: 18px;
     font-weight: 500;
-    transition: background-color .3s;
+    transition: background-color .3s, color .3s;
 }
 
 .session-btn:hover {
-    background-color: rgba(242, 240, 229, 0.842);
+    background-color: $boarders;
+    color: $cream;
 }
 
 .session-form-errors {
@@ -93,13 +94,16 @@
     display: flex;
     justify-content: center;
     padding: 5px 15px;
+    margin: 1vh;
     background-color: $cream;
-    color: $word;
-    font-size: 18px;
+    border: 1px solid $boarders;
+    border-radius: 4px;
+    font-size: 15px;
     font-weight: 500;
     transition: background-color .3s;
 }
 
 .demo-btn:hover {
-    background-color: rgba(242, 240, 229, 0.842);    
+    background-color: $boarders;
+    color: $cream;
 }

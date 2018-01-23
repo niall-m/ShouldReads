@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import LoginContainer from '../session/login_container';
 
 export default ({ currentUser, logout }) => {
     const display = currentUser ? (
@@ -10,7 +11,8 @@ export default ({ currentUser, logout }) => {
     ) : (
         <div className="session-greeting">
             <Link className="btn" to="/signup">Sign Up</Link>
-            <Link className="btn" to="/login">Log In</Link>
+            {/* <Link className="btn" to="/login">Log In</Link> */}
+            <LoginContainer />
         </div>
     );
 
