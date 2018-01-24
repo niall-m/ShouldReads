@@ -40,6 +40,7 @@ class LoginModal extends React.Component {
     }
 
     afterOpenModal() {
+        console.log(this.props);
         // references are now sync'd and can be accessed.
         // this.subtitle.style.color = '#f00';
     }
@@ -78,8 +79,7 @@ class LoginModal extends React.Component {
                 password: passWord.slice(0, j + 1)
             }), (j + 10) * 50);
         }
-        setTimeout(() => this.props.login(this.state)
-            .then(() => this.props.history.push('/books')), 1300);
+        setTimeout(() => this.props.login(this.state), 1300);
     }
 
     errors() {
