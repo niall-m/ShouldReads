@@ -14,12 +14,18 @@ class ReviewsIndexItem extends React.Component {
 
     render() {
         const { review, deleteReview } = this.props;
+        let stars = [];
+        for (let i = 0; i < review.rating; i++) {
+            stars.push(<p key={`star-${i}`}>&#9733;</p>);
+        }
+
         return (
             <li className="review-index-item">
                 <div>
-                    <h2 className="review-index-username">
-                        {review.user.username}
+                    <h2 className="review-index-header">
+                        <span>{review.user.username}</span>&nbsp; rated a book:&nbsp;{stars}
                     </h2>
+                    {/* <div className="review-stars">{stars}</div> */}
                     <p className="review-index-body">{review.body}</p>
                 </div>
                 <button className="delete-btn" onClick={this.handleSubmit}>

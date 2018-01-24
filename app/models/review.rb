@@ -11,7 +11,7 @@
 #
 
 class Review < ApplicationRecord
-    validates :book_id, :user_id, :body, presence: true
+    validates :book_id, :user_id, :body, :rating, presence: true
     validates :user_id, uniqueness: { scope: :book_id }
 
     belongs_to :book

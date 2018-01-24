@@ -24,13 +24,13 @@ class Api::ReviewsController < ApplicationController
   end
 
   def destroy
-    @review = Review.find(params[:id])
+    @review = current_user.reviews.find(params[:id])
     @review.destroy!
     render :show
   end
 
   private
   def review_params
-    params.require(:review).permit(:body, :book_id)
+    params.require(:review).permit(:book_id, :body, :rating)
   end
 end
