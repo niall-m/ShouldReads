@@ -33,21 +33,6 @@
     border: 1px solid $boarders;
 }
 
-.create-bookshelf-btn {
-    padding: 7px 12px;
-    background-color: $cream;
-    border: 1px solid $boarders;
-    border-radius: 4px;
-    color: $word;
-    font-weight: 500;
-    transition: background-color .3s, color .3s;
-}
-
-.create-bookshelf-btn:hover {
-    background-color: $boarders;
-    color: $cream;
-}
-
 .bookshelves-index-list {
     flex: 3;
     font-size: 20px;
@@ -62,6 +47,21 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+}
+
+.create-bookshelf-btn {
+    padding: 7px 12px;
+    background-color: $cream;
+    border: 1px solid $boarders;
+    border-radius: 4px;
+    color: $word;
+    font-weight: 500;
+    transition: background-color .3s, color .3s;
+}
+
+.create-bookshelf-btn:hover {
+    background-color: $boarders;
+    color: $cream;
 }
 
 .delete-btn {

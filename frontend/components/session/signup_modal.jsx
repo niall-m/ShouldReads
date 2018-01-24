@@ -15,11 +15,12 @@ const customStyles = {
     }
 };
 
-class LoginModal extends React.Component {
+class SignupModal extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             username: '',
+            email: '',
             password: '',
             modalIsOpen: false
         };
@@ -35,6 +36,7 @@ class LoginModal extends React.Component {
     openModal() {
         this.props.clearErrors();
         this.setState({username: ''});
+        this.setState({email: ''});
         this.setState({password: ''});
         this.setState({modalIsOpen: true});
     }
@@ -58,9 +60,10 @@ class LoginModal extends React.Component {
         e.preventDefault();
         let user = {
             username: this.state.username,
+            email: this.state.email,
             password: this.state.password
         };
-        this.props.login(user);
+        this.props.signup(user);
             // .then(() => this.props.history.push('/books'));
     }
 
@@ -99,7 +102,7 @@ class LoginModal extends React.Component {
     render() {
         return (
         <div>
-            <button onClick={this.openModal} className="btn">Log In</button>
+            <button onClick={this.openModal} className="btn">Sign Up</button>
             <Modal
             isOpen={this.state.modalIsOpen}
             onAfterOpen={this.afterOpenModal}
@@ -109,7 +112,7 @@ class LoginModal extends React.Component {
             contentLabel="Example Modal"
             >
 
-            <h2 className="session-form-title">Log In</h2>
+            <h2 className="session-form-title">Sign Up</h2>
             <form className="session-form">
                 <div className="session-form-fields">
                     <div className="field">
@@ -120,6 +123,14 @@ class LoginModal extends React.Component {
                             value={this.state.username}
                             onChange={this.handleInput('username')}
                             placeholder="username"
+                        />
+                    </div>
+                    <div className="field">Email
+                        <input
+                            type="text"
+                            value={this.state.email}
+                            onChange={this.handleInput('email')}
+                            placeholder="email"
                         />
                     </div>
                     <div className="field">
@@ -145,4 +156,4 @@ class LoginModal extends React.Component {
     }
 }
 
-export default LoginModal;
+export default SignupModal;
