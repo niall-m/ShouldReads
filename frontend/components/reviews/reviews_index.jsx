@@ -30,9 +30,24 @@ class ReviewsIndex extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.createReview(this.state)
-            .then(this.setState( { body: '' } ))
-            .then(this.setState( { rating: null} ));
-            // .then(this.props.fetchReviews(this.props.match.params.bookId));
+            .then(() => this.setState({
+                ['body']: '',
+                ['rating']: null
+            }), () => null );
+    }
+
+    errors() {
+        if (this.props.errors) {
+            return (
+                <ul>
+                    {this.props.errors.map((error, idx) => (
+                        <li key={`error-${idx}`}>
+                            {error}
+                        </li>
+                    ))}
+                </ul>
+            );
+        }
     }
 
     renderRating() {
@@ -75,7 +90,7 @@ class ReviewsIndex extends React.Component {
     }
 
     render() {
-        
+        console.log(this.props);
         const { 
             reviews,
             fetchReviews,

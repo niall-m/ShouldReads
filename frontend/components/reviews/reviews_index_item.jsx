@@ -19,6 +19,14 @@ class ReviewsIndexItem extends React.Component {
             stars.push(<p key={`star-${i}`}>&#9733;</p>);
         }
 
+        const deleteBtn = (window.currentUser.id === review.user.id) ? (
+            <button className="delete-btn" onClick={this.handleSubmit}>
+                <i className="fa fa-times" aria-hidden="true"></i>
+            </button>
+        ) : (
+            null
+        );
+
         return (
             <li className="review-index-item">
                 <div>
@@ -28,9 +36,7 @@ class ReviewsIndexItem extends React.Component {
                     {/* <div className="review-stars">{stars}</div> */}
                     <p className="review-index-body">{review.body}</p>
                 </div>
-                <button className="delete-btn" onClick={this.handleSubmit}>
-                    <i className="fa fa-times" aria-hidden="true"></i>
-                </button>
+                {deleteBtn}
             </li>
         );
     }
