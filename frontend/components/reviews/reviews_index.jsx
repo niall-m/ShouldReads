@@ -14,6 +14,10 @@ class ReviewsIndex extends React.Component {
         this.handleInput = this.handleInput.bind(this);
     }
 
+    componentWillMount() {
+        this.props.clearErrors();
+    }
+    
     componentDidMount() {
         this.props.fetchReviews(this.props.match.params.bookId);
     }
@@ -30,10 +34,16 @@ class ReviewsIndex extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.createReview(this.state)
-            .then(() => this.setState({
-                ['body']: '',
-                ['rating']: null
-            }), () => null );
+            .then(() => this.successfulSubmit(), () => null );
+    }
+
+    successfulSubmit() {
+        console.log(this.props);
+        this.setState({
+            ['body']: '',
+            ['rating']: null
+        });
+        this.props.clearErrors();
     }
 
     errors() {
@@ -52,7 +62,7 @@ class ReviewsIndex extends React.Component {
 
     renderRating() {
         return (
-            <div className="review-index-form-rating">
+            <div className="reviews-form-rating">
                 <span className="rating">
                     <input type="radio" value="5"
                         onChange={this.handleInput('rating')}
@@ -90,7 +100,7 @@ class ReviewsIndex extends React.Component {
     }
 
     render() {
-        console.log(this.props);
+        // console.log(this.props);
         const { 
             reviews,
             fetchReviews,
@@ -103,8 +113,8 @@ class ReviewsIndex extends React.Component {
             return (
                 <div>
                     <div className="loading">No Reviews...</div>
-                    <form className="reviews-index-form">
-                        <div className="reviews-index-form-container">
+                    <form className="reviews-form">
+                        <div className="reviews-form-container">
                             <h2>Write A Review</h2>
                             {this.renderRating()}
                             <textarea
@@ -116,14 +126,17 @@ class ReviewsIndex extends React.Component {
                                 onClick={this.handleSubmit}>Post Review</button>
                         </div>
                     </form>
+                    <div className="session-form-errors">
+                        {this.errors()}
+                    </div>
                 </div>
             );
         }
 
         return (
-            <div className="reviews-index-container">
-                <form className="reviews-index-form">
-                    <div className="reviews-index-form-container">
+            <div className="reviews-container">
+                <form className="reviews-form">
+                    <div className="reviews-form-container">
                         <h2>Write A Review</h2>
                         {this.renderRating()}
                         <textarea
@@ -135,6 +148,9 @@ class ReviewsIndex extends React.Component {
                             onClick={this.handleSubmit}>Post Review</button>
                     </div>
                 </form>
+                <div className="session-form-errors">
+                    {this.errors()}
+                </div>
                 <ul className="reviews-index-list">
                     {
                         reviews.map(review => (
@@ -142,8 +158,7 @@ class ReviewsIndex extends React.Component {
                             key={review.id}
                             review={review}
                             deleteReview={deleteReview} />
-                            )
-                        )
+                        ))
                     }
                 </ul>
             </div>

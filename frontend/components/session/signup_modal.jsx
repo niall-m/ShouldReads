@@ -20,8 +20,8 @@ class SignupModal extends React.Component {
         super(props);
         this.state = {
             username: '',
-            email: '',
             password: '',
+            email: '',
             modalIsOpen: false
         };
 
@@ -36,8 +36,8 @@ class SignupModal extends React.Component {
     openModal() {
         this.props.clearErrors();
         this.setState({username: ''});
-        this.setState({email: ''});
         this.setState({password: ''});
+        this.setState({email: ''});
         this.setState({modalIsOpen: true});
     }
 
@@ -60,8 +60,8 @@ class SignupModal extends React.Component {
         e.preventDefault();
         let user = {
             username: this.state.username,
-            email: this.state.email,
-            password: this.state.password
+            password: this.state.password,
+            email: this.state.email
         };
         this.props.signup(user);
             // .then(() => this.props.history.push('/books'));
@@ -124,14 +124,6 @@ class SignupModal extends React.Component {
                             placeholder="username"
                         />
                     </div>
-                    <div className="field">Email
-                        <input
-                            type="text"
-                            value={this.state.email}
-                            onChange={this.handleInput('email')}
-                            placeholder="email"
-                        />
-                    </div>
                     <div className="field">
                         Password
                         <br/>
@@ -140,6 +132,14 @@ class SignupModal extends React.Component {
                             value={this.state.password}
                             onChange={this.handleInput('password')}
                             placeholder="password"
+                        />
+                    </div>
+                    <div className="field">Email
+                        <input
+                            type="text"
+                            value={this.state.email}
+                            onChange={this.handleInput('email')}
+                            placeholder="email"
                         />
                     </div>
                     <button onClick={this.handleSubmit} className="session-btn">Submit</button>

@@ -7,17 +7,20 @@ import {
     createReview,
     updateReview,
     deleteReview,
+    clearErrors
 } from '../../actions/review_actions';
 
 const mapStateToProps = state => ({
-    reviews: Object.values(state.entities.reviews)
+    reviews: Object.values(state.entities.reviews),
+    errors: state.errors.reviews
 });
 
 const mapDispatchToProps = dispatch => ({
-    fetchReviews: book_id => dispatch(fetchReviews(book_id)),
+    fetchReviews: bookId => dispatch(fetchReviews(bookId)),
     createReview: review => dispatch(createReview(review)),
     updateReview: review => dispatch(updateReview(review)),
-    deleteReview: reviewId => dispatch(deleteReview(reviewId))
+    deleteReview: reviewId => dispatch(deleteReview(reviewId)),
+    clearErrors: () => dispatch(clearErrors())
 });
 
 export default withRouter(connect(

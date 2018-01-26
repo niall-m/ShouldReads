@@ -40,7 +40,6 @@ class LoginModal extends React.Component {
     }
 
     afterOpenModal() {
-        console.log(this.props);
         // references are now sync'd and can be accessed.
         // this.subtitle.style.color = '#f00';
     }
