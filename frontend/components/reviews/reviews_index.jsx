@@ -38,7 +38,6 @@ class ReviewsIndex extends React.Component {
     }
 
     successfulSubmit() {
-        console.log(this.props);
         this.setState({
             ['body']: '',
             ['rating']: null
@@ -100,7 +99,6 @@ class ReviewsIndex extends React.Component {
     }
 
     render() {
-        // console.log(this.props);
         const { 
             reviews,
             fetchReviews,
