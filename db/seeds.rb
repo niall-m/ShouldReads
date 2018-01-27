@@ -111,10 +111,10 @@ book4 = Book.create!(
     :cover_img => "http://vividbiology.com/shop/wp-content/uploads/sites/5/2016/05/posters8.jpg"
 )
 book5 = Book.create!(
-    :title => "The Sound and the Fury",
-    :author => "William Faulkner",
-    :description => "The Sound and the Fury is the tragedy of the Compson family, featuring some of the most memorable characters in literature: beautiful, rebellious Caddy; the manchild Benjy; haunted, neurotic Quentin; Jason, the brutal cynic; and Dilsey, their black servant. Their lives fragmented and harrowed by history and legacy, the character’s voices and actions mesh to create what is arguably Faulkner’s masterpiece and  one of the greatest novels of the twentieth century.",
-    :cover_img => "https://c1.staticflickr.com/3/2634/3941739119_0d88aa3ffd.jpg"
+    :title => "The Master and Margarita",
+    :author => "Mikhail Bulgakov",
+    :description => "When the devil arrives in 1930s Moscow, consorting with a retinue of odd associates—including a talking black cat, an assassin, and a beautiful naked witch—his antics wreak havoc among the literary elite of the world capital of atheism. Meanwhile, the Master, author of an unpublished novel about Jesus and Pontius Pilate, languishes in despair in a pyschiatric hospital, while his devoted lover, Margarita, decides to sell her soul to save him. As Bulgakov’s dazzlingly exuberant narrative weaves back and forth between Moscow and ancient Jerusalem, studded with scenes ranging from a giddy Satanic ball to the murder of Judas in Gethsemane, Margarita’s enduring love for the Master joins the strands of plot across space and time.",
+    :cover_img => "http://molempire.com/app/uploads/2011/08/The-Master-and-Margarita-by-Mikhail-Bulgakov-Book-Cover.jpg"
 )
 book6 = Book.create!(
     :title => "Catch-22",
@@ -249,16 +249,16 @@ book27 = Book.create!(
     :cover_img => "https://s-media-cache-ak0.pinimg.com/originals/c2/6d/46/c26d467efb9a3ce556b32793a87d3ec2.jpg"
 )
 book28 = Book.create!(
-    :title => "The Brothers Karamazov",
-    :author => "Fyodor Dostoyevsky",
-    :description => "The Brothers Karamasov is a murder mystery, a courtroom drama, and an exploration of erotic rivalry in a series of triangular love affairs involving the 'wicked and sentimental' Fyodor Pavlovich Karamazov and his three sons―the impulsive and sensual Dmitri; the coldly rational Ivan; and the healthy, red-cheeked young novice Alyosha. Through the gripping events of their story, Dostoevsky portrays the whole of Russian life, is social and spiritual striving, in what was both the golden age and a tragic turning point in Russian culture.",
-    :cover_img => "https://s-media-cache-ak0.pinimg.com/originals/97/e0/be/97e0bef1578b8969287d676361dff900.jpg"
+    :title => "A Game of Thrones",
+    :author => "George R.R. Martin",
+    :description => "Long ago, in a time forgotten, a preternatural event threw the seasons out of balance. In a land where summers can last decades and winters a lifetime, trouble is brewing. The cold is returning, and in the frozen wastes to the north of Winterfell, sinister forces are massing beyond the kingdom’s protective Wall. To the south, the king’s powers are failing—his most trusted adviser dead under mysterious circumstances and his enemies emerging from the shadows of the throne. At the center of the conflict lie the Starks of Winterfell, a family as harsh and unyielding as the frozen land they were born to. Now Lord Eddard Stark is reluctantly summoned to serve as the king’s new Hand, an appointment that threatens to sunder not only his family but the kingdom itself.",
+    :cover_img => "https://orig00.deviantart.net/29c9/f/2012/252/b/d/a_game_of_thrones_book_cover_by_nateblunt-d5e6oxt.jpg"
 )
 book29 = Book.create!(
-    :title => "As I Lay Dying",
+    :title => "The Sound and the Fury",
     :author => "William Faulkner",
-    :description => "As I Lay Dying is Faulkner's harrowing account of the Bundren family's odyssey across the Mississippi countryside to bury Addie, their wife and mother. Told in turns by each of the family members—including Addie herself—the novel ranges in mood from dark comedy to the deepest pathos.",
-    :cover_img => "https://userscontent2.emaze.com/images/ce56fb4f-7514-4001-bc03-3b664e0431e0/04e2dfe9-8213-4f03-8c9b-da89ea2c7aa3.jpg"
+    :description => "The Sound and the Fury is the tragedy of the Compson family, featuring some of the most memorable characters in literature: beautiful, rebellious Caddy; the manchild Benjy; haunted, neurotic Quentin; Jason, the brutal cynic; and Dilsey, their black servant. Their lives fragmented and harrowed by history and legacy, the character’s voices and actions mesh to create what is arguably Faulkner’s masterpiece and  one of the greatest novels of the twentieth century.",
+    :cover_img => "https://c1.staticflickr.com/3/2634/3941739119_0d88aa3ffd.jpg"
 )
 book30 = Book.create!(
     :title => "IT",
@@ -267,10 +267,10 @@ book30 = Book.create!(
     :cover_img => "https://i.pinimg.com/736x/df/fd/10/dffd10168d6a72b0eaee36bc4d028f56.jpg"
 )
 book31 = Book.create!(
-    :title => "In Cold Blood",
-    :author => "Truman Capote",
-    :description => "On November 15, 1959, in the small town of Holcomb, Kansas, four members of the Clutter family were savagely murdered by blasts from a shotgun held a few inches from their faces. There was no apparent motive for the crime, and there were almost no clues. As Truman Capote reconstructs the murder and the investigation that led to the capture, trial, and execution of the killers, he generates both mesmerizing suspense and astonishing empathy. In Cold Blood is a work that transcends its moment, yielding poignant insights into the nature of American violence.",
-    :cover_img => "http://www.santiagocasares.com/wp-content/uploads/2010/10/In-Cold-Blood.jpg"
+    :title => "The Crying of Lot 49",
+    :author => "Thomas Pynchon",
+    :description => "Suffused with rich satire, chaotic brilliance, verbal turbulence and wild humor, The Crying of Lot 49 opens as Oedipa Maas discovers that she has been made executrix of a former lover's estate. The performance of her duties sets her on a strange trail of detection, in which bizarre characters crowd in to help or confuse her. But gradually, death, drugs, madness and marriage combine to leave Oedipa in isolation on the threshold of revelation, awaiting the Crying of Lot 49.",
+    :cover_img => "https://s-media-cache-ak0.pinimg.com/originals/21/e2/35/21e23583eb6151d57c4830369d3955df.jpg"
 )
 book32 = Book.create!(
     :title => "American Psycho",
@@ -297,28 +297,28 @@ book35 = Book.create!(
     :cover_img => "https://pre00.deviantart.net/5fa8/th/pre/i/2015/079/f/c/the_hobbit_book_cover_by_dreams_design-d8mezqk.jpg"
 )
 book36 = Book.create!(
-    :title => "A Game of Thrones",
-    :author => "George R.R. Martin",
-    :description => "Long ago, in a time forgotten, a preternatural event threw the seasons out of balance. In a land where summers can last decades and winters a lifetime, trouble is brewing. The cold is returning, and in the frozen wastes to the north of Winterfell, sinister forces are massing beyond the kingdom’s protective Wall. To the south, the king’s powers are failing—his most trusted adviser dead under mysterious circumstances and his enemies emerging from the shadows of the throne. At the center of the conflict lie the Starks of Winterfell, a family as harsh and unyielding as the frozen land they were born to. Now Lord Eddard Stark is reluctantly summoned to serve as the king’s new Hand, an appointment that threatens to sunder not only his family but the kingdom itself.",
-    :cover_img => "https://orig00.deviantart.net/29c9/f/2012/252/b/d/a_game_of_thrones_book_cover_by_nateblunt-d5e6oxt.jpg"
+    :title => "The Brothers Karamazov",
+    :author => "Fyodor Dostoyevsky",
+    :description => "The Brothers Karamasov is a murder mystery, a courtroom drama, and an exploration of erotic rivalry in a series of triangular love affairs involving the 'wicked and sentimental' Fyodor Pavlovich Karamazov and his three sons―the impulsive and sensual Dmitri; the coldly rational Ivan; and the healthy, red-cheeked young novice Alyosha. Through the gripping events of their story, Dostoevsky portrays the whole of Russian life, is social and spiritual striving, in what was both the golden age and a tragic turning point in Russian culture.",
+    :cover_img => "https://s-media-cache-ak0.pinimg.com/originals/97/e0/be/97e0bef1578b8969287d676361dff900.jpg"
 )
 book37 = Book.create!(
     :title => "The Hitchhiker's Guide to the Galaxy",
     :author => "Douglas Adams",
     :description => "Seconds before Earth is demolished to make way for a galactic freeway, Arthur Dent is plucked off the planet by his friend Ford Prefect, a researcher for the revised edition of The Hitchhiker’s Guide to the Galaxy who, for the last fifteen years, has been posing as an out-of-work actor. Together, this dynamic pair began a journey through space aided by a galaxyful of fellow travelers: Zaphod Beeblebrox, the two-headed, three-armed, ex-hippie and totally out-to-lunch president of the galaxy; Trillian (formerly Tricia McMillan), Zaphod’s girlfriend, whom Arthur tried to pick up at a cocktail party once upon a time zone; Marvin, a paranoid, brilliant, and chronically depressed robot; and Veet Voojagig, a former graduate student obsessed with the disappearance of all the ballpoint pens he’s bought over the years. Where are these pens? Why are we born? Why do we die? For all the answers, stick your thumb to the stars!",
-    :cover_img => "http://silodrome.com/wp-content/uploads/2013/03/The-Hitchhikers-Guide-to-the-Galaxy-The-Book.jpg"
+    :cover_img => "http://4.bp.blogspot.com/-EGRD62OFTOg/UA6jfesbomI/AAAAAAAAATw/73kp7l1asnE/s1600/h2g2-01+copy.png"
 )
 book38 = Book.create!(
-    :title => "Dune",
-    :author => "Frank Herbert",
-    :description => "Set on the desert planet Arrakis, Dune is the story of the boy Paul Atreides, who would become the mysterious man known as Muad'Dib. He would avenge the traitorous plot against his noble family — and would bring to fruition humankind’s most ancient and unattainable dream. A stunning blend of adventure and mysticism, environmentalism and politics, Dune won the first Nebula Award, shared the Hugo Award, and formed the basis of what is undoubtedly the grandest epic in science fiction.",
-    :cover_img => "https://i.pinimg.com/736x/76/3c/41/763c4112e3050873ab7b298247ef07fd--book-challenge-student-life.jpg"
-)
-book39 = Book.create!(
     :title => "Life of Pi",
     :author => "Yann Martel",
     :description => "The son of a zookeeper, Pi Patel has an encyclopedic knowledge of animal behavior and a fervent love of stories. When Pi is sixteen, his family emigrates from India to North America aboard a Japanese cargo ship, along with their zoo animals bound for new homes. The ship sinks. Pi finds himself alone in a lifeboat, his only companions a hyena, an orangutan, a wounded zebra, and Richard Parker, a 450-pound Bengal tiger. Soon the tiger has dispatched all but Pi, whose fear, knowledge, and cunning allow him to coexist with Richard Parker for 227 days while lost at sea. When they finally reach the coast of Mexico, Richard Parker flees to the jungle, never to be seen again. The Japanese authorities who interrogate Pi refuse to believe his story and press him to tell them 'the truth.' After hours of coercion, Pi tells a second story, a story much less fantastical, much more conventional - but is it more true?",
     :cover_img => "https://mir-s3-cdn-cf.behance.net/project_modules/disp/37e32722999351.5631ba72c3110.jpg"
+)
+book39 = Book.create!(
+    :title => "Dune",
+    :author => "Frank Herbert",
+    :description => "Set on the desert planet Arrakis, Dune is the story of the boy Paul Atreides, who would become the mysterious man known as Muad'Dib. He would avenge the traitorous plot against his noble family — and would bring to fruition humankind’s most ancient and unattainable dream. A stunning blend of adventure and mysticism, environmentalism and politics, Dune won the first Nebula Award, shared the Hugo Award, and formed the basis of what is undoubtedly the grandest epic in science fiction.",
+    :cover_img => "https://i.pinimg.com/736x/76/3c/41/763c4112e3050873ab7b298247ef07fd--book-challenge-student-life.jpg"
 )
 book40 = Book.create!(
     :title => "Jurassic Park",
@@ -327,10 +327,10 @@ book40 = Book.create!(
     :cover_img => "https://img00.deviantart.net/dd65/i/2015/089/2/e/jurassic_park_book_cover_re_design_by_ellyrussellart-d8nsow1.jpg"
 )
 book41 = Book.create!(
-    :title => "The Crying of Lot 49",
-    :author => "Thomas Pynchon",
-    :description => "Suffused with rich satire, chaotic brilliance, verbal turbulence and wild humor, The Crying of Lot 49 opens as Oedipa Maas discovers that she has been made executrix of a former lover's estate. The performance of her duties sets her on a strange trail of detection, in which bizarre characters crowd in to help or confuse her. But gradually, death, drugs, madness and marriage combine to leave Oedipa in isolation on the threshold of revelation, awaiting the Crying of Lot 49.",
-    :cover_img => "https://s-media-cache-ak0.pinimg.com/originals/21/e2/35/21e23583eb6151d57c4830369d3955df.jpg"
+    :title => "In Cold Blood",
+    :author => "Truman Capote",
+    :description => "On November 15, 1959, in the small town of Holcomb, Kansas, four members of the Clutter family were savagely murdered by blasts from a shotgun held a few inches from their faces. There was no apparent motive for the crime, and there were almost no clues. As Truman Capote reconstructs the murder and the investigation that led to the capture, trial, and execution of the killers, he generates both mesmerizing suspense and astonishing empathy. In Cold Blood is a work that transcends its moment, yielding poignant insights into the nature of American violence.",
+    :cover_img => "http://www.santiagocasares.com/wp-content/uploads/2010/10/In-Cold-Blood.jpg"
 )
 book42 = Book.create!(
     :title => "Blood Meridian",
@@ -357,3 +357,185 @@ book45 = Book.create!(
     :cover_img => "https://pbs.twimg.com/media/DS-PMEHUMAEn_31.jpg:large"
 )
 
+Review.destroy_all
+
+review1 = Review.create!(
+    book_id: book2.id,
+    user_id: user3.id,
+    body: "Jay Gatsby was pretty sneaky!",
+    rating: 5
+)
+review2 = Review.create!(
+    book_id: book44.id,
+    user_id: user7.id,
+    body: "I wish I had a man to hug and kiss, just like him!",
+    rating: 5
+)
+review3 = Review.create!(
+    book_id: book45.id,
+    user_id: user4.id,
+    body: "FAKE NEWS!",
+    rating: 1
+)
+review4 = Review.create!(
+    book_id: book45.id,
+    user_id: user6.id,
+    body: "Amazing. Yuge. Loved it.",
+    rating: 5
+)
+review5 = Review.create!(
+    book_id: book45.id,
+    user_id: user8.id,
+    body: "This guy clearly has my best interest at heart.",
+    rating: 3
+)
+review6 = Review.create!(
+    book_id: book3.id,
+    user_id: user12.id,
+    body: "OMG my favorite childhood book!",
+    rating: 5
+)
+review7 = Review.create!(
+    book_id: book40.id,
+    user_id: user11.id,
+    body: "Historically accurate.",
+    rating: 4
+)
+review8 = Review.create!(
+    book_id: book4.id,
+    user_id: user14.id,
+    body: "Now, be brave and don't look back. Don't look back.",
+    rating: 5
+)
+review9 = Review.create!(
+    book_id: book15.id,
+    user_id: user3.id,
+    body: "Yet another sneaky classic.",
+    rating: 5
+)
+review10 = Review.create!(
+    book_id: book26.id,
+    user_id: user5.id,
+    body: "Such good. Much wow. Must read right meow!",
+    rating: 5
+)
+review11 = Review.create!(
+    book_id: book20.id,
+    user_id: user13.id,
+    body: "Buck is such a bad ass.",
+    rating: 5
+)
+review12 = Review.create!(
+    book_id: book18.id,
+    user_id: user4.id,
+    body: "Hey this is a pretty horrorshow idea...",
+    rating: 5
+)
+review13 = Review.create!(
+    book_id: book10.id,
+    user_id: user9.id,
+    body: "This dude is my hero!",
+    rating: 5
+)
+review14 = Review.create!(
+    book_id: book13.id,
+    user_id: user10.id,
+    body: "This book was a real page turner!",
+    rating: 5
+)
+review15 = Review.create!(
+    book_id: book13.id,
+    user_id: user15.id,
+    body: "I agree!",
+    rating: 5
+)
+review16 = Review.create!(
+    book_id: book8.id,
+    user_id: user12.id,
+    body: "These dystopian novels aren't too far from the truth..",
+    rating: 4
+)
+review17 = Review.create!(
+    book_id: book9.id,
+    user_id: user13.id,
+    body: "Tralfamadorians! You can't spell slaughter without laughter.",
+    rating: 5
+)
+review18 = Review.create!(
+    book_id: book11.id,
+    user_id: user15.id,
+    body: "I literally read this book in one sitting",
+    rating: 5
+)
+review19 = Review.create!(
+    book_id: book17.id,
+    user_id: user2.id,
+    body: "This book taught me how to carpe all them diems.",
+    rating: 5
+)
+review20 = Review.create!(
+    book_id: book30.id,
+    user_id: user5.id,
+    body: "vewy scawy @.@",
+    rating: 4
+)
+review21 = Review.create!(
+    book_id: book23.id,
+    user_id: user14.id,
+    body: "Was this Anakin's idea?",
+    rating: 3
+)
+review22 = Review.create!(
+    book_id: book23.id,
+    user_id: user13.id,
+    body: "Should've used a bear trap.",
+    rating: 1
+)
+review23 = Review.create!(
+    book_id: book28.id,
+    user_id: user10.id,
+    body: "Ned Stark: the Loss of a Boss.",
+    rating: 4
+)
+review24 = Review.create!(
+    book_id: book32.id,
+    user_id: user4.id,
+    body: "I don't get it, why's everyone making him out to be the bad guy? He's rich!",
+    rating: 1
+)
+review25 = Review.create!(
+    book_id: book14.id,
+    user_id: user1.id,
+    body: "You damn right it does! *flex*",
+    rating: 5
+)
+review26 = Review.create!(
+    book_id: book34.id,
+    user_id: user10.id,
+    body: "I feel bad for this noob...",
+    rating: 4
+)
+review27 = Review.create!(
+    book_id: book11.id,
+    user_id: user14.id,
+    body: "These wizards ain't got nothing on the force!",
+    rating: 2
+)
+review28 = Review.create!(
+    book_id: book28.id,
+    user_id: user15.id,
+    body: "When will the Winds of Winter ever come out? MUST HAVE",
+    rating: 5
+)
+review29 = Review.create!(
+    book_id: book33.id,
+    user_id: user3.id,
+    body: "This book is too sneaky.. Irrefutably well-written, cuz it made me feel weird.",
+    rating: 4
+)
+review30 = Review.create!(
+    book_id: book38.id,
+    user_id: user2.id,
+    body: "zen master",
+    rating: 5
+)

@@ -81,7 +81,7 @@ class ReviewsIndex extends React.Component {
                         id="rating-input-1-3" name="rating" />
                         <label htmlFor="rating-input-1-3"
                             className="rating-star">&#9733;</label>
-                        <input type="radio" value="2"
+                    <input type="radio" value="2"
                         onChange={this.handleInput('rating')}
                         className="rating-input"
                         id="rating-input-1-2" name="rating" />
