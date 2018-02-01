@@ -404,7 +404,7 @@ review7 = Review.create!(
 review8 = Review.create!(
     book_id: book4.id,
     user_id: user14.id,
-    body: "Now, be brave and don't look back. Don't look back.",
+    body: "Now, be brave and don't look back.",
     rating: 5
 )
 review9 = Review.create!(

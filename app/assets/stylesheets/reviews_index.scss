@@ -116,7 +116,7 @@
 .rating:hover .rating-star:hover,
 .rating:hover .rating-star:hover ~ .rating-star,
 .rating-input:checked ~ .rating-star {
-  color: gold;
+  color: $gold;
 }
 
 .rating-star,
@@ -130,6 +130,6 @@
   color: black;
 }
 
-// .review-stars {
-//     display: flex;
-// } 
+.review-star {
+    color: $gold;
+} 
