@@ -86,11 +86,59 @@ user15 = User.create!(
 
 Book.destroy_all
 
-book1 = Book.create!(
-    :title => "Ulysses",
-    :author => "James Joyce",
-    :description => "Ulysses is a novel by Irish writer James Joyce. It was first serialised in parts in the American journal The Little Review from March 1918 to December 1920, and then published in its entirety by Sylvia Beach in February 1922, in Paris. It is considered to be one of the most important works of Modernist literature, and has been called 'a demonstration and summation of the entire movement'. 'Before Joyce, no writer of fiction had so foregrounded the process of thinking.' However, even proponents of Ulysses such as Anthony Burgess have described the book as 'inimitable, and also possibly mad'.",
-    :cover_img => "https://s-media-cache-ak0.pinimg.com/originals/d2/2e/85/d22e85b233818348d775b2b29fc84515.jpg"
+book45 = Book.create!(
+    :title => "Fire and Fury: Inside the Trump White House",
+    :author => "Michael Wolff",
+    :description => "The first nine months of Donald Trump's term were stormy, outrageous—and absolutely mesmerizing. Now, thanks to his deep access to the West Wing, bestselling author Michael Wolff tells the riveting story of how Trump launched a tenure as volatile and fiery as the man himself.",
+    :cover_img => "https://pbs.twimg.com/media/DS-PMEHUMAEn_31.jpg:large"
+)
+book8 = Book.create!(
+    :title => "Fahrenheit 451",
+    :author => "Ray Bradbury",
+    :description => "Guy Montag is a fireman. In his world, where television rules and literature is on the brink of extinction, firemen start fires rather than put them out. His job is to destroy the most illegal of commodities, the printed book, along with the houses in which they are hidden. Montag never questions the destruction and ruin his actions produce, returning each day to his bland life and wife, Mildred, who spends all day with her television 'family.' But then he meets an eccentric young neighbor, Clarisse, who introduces him to a past where people didn’t live in fear and to a present where one sees the world through the ideas in books instead of the mindless chatter of television. When Mildred attempts suicide and Clarisse suddenly disappears, Montag begins to question everything he has ever known. He starts hiding books in his home, and when his pilfering is discovered, the fireman has to run for his life.",
+    :cover_img => "https://816nyc.com/freshstart/wp-content/uploads/2015/12/tumblr_masbephBNb1qlxr40o1_1280.jpg"
+)
+book7 = Book.create!(
+    :title => "1984",
+    :author => "George Orwell",
+    :description => "The year 1984 has come and gone, but George Orwell's prophetic, nightmarish vision in 1949 of the world we were becoming is timelier than ever. 1984 is still the great modern classic of 'dystopia' - a startlingly original and haunting novel that creates an imaginary world that is completely convincing, from the first sentence to the last four words. No one can deny the novel's hold on the imaginations of whole generations, or the power of its admonitions - a power that seems to grow, not lessen, with the passage of time.",
+    :cover_img => "http://flavorwire.files.wordpress.com/2011/06/www-robinmalau.jpeg"
+)
+book12 = Book.create!(
+    :title => "Animal Farm",
+    :author => "George Orwell",
+    :description => "As ferociously fresh as it was more than a half century ago, this remarkable allegory of a downtrodden society of overworked, mistreated animals, and their quest to create a paradise of progress, justice, and equality is one of the most scathing satires ever published. As we witness the rise and bloody fall of the revolutionary animals, we begin to recognize the seeds of totalitarianism in the most idealistic organization; and in our most charismatic leaders, the souls of our cruelest oppressors.",
+    :cover_img => "https://i.pinimg.com/736x/92/6f/d7/926fd7c8fb5e26fea0b8a2a7663fdad4--george-orwell-farms.jpg"
+)
+book18 = Book.create!(
+    :title => "A Clockwork Orange",
+    :author => "Anthony Burgess",
+    :description => "A vicious fifteen-year-old 'droog' is the central character of this 1963 classic, whose stark terror was captured in Stanley Kubrick's magnificent film of the same title. In Anthony Burgess's nightmare vision of the future, where criminals take over after dark, the story is told by the central character, Alex, who talks in a brutal invented slang that brilliantly renders his and his friends' social pathology. A Clockwork Orange is a frightening fable about good and evil, and the meaning of human freedom. When the state undertakes to reform Alex—to 'redeem' him—the novel asks, 'At what cost?'",
+    :cover_img => "http://www.adazing.com/wp-content/uploads/2012/09/a-clockwork-orange.jpg"
+)
+book6 = Book.create!(
+    :title => "Catch-22",
+    :author => "Joseph Heller",
+    :description => "At the heart of Catch-22 resides the incomparable, malingering bombardier, Yossarian, a hero endlessly inventive in his schemes to save his skin from the horrible chances of war. His problem is Colonel Cathcart, who keeps raising the number of missions the men must fly to complete their service. Yet if Yossarian makes any attempts to excuse himself from the perilous missions that he's committed to flying, he's trapped by the Great Loyalty Oath Crusade, the bureaucratic rule from which the book takes its title: a man is considered insane if he willingly continues to fly dangerous combat missions, but if he makes the necessary formal request to be relieved of such missions, the very act of making the request proves that he's sane and therefore, ineligible to be relieved.",
+    :cover_img => "http://uploads.neatorama.com/images/posts/123/68/68123/1388375331-3.jpg"
+)
+book24 = Book.create!(
+    :title => "One Flew Over the Cuckoo's Nest",
+    :author => "Ken Kesey",
+    :description => "In this classic of the 1960s, Ken Kesey's hero is Randle Patrick McMurphy, a boisterous, brawling, fun-loving rebel who swaggers into the world of a mental hospital and takes over. A lusty, life-affirming fighter, McMurphy rallies the other patients around him by challenging the dictatorship of Nurse Ratched. He promotes gambling in the ward, smuggles in wine and women, and openly defies the rules at every turn. But this defiance, which starts as a sport, soon develops into a grim struggle, an all-out war between two relentless opponents: Nurse Ratched, back by the full power of authority, and McMurphy, who has only his own indomitable will. What happens when Nurse Ratched uses her ultimate weapon against McMurphy provides the story's shocking climax.",
+    :cover_img => "http://payload64.cargocollective.com/1/7/241708/3588599/oneflew.png"
+)
+book32 = Book.create!(
+    :title => "American Psycho",
+    :author => "Bret Easton Ellis",
+    :description => "Patrick Bateman is twenty-six and he works on Wall Street, he is handsome, sophisticated, charming and intelligent. He is also a psychopath. Taking us to head-on collision with America's greatest dream—and its worst nightmare—American Psycho is bleak, bitter, black comedy about a world we all recognise but do not wish to confront.",
+    :cover_img => "http://payload.cargocollective.com/1/4/138466/1834335/psyko1.jpg"
+)
+book15 = Book.create!(
+    :title => "The Secret Agent",
+    :author => "Joseph Conrad",
+    :description => "Mr Verloc, the secret agent, keeps a shop in London's Soho where he lives with his wife Winnie, her infirm mother, and her idiot brother, Stevie. When Verloc is reluctantly involved in an anarchist plot to blow up the Greenwich Observatory things go disastrously wrong, and what appears to be 'a simple tale' proves to involve politicians, policemen, foreign diplomats and London's fashionable society in the darkest and most surprising interrelations.",
+    :cover_img => "https://dailylit.com/media/images/covers/98.jpg"
 )
 book2 = Book.create!(
     :title => "The Great Gatsby",
@@ -116,24 +164,6 @@ book5 = Book.create!(
     :description => "When the devil arrives in 1930s Moscow, consorting with a retinue of odd associates—including a talking black cat, an assassin, and a beautiful naked witch—his antics wreak havoc among the literary elite of the world capital of atheism. Meanwhile, the Master, author of an unpublished novel about Jesus and Pontius Pilate, languishes in despair in a pyschiatric hospital, while his devoted lover, Margarita, decides to sell her soul to save him. As Bulgakov’s dazzlingly exuberant narrative weaves back and forth between Moscow and ancient Jerusalem, studded with scenes ranging from a giddy Satanic ball to the murder of Judas in Gethsemane, Margarita’s enduring love for the Master joins the strands of plot across space and time.",
     :cover_img => "http://molempire.com/app/uploads/2011/08/The-Master-and-Margarita-by-Mikhail-Bulgakov-Book-Cover.jpg"
 )
-book6 = Book.create!(
-    :title => "Catch-22",
-    :author => "Joseph Heller",
-    :description => "At the heart of Catch-22 resides the incomparable, malingering bombardier, Yossarian, a hero endlessly inventive in his schemes to save his skin from the horrible chances of war. His problem is Colonel Cathcart, who keeps raising the number of missions the men must fly to complete their service. Yet if Yossarian makes any attempts to excuse himself from the perilous missions that he's committed to flying, he's trapped by the Great Loyalty Oath Crusade, the bureaucratic rule from which the book takes its title: a man is considered insane if he willingly continues to fly dangerous combat missions, but if he makes the necessary formal request to be relieved of such missions, the very act of making the request proves that he's sane and therefore, ineligible to be relieved.",
-    :cover_img => "http://uploads.neatorama.com/images/posts/123/68/68123/1388375331-3.jpg"
-)
-book7 = Book.create!(
-    :title => "1984",
-    :author => "George Orwell",
-    :description => "The year 1984 has come and gone, but George Orwell's prophetic, nightmarish vision in 1949 of the world we were becoming is timelier than ever. 1984 is still the great modern classic of 'dystopia' - a startlingly original and haunting novel that creates an imaginary world that is completely convincing, from the first sentence to the last four words. No one can deny the novel's hold on the imaginations of whole generations, or the power of its admonitions - a power that seems to grow, not lessen, with the passage of time.",
-    :cover_img => "http://flavorwire.files.wordpress.com/2011/06/www-robinmalau.jpeg"
-)
-book8 = Book.create!(
-    :title => "Fahrenheit 451",
-    :author => "Ray Bradbury",
-    :description => "Guy Montag is a fireman. In his world, where television rules and literature is on the brink of extinction, firemen start fires rather than put them out. His job is to destroy the most illegal of commodities, the printed book, along with the houses in which they are hidden. Montag never questions the destruction and ruin his actions produce, returning each day to his bland life and wife, Mildred, who spends all day with her television 'family.' But then he meets an eccentric young neighbor, Clarisse, who introduces him to a past where people didn’t live in fear and to a present where one sees the world through the ideas in books instead of the mindless chatter of television. When Mildred attempts suicide and Clarisse suddenly disappears, Montag begins to question everything he has ever known. He starts hiding books in his home, and when his pilfering is discovered, the fireman has to run for his life.",
-    :cover_img => "https://816nyc.com/freshstart/wp-content/uploads/2015/12/tumblr_masbephBNb1qlxr40o1_1280.jpg"
-)
 book9 = Book.create!(
     :title => "Slaughterhouse-Five",
     :author => "Kurt Vonnegut",
@@ -152,12 +182,6 @@ book11 = Book.create!(
     :description => "Harry Potter has no idea how famous he is. That's because he's being raised by his miserable aunt and uncle who are terrified Harry will learn that he's really a wizard, just as his parents were. But everything changes when Harry is summoned to attend an infamous school for wizards, and he begins to discover some clues about his illustrious birthright. From the surprising way he is greeted by a lovable giant, to the unique curriculum and colorful faculty at his unusual school, Harry finds himself drawn deep inside a mystical world he never knew existed and closer to his own noble destiny.",
     :cover_img => "https://static.boredpanda.com/blog/wp-content/uploads/2016/10/harry-potter-book-covers-illustration-olly-moss-3.jpg"
 )
-book12 = Book.create!(
-    :title => "Animal Farm",
-    :author => "George Orwell",
-    :description => "As ferociously fresh as it was more than a half century ago, this remarkable allegory of a downtrodden society of overworked, mistreated animals, and their quest to create a paradise of progress, justice, and equality is one of the most scathing satires ever published. As we witness the rise and bloody fall of the revolutionary animals, we begin to recognize the seeds of totalitarianism in the most idealistic organization; and in our most charismatic leaders, the souls of our cruelest oppressors.",
-    :cover_img => "https://i.pinimg.com/736x/92/6f/d7/926fd7c8fb5e26fea0b8a2a7663fdad4--george-orwell-farms.jpg"
-)
 book13 = Book.create!(
     :title => "The Alchemist",
     :author => "Paulo Coelho",
@@ -170,12 +194,6 @@ book14 = Book.create!(
     :description => "The quintessential novel of the Lost Generation, The Sun Also Rises is one of Ernest Hemingway's masterpieces and a classic example of his spare but powerful writing style. A poignant look at the disillusionment and angst of the post-World War I generation, the novel introduces two of Hemingway's most unforgettable characters: Jake Barnes and Lady Brett Ashley. The story follows the flamboyant Brett and the hapless Jake as they journey from the wild nightlife of 1920s Paris to the brutal bullfighting rings of Spain with a motley group of expatriates. It is an age of moral bankruptcy, spiritual dissolution, unrealized love, and vanishing illusions. First published in 1926, The Sun Also Rises helped to establish Hemingway as one of the greatest writers of the twentieth century.",
     :cover_img => "https://i.pinimg.com/736x/2d/84/07/2d84075495dab9fbe51b1bba2021d5ee--ernest-hemingway-the-sun-also-rises.jpg"
 )
-book15 = Book.create!(
-    :title => "The Secret Agent",
-    :author => "Joseph Conrad",
-    :description => "Mr Verloc, the secret agent, keeps a shop in London's Soho where he lives with his wife Winnie, her infirm mother, and her idiot brother, Stevie. When Verloc is reluctantly involved in an anarchist plot to blow up the Greenwich Observatory things go disastrously wrong, and what appears to be 'a simple tale' proves to involve politicians, policemen, foreign diplomats and London's fashionable society in the darkest and most surprising interrelations.",
-    :cover_img => "https://dailylit.com/media/images/covers/98.jpg"
-)
 book16 = Book.create!(
     :title => "Women in Love",
     :author => "D.H. Lawrence",
@@ -187,12 +205,6 @@ book17 = Book.create!(
     :author => "Jack Kerouac",
     :description => "On the Road chronicles Jack Kerouac's years traveling the North American continent with his friend Neal Cassady, 'a sideburned hero of the snowy West.' As 'Sal Paradise' and 'Dean Moriarty,' the two roam the country in a quest for self-knowledge and experience. Kerouac's love of America, his compassion for humanity, and his sense of language as jazz combine to make On the Road an inspirational work of lasting importance. Kerouac's classic novel of freedom and longing defined what it meant to be 'Beat' and has inspired every generation since its initial publication.",
     :cover_img => "https://i.pinimg.com/736x/88/c2/5e/88c25eb20dd750d70384937dbf55a4d2--travel-books-classic-books.jpg"
-)
-book18 = Book.create!(
-    :title => "A Clockwork Orange",
-    :author => "Anthony Burgess",
-    :description => "A vicious fifteen-year-old 'droog' is the central character of this 1963 classic, whose stark terror was captured in Stanley Kubrick's magnificent film of the same title. In Anthony Burgess's nightmare vision of the future, where criminals take over after dark, the story is told by the central character, Alex, who talks in a brutal invented slang that brilliantly renders his and his friends' social pathology. A Clockwork Orange is a frightening fable about good and evil, and the meaning of human freedom. When the state undertakes to reform Alex—to 'redeem' him—the novel asks, 'At what cost?'",
-    :cover_img => "http://www.adazing.com/wp-content/uploads/2012/09/a-clockwork-orange.jpg"
 )
 book19 = Book.create!(
     :title => "Heart of Darkness",
@@ -223,12 +235,6 @@ book23 = Book.create!(
     :author => "William Golding",
     :description => "When a plane crashes on a remote island, a small group of schoolboys are the sole survivors. From the prophetic Simon and virtuous Ralph to the lovable Piggy and brutish Jack, each of the boys attempts to establish control as the reality - and brutal savagery - of their situation sets in. The boys' struggle to find a way of existing in a community with no fixed boundaries invites readers to evaluate the concepts involved in social and political constructs and moral frameworks. Ideas of community, leadership, and the rule of law are called into question as the reader has to consider who has a right to power, why, and what the consequences of the acquisition of power may be. Often compared to Catcher in the Rye, Lord of the Flies also represents a coming-of-age story of innocence lost.",
     :cover_img => "https://78.media.tumblr.com/a8624be26357af403b8824e1e71dbea9/tumblr_oebpqmOQAQ1t4ug4io1_r2_500.png"
-)
-book24 = Book.create!(
-    :title => "One Flew Over the Cuckoo's Nest",
-    :author => "Ken Kesey",
-    :description => "In this classic of the 1960s, Ken Kesey's hero is Randle Patrick McMurphy, a boisterous, brawling, fun-loving rebel who swaggers into the world of a mental hospital and takes over. A lusty, life-affirming fighter, McMurphy rallies the other patients around him by challenging the dictatorship of Nurse Ratched. He promotes gambling in the ward, smuggles in wine and women, and openly defies the rules at every turn. But this defiance, which starts as a sport, soon develops into a grim struggle, an all-out war between two relentless opponents: Nurse Ratched, back by the full power of authority, and McMurphy, who has only his own indomitable will. What happens when Nurse Ratched uses her ultimate weapon against McMurphy provides the story's shocking climax.",
-    :cover_img => "http://payload64.cargocollective.com/1/7/241708/3588599/oneflew.png"
 )
 book25 = Book.create!(
     :title => "Atonement",
@@ -271,12 +277,6 @@ book31 = Book.create!(
     :author => "Thomas Pynchon",
     :description => "Suffused with rich satire, chaotic brilliance, verbal turbulence and wild humor, The Crying of Lot 49 opens as Oedipa Maas discovers that she has been made executrix of a former lover's estate. The performance of her duties sets her on a strange trail of detection, in which bizarre characters crowd in to help or confuse her. But gradually, death, drugs, madness and marriage combine to leave Oedipa in isolation on the threshold of revelation, awaiting the Crying of Lot 49.",
     :cover_img => "https://s-media-cache-ak0.pinimg.com/originals/21/e2/35/21e23583eb6151d57c4830369d3955df.jpg"
-)
-book32 = Book.create!(
-    :title => "American Psycho",
-    :author => "Bret Easton Ellis",
-    :description => "Patrick Bateman is twenty-six and he works on Wall Street, he is handsome, sophisticated, charming and intelligent. He is also a psychopath. Taking us to head-on collision with America's greatest dream—and its worst nightmare—American Psycho is bleak, bitter, black comedy about a world we all recognise but do not wish to confront.",
-    :cover_img => "http://payload.cargocollective.com/1/4/138466/1834335/psyko1.jpg"
 )
 book33 = Book.create!(
     :title => "Lolita",
@@ -350,11 +350,11 @@ book44 = Book.create!(
     :description => "Anyone who lived through the 1980s may find it impossible—inconceivable, even—to equate The Princess Bride with anything other than the sweet, celluloid romance of Westley and Buttercup, but the film is only a fraction of the ingenious storytelling you'll find in these pages. Rich in character and satire, the novel is set in 1941 and framed cleverly as an 'abridged' retelling of a centuries-old tale set in the fabled country of Florin that's home to 'Beasts of all natures and descriptions. Pain. Death. Brave men. Coward men. Strongest men. Chases. Escapes. Lies. Truths. Passions.'",
     :cover_img => "http://prodimage.images-bn.com/pimages/9780544173767_p0_v2_s1200x630.jpg"
 )
-book45 = Book.create!(
-    :title => "Fire and Fury: Inside the Trump White House",
-    :author => "Michael Wolff",
-    :description => "The first nine months of Donald Trump's term were stormy, outrageous—and absolutely mesmerizing. Now, thanks to his deep access to the West Wing, bestselling author Michael Wolff tells the riveting story of how Trump launched a tenure as volatile and fiery as the man himself.",
-    :cover_img => "https://pbs.twimg.com/media/DS-PMEHUMAEn_31.jpg:large"
+book1 = Book.create!(
+    :title => "Ulysses",
+    :author => "James Joyce",
+    :description => "Ulysses is a novel by Irish writer James Joyce. It was first serialised in parts in the American journal The Little Review from March 1918 to December 1920, and then published in its entirety by Sylvia Beach in February 1922, in Paris. It is considered to be one of the most important works of Modernist literature, and has been called 'a demonstration and summation of the entire movement'. 'Before Joyce, no writer of fiction had so foregrounded the process of thinking.' However, even proponents of Ulysses such as Anthony Burgess have described the book as 'inimitable, and also possibly mad'.",
+    :cover_img => "https://s-media-cache-ak0.pinimg.com/originals/d2/2e/85/d22e85b233818348d775b2b29fc84515.jpg"
 )
 
 Review.destroy_all
