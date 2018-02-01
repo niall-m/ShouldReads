@@ -12,7 +12,8 @@ const customStyles = {
         color                 : '#51452d',
         background            : '#f4f1eb',
         transform             : 'translate(-50%, -50%)'
-    }
+    },
+    overlay: {zIndex: 11}
 };
 
 class LoginModal extends React.Component {
