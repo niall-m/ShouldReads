@@ -41,7 +41,9 @@ class BookShow extends React.Component {
                             </div>
                         </div>
                         <div className="show-main-bottom">
-                            <ShelvingsContainer book={this.props.book} />
+                            <div className="show-shelvings">
+                                <ShelvingsContainer book={this.props.book} />
+                            </div>
                             <div className="show-reviews">
                                 <div className="book-reviews">
                                     <ReviewsIndexContainer />

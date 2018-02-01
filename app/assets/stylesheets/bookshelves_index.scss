@@ -6,8 +6,9 @@
     align-content: center;
     justify-content: space-around;
     flex-direction: column;
-    background-color: $background;
     min-height: 400px;
+    padding: 1vh;
+    background-color: $shelves;
 }
 
 .bookshelves-index-form {

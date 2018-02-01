@@ -10,10 +10,14 @@ const customStyles = {
         bottom                : 'auto',
         marginRight           : '-50%',
         color                 : '#51452d',
-        background            : '#f4f1eb',
+        width                 : '25%',
+        background            : 'linear-gradient(to right, #ece9e6, #ffffff)',
         transform             : 'translate(-50%, -50%)'
     },
-    overlay: {zIndex: 11}
+    overlay: {
+        zIndex: 11,
+        background: "linear-gradient(to top, #1e130cce, #9a8478cc)",
+    }
 };
 
 class LoginModal extends React.Component {
