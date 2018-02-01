@@ -1,1 +1,1 @@
-json.extract! bookshelf, :id, :user_id, :shelf_name, :books
+json.extract! bookshelf, :id, :user_id, :shelf_name, :default_shelf, :books

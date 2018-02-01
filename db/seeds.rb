@@ -539,3 +539,25 @@ review30 = Review.create!(
     body: "zen master",
     rating: 5
 )
+
+Bookshelf.destroy_all
+
+shelf1 = Bookshelf.create!(
+    shelf_name: "Already Read",
+    user_id: user1.id,
+    default_shelf: true
+)
+shelf2 = Bookshelf.create!(
+    shelf_name: "Currently Reading",
+    user_id: user1.id,
+    default_shelf: true
+)
+shelf3 = Bookshelf.create!(
+    shelf_name: "Want To Read",
+    user_id: user1.id,
+    default_shelf: true
+)
+shelf4 = Bookshelf.create!(
+    shelf_name: "Tasty Treats",
+    user_id: user1.id
+)

@@ -14,6 +14,13 @@ class BookshelvesIndexItem extends React.Component {
 
     render() {
         const { bookshelf, deleteBookshelf } = this.props;
+        const deleteBtn = (this.props.bookshelf && !this.props.bookshelf.default_shelf) ? (
+            <button className="delete-btn" onClick={this.handleSubmit}>
+                <i className="fa fa-times" aria-hidden="true"></i>
+            </button>
+        ) : (
+            null
+        );
         return (
             <li className="bookshelf-index-item">
                 <Link to={`/bookshelves/${bookshelf.id}`} className="bookshelf-link">
@@ -23,9 +30,7 @@ class BookshelvesIndexItem extends React.Component {
                         </h2>
                     </div>
                 </Link>
-                <button className="delete-btn" onClick={this.handleSubmit}>
-                    <i className="fa fa-times" aria-hidden="true"></i>
-                </button>
+                {deleteBtn}
             </li>
         );
     }
