@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import BookshelvesIndexContainer from '../bookshelves/bookshelves_index_container';
+import BookshelvesIndexContainer from '../bookshelves/bookshelves_index_container';
 import ShelvingsContainer from '../book_shelvings/shelvings_container';
 import ReviewsIndexContainer from '../reviews/reviews_index_container.jsx';
 
@@ -36,19 +36,24 @@ class BookShow extends React.Component {
                                 <br />
                                 <p>{book.description}</p>
                             </div>
-                            {/* <div className="book-shelves">
+                            <div className="book-shelves">
                                 <BookshelvesIndexContainer />
-                            </div> */}
+                            </div>
                         </div>
                         <div className="show-main-bottom">
                             <ShelvingsContainer book={this.props.book} />
+                            <div className="show-reviews">
+                                <div className="book-reviews">
+                                    <ReviewsIndexContainer />
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div className="show-reviews">
+                    {/* <div className="show-reviews">
                         <div className="book-reviews">
                             <ReviewsIndexContainer />
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         );

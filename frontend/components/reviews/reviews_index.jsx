@@ -100,6 +100,7 @@ class ReviewsIndex extends React.Component {
 
     render() {
         const { 
+            currentUser,
             reviews,
             fetchReviews,
             createReview,
@@ -155,6 +156,7 @@ class ReviewsIndex extends React.Component {
                             <ReviewsIndexItem
                             key={review.id}
                             review={review}
+                            currentUser={currentUser}
                             deleteReview={deleteReview} />
                         ))
                     }

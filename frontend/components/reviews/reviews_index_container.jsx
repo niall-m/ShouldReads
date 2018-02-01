@@ -12,7 +12,8 @@ import {
 
 const mapStateToProps = state => ({
     reviews: Object.values(state.entities.reviews),
-    errors: state.errors.reviews
+    errors: state.errors.reviews,
+    currentUser: state.session.currentUser
 });
 
 const mapDispatchToProps = dispatch => ({

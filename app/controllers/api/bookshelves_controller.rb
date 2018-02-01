@@ -10,14 +10,14 @@ class Api::BookshelvesController < ApplicationController
     if @bookshelf
       render :show
     else
-      render json: ["Couldn't find it"]
+      render json: ["Invalid parameters."]
     end
   end
 
   def create
     @bookshelf = Bookshelf.new(bookshelf_params)
     @bookshelf.user_id = current_user.id
-    if @bookshelf.save!
+    if @bookshelf.save
       render :show
     else
       render json: @bookshelf.errors.full_messages, status: 422
