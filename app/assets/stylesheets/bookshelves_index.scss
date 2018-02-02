@@ -56,12 +56,12 @@
     border-radius: 4px;
     color: $word;
     font-weight: 500;
-    transition: background-color .3s, color .3s;
+    transition: background .3s, color .3s;
 }
 
 .create-bookshelf-btn:hover {
-    background-color: $boarders;
     color: $cream;
+    background: $boarders;
 }
 
 .delete-btn {
@@ -70,4 +70,9 @@
 
 .delete-btn:hover {
     color: $hoverword;
+}
+
+select:hover {
+    color: $cream;
+    background: $boarders;
 }
