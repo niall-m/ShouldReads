@@ -27,7 +27,7 @@ class ShelvingItem extends React.Component {
                         </h2>
                     </div>
                 </Link>
-                <button title="Remove From Shelf" className="delete-btn" onClick={this.handleSubmit}>
+                <button title="Remove From Shelf" className="delete-shelving-btn" onClick={this.handleSubmit}>
                     <i className="fa fa-times" aria-hidden="true"></i>
                 </button>
             </li>

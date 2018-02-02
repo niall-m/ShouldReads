@@ -6,6 +6,7 @@ import SignupContainer from './session/signup_container';
 import LoginContainer from './session/login_container';
 import BookIndexContainer from './books/book_index_container';
 import BookShowContainer from './books/book_show_container';
+import BookshelfShowContainer from './bookshelves/bookshelf_show_container';
 import { 
     AuthRoute,
     ProtectedRoute
@@ -19,6 +20,7 @@ const App = () => (
             <AuthRoute path="/signup" component={SignupContainer} />
             <ProtectedRoute path="/books/:bookId" component={BookShowContainer} />
             <ProtectedRoute path="/books" component={BookIndexContainer} />
+            <ProtectedRoute path="/bookshelves/:bookshelfId" component={BookshelfShowContainer} />
         </Switch>
     </div>
 );

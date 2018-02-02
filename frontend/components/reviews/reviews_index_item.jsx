@@ -19,7 +19,7 @@ class ReviewsIndexItem extends React.Component {
             stars.push(<p className="review-star" key={`star-${i}`}>&#9733;</p>);
         }
         const deleteBtn = (this.props.currentUser.id === review.user.id) ? (
-            <button title="Delete Review" className="delete-btn" onClick={this.handleSubmit}>
+            <button title="Delete Review" className="delete-review-btn" onClick={this.handleSubmit}>
                 <i className="fa fa-times" aria-hidden="true"></i>
             </button>
         ) : (

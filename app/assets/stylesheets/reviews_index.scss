@@ -38,8 +38,8 @@
 .reviews-form-container textarea {
     padding: 1vh;
     border: 1px solid $boarders;
-    min-height: 150px;
-    min-width: 300px;
+    min-height: 10vh;
+    width: 30vh;
 }
 
 .create-review-btn {
@@ -95,9 +95,9 @@
     background-color: $cream;
 }
 
-// .delete-btn {
-//     padding: 1vh;
-// }
+.delete-review-btn {
+    padding: 1vh;
+}
 
 .rating {
     overflow: hidden;
