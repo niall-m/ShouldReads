@@ -1,42 +1,54 @@
 import React from 'react';
 // import { Route } from 'react-router-dom';
-import BookshelvesIndexItem from './bookshelves_index_item';
 import BookshelfShowContainer from './bookshelf_show_container';
+import BookshelfShowItem from './bookshelf_show_item';
 import BookshelvesIndexContainer from './bookshelves_index_container';
 
 class BookshelfShow extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            
-        };
-        this.handleSubmit = this.handleSubmit.bind(this);
-        this.handleInput = this.handleInput.bind(this);
     }
 
     componentDidMount() {
-        console.log(this.props);
-    }
-
-    handleInput(type) {
-        return (e) => {
-            this.setState({ [type]: e.target.value });
-        };
-    }
-
-    handleSubmit(e) {
-        e.preventDefault();
-        this.props.createBookshelf(this.state)
-            .then(this.setState( { shelf_name: '' } ));
+        this.props.fetchBookshelf(this.props.match.params.bookshelfId);
     }
 
     render() {
-        const { bookshelves, deleteBookshelf } = this.props;
+        const { 
+            bookshelf, 
+            deleteBookshelf, 
+            deleteShelving,
+            fetchBookshelves } = this.props;
+        if (!bookshelf) {
+            return <div className="loading">Loading...</div>;
+        }
+        const books = bookshelf.books;
+
         return (
             <div className="bookshelf-show-background">
-                <div className="bookshelves-show">
+                <div className="bookshelf-index-show">
                     <BookshelvesIndexContainer />
                 </div>
+                <section className="bookshelf-show-container">
+                    <div className="bookshelf-show-header">
+                        <h3>{bookshelf.shelf_name}</h3>
+                        <h3>Title</h3>
+                        <h3>Author</h3>
+                    </div>
+                    <ul className="bookshelf-shelvings-list">
+                        {
+                            books.map(book => (
+                                <BookshelfShowItem
+                                key={book.id}
+                                book={book}
+                                bookshelf={bookshelf}
+                                deleteShelving={deleteShelving}
+                                fetchBookshelves={fetchBookshelves} />
+                                )
+                            )
+                        }
+                    </ul>
+                </section>
             </div>
         );
     }
