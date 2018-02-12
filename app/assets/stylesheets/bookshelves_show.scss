@@ -28,26 +28,30 @@
     padding: 3vh;
 }
 
+.bookshelf-show-container p {
+    margin-top: 10vh;
+}
+
 .bookshelf-show-header {
     display: grid;
-    grid-template-columns: 25% 30% 35%;
+    grid-template-columns: 30% 30% 30% 10%;
 }
 
 .bookshelf-show-title:hover {
     color: $hoverword;
 }
 
-.bookshelf-shelvings-list {
-
-}
-
 .bookshelf-show-item {
     display: grid;
-    grid-template-columns: 25% 36% 30% 10%;
+    grid-template-columns: 30% 30% 30% 10%;
     align-items: center;
     // justify-content: space-between;
     padding: 5vh 5vh 5vh 10vh;
     border-bottom: 1px solid $boarders;
+}
+
+.bookshelf-show-item h2 {
+    padding: 1vh;
 }
 
 .bookshelf-show-item:last-child {
@@ -62,4 +66,8 @@
 .bookshelf-show-item h2 {
     font-size: 20px;
     max-width: 30vh;
+}
+
+.shelf-name {
+    text-decoration: underline;
 }

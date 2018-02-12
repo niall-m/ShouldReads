@@ -14,7 +14,11 @@ class BookshelvesIndexItem extends React.Component {
 
     render() {
         const { bookshelf, deleteBookshelf } = this.props;
-        const deleteBtn = (this.props.bookshelf && !this.props.bookshelf.default_shelf) ? (
+        // const currentShelf = this.props.match.params.bookshelfId; // this.props.bookshelf.id;
+        console.log(this.props);
+        const deleteBtn = (
+            this.props.bookshelf && !this.props.bookshelf.default_shelf // && !currentShelf
+        ) ? (
             <button title="Delete Shelf" className="delete-bookshelf-btn" onClick={this.handleSubmit}>
                 <i className="fa fa-times" aria-hidden="true"></i>
             </button>
