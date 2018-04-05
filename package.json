@@ -15,6 +15,7 @@
     "lodash": "^4.17.4",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
+    "react-favicon": "0.0.14",
     "react-modal": "^3.1.11",
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
@@ -23,9 +24,11 @@
     "redux-thunk": "^2.2.0",
     "webpack": "^3.8.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "jest": "^22.4.3"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "postinstall": "webpack",
     "webpack": "webpack --watch"
   },
