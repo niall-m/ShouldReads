@@ -30,13 +30,14 @@ class Shelvings extends React.Component {
     }
 
     render() {
-        const { book, bookshelves, deleteShelving } = this.props;
-        const shelvings = this.props.book.bookshelves;
+        const { book, bookshelves, deleteShelving, currentUser } = this.props;
+        const shelvings = book.bookshelves.filter(shelf => shelf.user_id === currentUser.id);
+
         return (
             <section className="show-shelves-container">
                 <form className="show-shelves-form">
-                    <select onChange={this.handleInput('shelf_id')}>
-                        <option selected="selected" disabled>select a shelf...</option>
+                    <select value={this.state.shelf_id} onChange={this.handleInput('shelf_id')}>
+                        <option value={0} disabled>select a shelf...</option>
                         {
                             bookshelves.map(shelf => (
                                 <option
@@ -48,8 +49,7 @@ class Shelvings extends React.Component {
                         }
                     </select>
                     <br />&nbsp;<br />
-                    <button className="show-shelf-btn" 
-                        onClick={this.handleSubmit}>Add to Shelf</button>
+                    <button className="show-shelf-btn" onClick={this.handleSubmit}>Add to Shelf</button>
                 </form>
                 <h3>This book is on the following shelves:</h3>
                 <ul className="show-shelvings-per-book">

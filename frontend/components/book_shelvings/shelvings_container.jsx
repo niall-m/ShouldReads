@@ -8,7 +8,8 @@ import {
 } from '../../actions/shelving_actions';
 
 const mapStateToProps = state => ({
-    bookshelves: Object.values(state.entities.bookshelves)
+    bookshelves: Object.values(state.entities.bookshelves),
+    currentUser: state.session.currentUser
 });
 
 const mapDispatchToProps = dispatch => ({
