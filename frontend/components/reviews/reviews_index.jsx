@@ -16,19 +16,15 @@ class ReviewsIndex extends React.Component {
 
     componentWillMount() {
         this.props.clearErrors();
-    }
-    
-    componentDidMount() {
         this.props.fetchReviews(this.props.match.params.bookId);
     }
 
     handleInput(type) {
         if (type === "rating"){
             return (e) => this.setState({ [type]: parseInt(e.target.value) });
+        } else {
+            return (e) => this.setState({ [type]: e.target.value });
         }
-        return (e) => {
-            this.setState({ [type]: e.target.value });
-        };
     }
 
     handleSubmit(e) {
@@ -111,7 +107,6 @@ class ReviewsIndex extends React.Component {
         if (Object.keys(reviews).length === 0) {
             return (
                 <div>
-                    <div className="loading">No Reviews...</div>
                     <form className="reviews-form">
                         <div className="reviews-form-container">
                             <h2>Write A Review</h2>
@@ -128,6 +123,7 @@ class ReviewsIndex extends React.Component {
                     <div className="session-form-errors">
                         {this.errors()}
                     </div>
+                    <div className="loading">Write the first review!</div>
                 </div>
             );
         }

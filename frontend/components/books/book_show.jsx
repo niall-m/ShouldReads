@@ -9,13 +9,12 @@ class BookShow extends React.Component {
         super(props);
     }
 
-    componentDidMount() {
+    componentWillMount() {
         this.props.fetchBook(this.props.match.params.bookId);
-        // console.log(this.props);
     }
 
     render () {
-        const book = this.props.book;
+        const { book } = this.props;
         if (!book) {
             return <div className="loading">Loading...</div>;
         }
@@ -43,7 +42,7 @@ class BookShow extends React.Component {
                         </div>
                         <div className="show-main-bottom">
                             <div className="show-shelvings">
-                                <ShelvingsContainer book={this.props.book} />
+                                <ShelvingsContainer book={book} />
                             </div>
                             <div className="show-reviews">
                                 <div className="book-reviews">
@@ -52,11 +51,6 @@ class BookShow extends React.Component {
                             </div>
                         </div>
                     </div>
-                    {/* <div className="show-reviews">
-                        <div className="book-reviews">
-                            <ReviewsIndexContainer />
-                        </div>
-                    </div> */}
                 </div>
             </div>
         );
