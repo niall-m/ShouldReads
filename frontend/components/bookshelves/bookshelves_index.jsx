@@ -1,5 +1,4 @@
 import React from 'react';
-// import { Route } from 'react-router-dom';
 import BookshelvesIndexItem from './bookshelves_index_item';
 import BookshelfShowContainer from './bookshelf_show_container';
 

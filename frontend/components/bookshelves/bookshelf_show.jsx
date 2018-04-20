@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import BookshelfShowContainer from './bookshelf_show_container';
 import BookshelfShowItem from './bookshelf_show_item';
 import BookshelvesIndexContainer from './bookshelves_index_container';

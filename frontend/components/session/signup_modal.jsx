@@ -69,7 +69,6 @@ class SignupModal extends React.Component {
             email: this.state.email
         };
         this.props.signup(user);
-            // .then(() => this.props.history.push('/books'));
     }
 
     handleDemo(e) {

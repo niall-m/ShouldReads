@@ -9,7 +9,6 @@ class BookshelfShowItem extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        console.log(this.props);
         let shelving = {
             book_id: this.props.book.id,
             shelf_id: this.props.bookshelf.id
@@ -20,7 +19,7 @@ class BookshelfShowItem extends React.Component {
 
     render() {
         const { book, deleteShelving } = this.props;
-
+        
         return (
             <li className="bookshelf-show-item">
                 <Link to={`/books/${book.id}`} className="bookshelf-book-cover">

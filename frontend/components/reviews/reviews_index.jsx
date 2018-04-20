@@ -14,7 +14,7 @@ class ReviewsIndex extends React.Component {
         this.handleInput = this.handleInput.bind(this);
     }
 
-    componentWillMount() {
+    componentDidMount() {
         this.props.clearErrors();
         this.props.fetchReviews(this.props.match.params.bookId);
     }

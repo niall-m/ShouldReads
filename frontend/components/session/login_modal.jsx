@@ -66,7 +66,6 @@ class LoginModal extends React.Component {
             password: this.state.password
         };
         this.props.login(user);
-            // .then(() => this.props.history.push('/books'));
     }
 
     handleDemo(e) {

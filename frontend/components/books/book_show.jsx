@@ -9,7 +9,7 @@ class BookShow extends React.Component {
         super(props);
     }
 
-    componentWillMount() {
+    componentDidMount() {
         this.props.fetchBook(this.props.match.params.bookId);
     }
 
