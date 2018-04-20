@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 class BookshelvesIndexItem extends React.Component {
     constructor(props) {
@@ -9,22 +9,24 @@ class BookshelvesIndexItem extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.deleteBookshelf(this.props.bookshelf.id);
+        if (this.props.match.params.bookshelfId == this.props.bookshelf.id) {
+            this.props.deleteBookshelf(this.props.bookshelf.id);
+            this.props.history.push("/");
+        } else {
+            this.props.deleteBookshelf(this.props.bookshelf.id);
+        }
     }
 
     render() {
         const { bookshelf, deleteBookshelf } = this.props;
-        // const currentShelf = this.props.match.params.bookshelfId; // this.props.bookshelf.id;
-        console.log(this.props);
-        const deleteBtn = (
-            this.props.bookshelf && !this.props.bookshelf.default_shelf // && !currentShelf
-        ) ? (
+        const deleteBtn = (bookshelf && !bookshelf.default_shelf) ? (
             <button title="Delete Shelf" className="delete-bookshelf-btn" onClick={this.handleSubmit}>
                 <i className="fa fa-times" aria-hidden="true"></i>
             </button>
         ) : (
             null
         );
+        
         return (
             <li className="bookshelf-index-item">
                 {deleteBtn}
@@ -40,4 +42,4 @@ class BookshelvesIndexItem extends React.Component {
     }
 }
 
-export default BookshelvesIndexItem;
+export default withRouter(BookshelvesIndexItem);
