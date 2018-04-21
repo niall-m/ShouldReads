@@ -29,7 +29,7 @@ class BookshelvesIndex extends React.Component {
     }
 
     render() {
-        const { bookshelves, deleteBookshelf } = this.props;
+        const { bookshelves, deleteBookshelf, match, history } = this.props;
         return (
             <div className="bookshelves-index-container">
                 <form className="bookshelves-index-form">
@@ -50,6 +50,8 @@ class BookshelvesIndex extends React.Component {
                             <BookshelvesIndexItem
                             key={bookshelf.id}
                             bookshelf={bookshelf}
+                            history={history}
+                            match={match}
                             deleteBookshelf={deleteBookshelf} />
                             )
                         )

@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import BookshelvesIndex from './bookshelves_index';
 import {
     fetchBookshelves,
@@ -21,7 +22,7 @@ const mapDispatchToProps = dispatch => ({
     deleteBookshelf: bookshelfId => dispatch(deleteBookshelf(bookshelfId))
 });
 
-export default connect(
+export default withRouter(connect(
     mapStateToProps,
     mapDispatchToProps
-)(BookshelvesIndex);
+)(BookshelvesIndex));

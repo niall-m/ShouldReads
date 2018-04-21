@@ -1,5 +1,4 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
 import BookshelfShowContainer from './bookshelf_show_container';
 import BookshelfShowItem from './bookshelf_show_item';
 import BookshelvesIndexContainer from './bookshelves_index_container';
@@ -72,4 +71,4 @@ class BookshelfShow extends React.Component {
     }
 }
 
-export default withRouter(BookshelfShow);
+export default BookshelfShow;

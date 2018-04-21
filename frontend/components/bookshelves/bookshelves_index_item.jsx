@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 class BookshelvesIndexItem extends React.Component {
     constructor(props) {
@@ -42,4 +42,4 @@ class BookshelvesIndexItem extends React.Component {
     }
 }
 
-export default withRouter(BookshelvesIndexItem);
+export default BookshelvesIndexItem;
