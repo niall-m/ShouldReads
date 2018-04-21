@@ -8,17 +8,17 @@ export default () => (
                 <div className="about-catalogue">
                     <div className="section-header">
                     </div>
-                    <p>Peruse the catalogue of books.</p>
+                    <p>Create custom bookshelves to keep organized for any occasion.</p>
                 </div>
                 <div className="about-tracking">
                     <div className="section-header">
                     </div>
-                    <p>Create your own bookshelves to keep track of what you've read!</p>
+                    <p>Peruse the catalogue and shelve books wherever you like.</p>
                 </div>
                 <div className="about-reviews">
                     <div className="section-header">
                     </div>
-                    <p>Rate your reads!</p>
+                    <p>Rate and review your reads.</p>
                 </div>
             </div>
         </div>
