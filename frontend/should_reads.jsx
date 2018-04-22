@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Root from './components/root';
 import createStore from './store/store';
-// import { searchBookDatabase } from './util/book_api_util';
+import { searchBookDatabase } from './util/book_api_util';
 
 document.addEventListener("DOMContentLoaded", () => {
     const root = document.getElementById("root");
@@ -17,6 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const store = createStore(preloadedState);
     // window.getState = store.getState;
     // window.dispatch = store.dispatch;
-    // window.searchBookDatabase = searchBookDatabase;
+    window.searchBookDatabase = searchBookDatabase;
     ReactDOM.render(<Root store={store}/>, root);
 });

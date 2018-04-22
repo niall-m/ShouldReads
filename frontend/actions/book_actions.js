@@ -2,6 +2,7 @@ import * as BookApiUtil from '../util/book_api_util';
 
 export const RECEIVE_ALL_BOOKS = 'RECEIVE_ALL_BOOKS';
 export const RECEIVE_BOOK = 'RECEIVE_BOOK';
+export const RECEIVE_SEARCH_RESULTS = 'RECEIVE_SEARCH_RESULTS';
 
 export const receiveAllBooks = books => ({
     type: RECEIVE_ALL_BOOKS,
@@ -23,14 +24,12 @@ export const fetchBook = bookId => dispatch => (
         .then(book => dispatch(receiveBook(book)))
 );
 
-// export const RECEIVE_SEARCH_RESULTS = 'RECEIVE_SEARCH_RESULTS';
+const receiveSearchResults = (searchResults) => ({
+    type: RECEIVE_SEARCH_RESULTS,
+    searchResults
+});
 
-// const receiveSearchResults = (searchResults) => ({
-//     type: RECEIVE_SEARCH_RESULTS,
-//     searchResults
-// });
-
-// export const searchDatabase = (query) => dispatch => (
-//     BookApiUtil.searchBookDatabase(query)
-//         .then(results => dispatch(receiveSearchResults))
-// );
+export const searchDatabase = (query) => dispatch => (
+    BookApiUtil.searchBookDatabase(query)
+        .then(results => dispatch(receiveSearchResults(results)))
+);
