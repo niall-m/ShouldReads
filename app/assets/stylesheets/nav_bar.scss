@@ -66,7 +66,14 @@
 
 .book-search {
     padding: 8px;
-    border: 1px solid $boarders;
+    border: 2px solid $boarders;
     border-radius: 5px;
-    width: 300px;
+    width: 20vw;
+}
+
+.search-results {
+    position: absolute;
+    top: 62px;
+    width: 20vw;
+    background-color: white;
 }

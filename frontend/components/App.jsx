@@ -15,7 +15,7 @@ import {
 
 const App = () => (
     <div>
-        <Favicon url="http://icons.iconarchive.com/icons/hopstarter/soft-scraps/16/Book-icon.png" />
+        <Favicon url="//drhktpaw9j8bp.cloudfront.net/favicon-book.ico" />
         <Route path="/" component={NavBarContainer} />
         <Switch>
             <AuthRoute exact path="/" component={Splash} />

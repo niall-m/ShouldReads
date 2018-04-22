@@ -18,10 +18,11 @@ class BookshelfShow extends React.Component {
             deleteBookshelf, 
             deleteShelving,
             fetchBookshelves } = this.props;
+        const books = bookshelf.books;
+        
         if (!bookshelf) {
             return <div className="loading">Loading...</div>;
         }
-        const books = bookshelf.books;
 
         if (books.length < 1) {
             return (

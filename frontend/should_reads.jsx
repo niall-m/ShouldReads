@@ -17,6 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const store = createStore(preloadedState);
     // window.getState = store.getState;
     // window.dispatch = store.dispatch;
-    window.searchBookDatabase = searchBookDatabase;
+    // window.searchBookDatabase = searchBookDatabase;
     ReactDOM.render(<Root store={store}/>, root);
 });
