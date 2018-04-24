@@ -1,5 +1,5 @@
 import React from 'react';
-// import BookSearchItem from './book_search_item';
+import BookSearchItem from './book_search_item';
 import { Link } from 'react-router-dom';
 import onClickOutside from "react-onclickoutside";
 
@@ -29,23 +29,19 @@ class BookSearch extends React.Component {
 
     renderResults() {
         if (this.state.searchValue === '') return null;
-        let bookSearchResults = [];
         let results = Object.values(this.props.searchResults);
-        results.forEach(book => bookSearchResults.push(book));
-        console.log(bookSearchResults, "bookSearchResults");
-        if (bookSearchResults.length > 0) {
+        const { history } = this.props;
+        if (results.length > 0) {
             return (
                 <ul>
                     <li>matching books</li>
                     {
-                        bookSearchResults.map(book => (
-                            <li className="book-index-item" key={book.id}>
-                                <Link to={`/books/${book.id}`}
-                                // onClick={this.clearState()}
-                                >
-                                    {book.title}
-                                </Link>
-                            </li>
+                        results.map(book => (
+                            <BookSearchItem key={book.id}
+                                book={book}
+                                history={history}
+                                clearState={this.clearState}
+                            />
                         ))
                     }
                 </ul>
