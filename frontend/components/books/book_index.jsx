@@ -1,5 +1,6 @@
 import React from 'react';
 import BookIndexItem from './book_index_item';
+import Loading from '../loading';
 
 class BookIndex extends React.Component {
     constructor(props) {
@@ -11,7 +12,10 @@ class BookIndex extends React.Component {
     }
 
     render () {
-        const books = this.props.books;
+        const { loadingIndex } = this.props;
+        if (loadingIndex) return <Loading />;
+
+        const { books } = this.props;
         return (
             <div className="book-index-background">
                 <ul className="book-index">

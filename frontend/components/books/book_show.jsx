@@ -3,22 +3,28 @@ import { Link } from 'react-router-dom';
 import BookshelvesIndexContainer from '../bookshelves/bookshelves_index_container';
 import ShelvingsContainer from '../book_shelvings/shelvings_container';
 import ReviewsIndexContainer from '../reviews/reviews_index_container.jsx';
+import Loading from '../loading';
 
 class BookShow extends React.Component {
     constructor(props) {
         super(props);
     }
 
-    componentDidMount() {
+    componentWillMount() {
         this.props.fetchBook(this.props.match.params.bookId);
     }
 
-    render () {
-        const { book } = this.props;
-        if (!book) {
-            return <div className="loading">Loading...</div>;
+    componentWillReceiveProps(nextProps) {
+        if (this.props.match.params.bookId != nextProps.match.params.bookId) {
+            this.props.fetchBook(nextProps.match.params.bookId);
         }
+    }
 
+    render() {
+        const { loadingBook, loadingBookshelves } = this.props;
+        if (loadingBook || loadingBookshelves) return <Loading />;
+        
+        const { book } = this.props;
         return (
             <div className="book-show-background">
                 <div className="book-show">

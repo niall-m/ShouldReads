@@ -4,7 +4,8 @@ import BookIndex from './book_index';
 import { fetchBooks, fetchBook } from '../../actions/book_actions';
 
 const mapStateToProps = state => ({
-    books: Object.values(state.entities.books)
+    books: Object.values(state.entities.books),
+    loadingIndex: state.ui.books.loadingBookIndex
 });
 
 const mapDispatchToProps = dispatch => ({

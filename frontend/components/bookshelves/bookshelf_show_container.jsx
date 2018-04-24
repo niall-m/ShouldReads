@@ -11,6 +11,7 @@ import {
 
 const mapStateToProps = (state, ownProps) => ({
     bookshelf: state.entities.bookshelves[ownProps.match.params.bookshelfId],
+    loadingShow: state.ui.bookshelves.loadingBookshelfShow
 });
 
 const mapDispatchToProps = dispatch => ({

@@ -6,19 +6,20 @@ import {
     fetchBookshelves,
     fetchBookshelf,
     createBookshelf,
-    updateBookshelf,
+    // updateBookshelf,
     deleteBookshelf
 } from '../../actions/bookshelf_actions';
 
 const mapStateToProps = state => ({
-    bookshelves: Object.values(state.entities.bookshelves)
+    bookshelves: Object.values(state.entities.bookshelves),
+    loadingIndex: state.ui.bookshelves.loadingBookshelvesIndex
 });
 
 const mapDispatchToProps = dispatch => ({
     fetchBookshelves: () => dispatch(fetchBookshelves()),
     fetchBookshelf: id => dispatch(fetchBookshelf(id)),
     createBookshelf: bookshelf => dispatch(createBookshelf(bookshelf)),
-    updateBookshelf: bookshelf => dispatch(updateBookshelf(bookshelf)),
+    // updateBookshelf: bookshelf => dispatch(updateBookshelf(bookshelf)),
     deleteBookshelf: bookshelfId => dispatch(deleteBookshelf(bookshelfId))
 });
 

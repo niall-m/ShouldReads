@@ -123,7 +123,7 @@ class ReviewsIndex extends React.Component {
                     <div className="session-form-errors">
                         {this.errors()}
                     </div>
-                    <div className="loading">Write the first review!</div>
+                    <p>Write the first review!</p>
                 </div>
             );
         }
