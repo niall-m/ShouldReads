@@ -14,14 +14,15 @@ class BookshelfShow extends React.Component {
     }
 
     render() {
-        const { loadingShow } = this.props;
-        if (loadingShow) return <Loading />;
-
         const { 
-            bookshelf, 
-            deleteBookshelf, 
+            bookshelf,
+            deleteBookshelf,
             deleteShelving,
-            fetchBookshelves } = this.props;
+            fetchBookshelves,
+            loadingShow
+        } = this.props;
+
+        if (loadingShow || !bookshelf) return <Loading />;
 
         if (bookshelf) {
             const books = bookshelf.books;
@@ -41,11 +42,11 @@ class BookshelfShow extends React.Component {
                                 {
                                     books.map(book => (
                                         <BookshelfShowItem
-                                        key={book.id}
-                                        book={book}
-                                        bookshelf={bookshelf}
-                                        deleteShelving={deleteShelving}
-                                        fetchBookshelves={fetchBookshelves} />
+                                            key={book.id}
+                                            book={book}
+                                            bookshelf={bookshelf}
+                                            deleteShelving={deleteShelving}
+                                            fetchBookshelves={fetchBookshelves} />
                                         )
                                     )
                                 }

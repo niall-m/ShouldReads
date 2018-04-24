@@ -21,10 +21,9 @@ class BookShow extends React.Component {
     }
 
     render() {
-        const { loadingBook, loadingBookshelves } = this.props;
-        if (loadingBook || loadingBookshelves) return <Loading />;
+        const { loadingBook, loadingBookshelves, book } = this.props;
+        if (loadingBook || loadingBookshelves || !book) return <Loading />;
         
-        const { book } = this.props;
         return (
             <div className="book-show-background">
                 <div className="book-show">

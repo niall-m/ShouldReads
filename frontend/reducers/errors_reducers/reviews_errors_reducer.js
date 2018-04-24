@@ -1,7 +1,7 @@
 import {
     RECEIVE_REVIEW_ERRORS,
     CLEAR_ERRORS
-} from '../actions/review_actions';
+} from '../../actions/review_actions';
 
 const reviewsErrorsReducer = (state = [], action) => {
     Object.freeze(state);

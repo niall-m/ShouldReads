@@ -6,7 +6,6 @@ import {
     fetchBookshelves,
     fetchBookshelf,
     createBookshelf,
-    // updateBookshelf,
     deleteBookshelf
 } from '../../actions/bookshelf_actions';
 
@@ -19,7 +18,6 @@ const mapDispatchToProps = dispatch => ({
     fetchBookshelves: () => dispatch(fetchBookshelves()),
     fetchBookshelf: id => dispatch(fetchBookshelf(id)),
     createBookshelf: bookshelf => dispatch(createBookshelf(bookshelf)),
-    // updateBookshelf: bookshelf => dispatch(updateBookshelf(bookshelf)),
     deleteBookshelf: bookshelfId => dispatch(deleteBookshelf(bookshelfId))
 });
 

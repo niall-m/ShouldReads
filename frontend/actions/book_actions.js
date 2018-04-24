@@ -5,6 +5,7 @@ export const RECEIVE_BOOK = 'RECEIVE_BOOK';
 export const RECEIVE_SEARCH_RESULTS = 'RECEIVE_SEARCH_RESULTS';
 export const LOADING_BOOK = 'LOADING_BOOK';
 export const LOADING_BOOKS = 'LOADING_BOOKS';
+export const RECEIVE_BOOK_ERRORS = 'RECEIVE_BOOK_ERRORS';
 
 export const receiveAllBooks = books => ({
     type: RECEIVE_ALL_BOOKS,
@@ -24,6 +25,11 @@ export const loadBooks = () => ({
     type: LOADING_BOOKS
 });
 
+export const receiveBookErrors = errors => ({
+    type: RECEIVE_BOOK_ERRORS,
+    errors
+});
+
 export const fetchBooks = () => dispatch => {
     dispatch(loadBooks());
     return BookApiUtil.fetchBooks()
@@ -32,8 +38,10 @@ export const fetchBooks = () => dispatch => {
 
 export const fetchBook = bookId => dispatch => {
     dispatch(loadBook());
-    return BookApiUtil.fetchBook(bookId)
-        .then(book => dispatch(receiveBook(book)));
+    return BookApiUtil.fetchBook(bookId).then(
+        (book) => dispatch(receiveBook(book)),
+        (err) => dispatch(receiveBookErrors(err.responseJSON))
+    );
 };
 
 const receiveSearchResults = (searchResults) => ({

@@ -7,7 +7,7 @@ class BookshelvesIndex extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            shelfName: ''
+            shelf_name: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleInput = this.handleInput.bind(this);
@@ -26,14 +26,20 @@ class BookshelvesIndex extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.createBookshelf(this.state)
-            .then(this.setState( { shelfName: '' } ));
+            .then(this.setState( { shelf_name: '' } ));
     }
 
     render() {
-        const { loadingIndex } = this.props;
-        if (loadingIndex) return <Loading />;
+        const { 
+            bookshelves, 
+            deleteBookshelf, 
+            match, 
+            history, 
+            loadingIndex 
+        } = this.props;
         
-        const { bookshelves, deleteBookshelf, match, history } = this.props;
+        if (loadingIndex || !bookshelves) return <Loading />;
+
         return (
             <div className="bookshelves-index-container">
                 <form className="bookshelves-index-form">
@@ -41,8 +47,8 @@ class BookshelvesIndex extends React.Component {
                         <h2>My Bookshelves</h2>
                         <input
                             type="text"
-                            value={this.state.shelfName}
-                            onChange={this.handleInput('shelfName')}
+                            value={this.state.shelf_name}
+                            onChange={this.handleInput('shelf_name')}
                             placeholder="Shelf Name" />
                         <button className="create-bookshelf-btn" 
                             onClick={this.handleSubmit}>Create New Bookshelf</button>
@@ -52,11 +58,11 @@ class BookshelvesIndex extends React.Component {
                     {
                         bookshelves.map(bookshelf => (
                             <BookshelvesIndexItem
-                            key={bookshelf.id}
-                            bookshelf={bookshelf}
-                            history={history}
-                            match={match}
-                            deleteBookshelf={deleteBookshelf} />
+                                key={bookshelf.id}
+                                bookshelf={bookshelf}
+                                history={history}
+                                match={match}
+                                deleteBookshelf={deleteBookshelf} />
                             )
                         )
                     }

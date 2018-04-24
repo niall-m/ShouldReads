@@ -19,19 +19,17 @@ export const clearErrors = () => ({
 });
 
 export const signup = (user) => dispatch => (
-    APIUtil.signup(user).then(formUser => (
-        dispatch(receiveCurrentUser(formUser))
-    ), err => (
-        dispatch(receiveErrors(err.responseJSON))
-    ))
+    APIUtil.signup(user).then(
+        formUser => dispatch(receiveCurrentUser(formUser)), 
+        err => dispatch(receiveErrors(err.responseJSON))
+    )
 );
 
 export const login = (user) => dispatch => (
-    APIUtil.login(user).then(formUser => (
-        dispatch(receiveCurrentUser(formUser))
-    ), err => (
-        dispatch(receiveErrors(err.responseJSON))
-    ))
+    APIUtil.login(user).then(
+        formUser => dispatch(receiveCurrentUser(formUser)),
+        err => dispatch(receiveErrors(err.responseJSON))
+    )
 );
 
 export const logout = () => dispatch => (

@@ -36,10 +36,9 @@ export const fetchReviews = bookId => dispatch => (
 );
 
 export const createReview = review => dispatch => (
-    ReviewApiUtil.createReview(review).then(review => (
-        dispatch(receiveReview(review))
-    ), err => (
-        dispatch(receiveReviewErrors(err.responseJSON))
+    ReviewApiUtil.createReview(review).then(
+        (review) => dispatch(receiveReview(review)), 
+        (err) => (dispatch(receiveReviewErrors(err.responseJSON))
     ))
 );
 

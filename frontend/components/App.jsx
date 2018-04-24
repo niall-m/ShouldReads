@@ -14,7 +14,7 @@ import {
 } from '../util/route_utils';
 
 const App = () => (
-    <div>
+    <div className="app">
         <Favicon url="//drhktpaw9j8bp.cloudfront.net/favicon-book.ico" />
         <Route path="/" component={NavBarContainer} />
         <Switch>
