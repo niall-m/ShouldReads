@@ -54,10 +54,12 @@ class BookSearch extends React.Component {
         return (
             <div className="book-search">
                 <i className="fa fa-book"></i>
-                <input type="text" onChange={this.handleInput}
-                    placeholder="search for a book"
-                    value={this.state.searchValue} />
-                <div className="search-results">
+                <input 
+                type="text" 
+                onChange={this.handleInput}
+                placeholder="search for a book"
+                value={this.state.searchValue} />
+                <div>
                     {this.renderResults()}
                 </div>
             </div>

@@ -16,7 +16,7 @@ class BookSearchItem extends React.Component {
     render() {
         const { book } = this.props;
         return (
-            <li className="book-index-item">
+            <li>
                 <Link to={`/books/${book.id}`}
                 onClick={this.handleSubmit}>
                     {book.title}

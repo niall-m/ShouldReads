@@ -6,26 +6,26 @@ import BookSearchContainer from '../search/book_search_container';
 
 export default ({ currentUser, logout }) => {
     const display = currentUser ? (
-        <nav className="nav-bar">
+        <nav>
             <Link className="logo" to="/">should<span>Reads</span></Link>
             <BookSearchContainer />
-            <div className="session-greeting">
+            <aside>
                 <h3>Welcome, {currentUser.username}.</h3>
-                <button className="btn" onClick={logout}>Logout</button>
-            </div>
+                <button onClick={logout}>Logout</button>
+            </aside>
         </nav>
     ) : (
-        <nav className="nav-bar">
+        <nav>
             <Link className="logo" to="/">should<span>Reads</span></Link>
-            <div className="session-greeting">
+            <aside>
                 <SignupContainer />
                 <LoginContainer />
-            </div>
+            </aside>
         </nav>
     );
 
     return (
-        <header className="nav-header">
+        <header>
             {display}
         </header>
     );

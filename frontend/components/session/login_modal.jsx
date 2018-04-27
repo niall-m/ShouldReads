@@ -11,7 +11,7 @@ const customStyles = {
         marginRight           : '-50%',
         color                 : '#51452d',
         width                 : '25%',
-        background            : 'linear-gradient(to right, #ece9e6, #ffffff)',
+        background            : '#f4f1eb',
         transform             : 'translate(-50%, -50%)'
     },
     overlay: {
@@ -28,29 +28,22 @@ class LoginModal extends React.Component {
             password: '',
             modalIsOpen: false
         };
-
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleInput = this.handleInput.bind(this);
         this.handleDemo = this.handleDemo.bind(this);
         this.openModal = this.openModal.bind(this);
-        this.afterOpenModal = this.afterOpenModal.bind(this);
         this.closeModal = this.closeModal.bind(this);
     }
 
     openModal() {
         this.props.clearErrors();
-        this.setState({username: ''});
-        this.setState({password: ''});
-        this.setState({modalIsOpen: true});
-    }
-
-    afterOpenModal() {
-        // references are now sync'd and can be accessed.
-        // this.subtitle.style.color = '#f00';
+        this.setState({ username: '' });
+        this.setState({ password: '' });
+        this.setState({ modalIsOpen: true });
     }
 
     closeModal() {
-        this.setState({modalIsOpen: false});
+        this.setState({ modalIsOpen: false });
     }
 
     handleInput(type) {
@@ -102,46 +95,36 @@ class LoginModal extends React.Component {
     render() {
         return (
         <div>
-            <button onClick={this.openModal} className="btn">Log In</button>
+            <button onClick={this.openModal}>Log In</button>
             <Modal
             isOpen={this.state.modalIsOpen}
-            onAfterOpen={this.afterOpenModal}
             onRequestClose={this.closeModal}
             style={customStyles}
             ariaHideApp={false}
-            contentLabel="Example Modal"
+            contentLabel="Login Modal"
             >
-
-            <h2 className="session-form-title">Log In</h2>
-            <form className="session-form">
-                <div className="session-form-fields">
-                    <div className="field">
-                        Username
-                        <br/>
+                <form className="session-form">
+                    <h2 >Log In</h2>
+                    <div>
                         <input
-                            type="text"
-                            value={this.state.username}
-                            onChange={this.handleInput('username')}
-                            placeholder="username"
+                        type="text"
+                        value={this.state.username}
+                        onChange={this.handleInput('username')}
+                        placeholder="username"
                         />
-                    </div>
-                    <div className="field">
-                        Password
-                        <br/>
                         <input
-                            type="password"
-                            value={this.state.password}
-                            onChange={this.handleInput('password')}
-                            placeholder="password"
+                        type="password"
+                        value={this.state.password}
+                        onChange={this.handleInput('password')}
+                        placeholder="password"
                         />
+                        <button onClick={this.handleSubmit}>Submit</button>
+                        <button onClick={this.handleDemo}>Demo</button>
                     </div>
-                    <button onClick={this.handleSubmit} className="session-btn">Submit</button>
-                    <button onClick={this.handleDemo} className="demo-btn">Demo</button>
-                </div>
-                <div className="session-form-errors">
-                    {this.errors()}
-                </div>
-            </form>
+                    <footer>
+                        {this.errors()}
+                    </footer>
+                </form>
             </Modal>
         </div>
         );

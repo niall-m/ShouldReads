@@ -29,8 +29,8 @@ class BookIndex extends React.Component {
         this.shuffle(this.props.books);
 
         return (
-            <div className="book-index-background">
-                <ul className="book-index">
+            <div className="book-index">
+                <ul>
                     {
                         books.map(book => (
                             <BookIndexItem
