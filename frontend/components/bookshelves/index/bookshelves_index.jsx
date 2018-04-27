@@ -29,31 +29,24 @@ class BookshelvesIndex extends React.Component {
 
     render() {
         const { 
-            bookshelves, 
-            deleteBookshelf, 
-            match, 
-            history, 
-            loadingIndex 
+            bookshelves, deleteBookshelf, match, history, loadingIndex 
         } = this.props;
         
         if (loadingIndex || !bookshelves) return <Loading />;
 
         return (
-            <div className="bookshelves-index-container">
-                <form className="bookshelves-index-form">
-                    <div className="bookshelves-index-form-container">
-                        <h2>My Bookshelves</h2>
+            <aside className="bookshelves-index">
+                <form>
+                        <h2>My Shelves</h2>
                         <input
                             type="text"
                             value={this.state.shelf_name}
                             onChange={this.handleInput('shelf_name')}
-                            placeholder="Shelf Name" 
+                            placeholder="shelf name" 
                         />
-                        <button className="create-bookshelf-btn" 
-                            onClick={this.handleSubmit}>Create New Bookshelf</button>
-                    </div>
+                        <button onClick={this.handleSubmit}>create</button>
                 </form>
-                <ul className="bookshelves-index-list">
+                <ul>
                     {
                         bookshelves.map(bookshelf => (
                             <BookshelvesIndexItem
@@ -66,7 +59,7 @@ class BookshelvesIndex extends React.Component {
                         ))
                     }
                 </ul>
-            </div>
+            </aside>
         );
     }
 }
