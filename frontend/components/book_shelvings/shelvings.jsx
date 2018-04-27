@@ -30,7 +30,10 @@ class Shelvings extends React.Component {
     }
 
     render() {
-        const { book, bookshelves, deleteShelving, currentUser } = this.props;
+        const { 
+            book, bookshelves, deleteShelving, currentUser
+        } = this.props;
+
         const shelvings = book.bookshelves.filter(shelf => shelf.user_id === currentUser.id);
 
         return (
@@ -40,10 +43,8 @@ class Shelvings extends React.Component {
                         <option value={0} disabled>select a shelf...</option>
                         {
                             bookshelves.map(shelf => (
-                                <option
-                                    key={shelf.id}
-                                    value={shelf.id}>
-                                        {shelf.shelf_name}
+                                <option key={shelf.id} value={shelf.id}>
+                                    {shelf.shelf_name}
                                 </option>
                             ))
                         }

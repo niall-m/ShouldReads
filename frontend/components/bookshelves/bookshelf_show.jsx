@@ -15,18 +15,15 @@ class BookshelfShow extends React.Component {
 
     render() {
         const { 
-            bookshelf,
-            deleteBookshelf,
-            deleteShelving,
-            fetchBookshelves,
-            loadingShow
+            bookshelf, deleteBookshelf, deleteShelving, 
+            fetchBookshelves, loadingShow
         } = this.props;
 
         if (loadingShow || !bookshelf) return <Loading />;
 
         if (bookshelf) {
             const books = bookshelf.books;
-            if (books) {
+            if (books.length > 0) {
                 return (
                     <div className="bookshelf-show-background">
                         <div className="bookshelf-index-show">
@@ -54,24 +51,24 @@ class BookshelfShow extends React.Component {
                         </section>
                     </div>
                 );
-            }
-        } else {
-            return (
-                <div className="bookshelf-show-background">
-                    <div className="bookshelf-index-show">
-                        <BookshelvesIndexContainer />
-                    </div>
-                    <section className="bookshelf-show-container">
-                        <div className="bookshelf-show-header">
-                            <h3 className="shelf-name">{bookshelf.shelf_name}</h3>
-                            <h3>Title</h3>
-                            <h3>Author</h3>
+            } else {
+                return (
+                    <div className="bookshelf-show-background">
+                        <div className="bookshelf-index-show">
+                            <BookshelvesIndexContainer />
                         </div>
-                        <p>This bookshelf is currently empty!</p>
-                    </section>
-                </div>
-            );
-        }
+                        <section className="bookshelf-show-container">
+                            <div className="bookshelf-show-header">
+                                <h3 className="shelf-name">{bookshelf.shelf_name}</h3>
+                                <h3>Title</h3>
+                                <h3>Author</h3>
+                            </div>
+                            <p>This bookshelf is currently empty.</p>
+                        </section>
+                    </div>
+                );
+            }
+        } 
     }
 }
 

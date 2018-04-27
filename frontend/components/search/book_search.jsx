@@ -37,7 +37,8 @@ class BookSearch extends React.Component {
                     <li>matching books</li>
                     {
                         results.map(book => (
-                            <BookSearchItem key={book.id}
+                            <BookSearchItem 
+                                key={book.id}
                                 book={book}
                                 history={history}
                                 clearState={this.clearState}
