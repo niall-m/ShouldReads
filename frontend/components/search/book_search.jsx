@@ -34,7 +34,7 @@ class BookSearch extends React.Component {
         if (results.length > 0) {
             return (
                 <ul>
-                    <li>matching books</li>
+                    <li>Top 5 Matches</li>
                     {
                         results.map(book => (
                             <BookSearchItem 

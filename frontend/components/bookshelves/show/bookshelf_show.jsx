@@ -1,8 +1,8 @@
 import React from 'react';
 import BookshelfShowContainer from './bookshelf_show_container';
 import BookshelfShowItem from './bookshelf_show_item';
-import BookshelvesIndexContainer from './bookshelves_index_container';
-import Loading from '../loading';
+import BookshelvesIndexContainer from '../index/bookshelves_index_container';
+import Loading from '../../loading';
 
 class BookshelfShow extends React.Component {
     constructor(props) {

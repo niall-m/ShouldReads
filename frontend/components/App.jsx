@@ -4,9 +4,9 @@ import { AuthRoute, ProtectedRoute } from '../util/route_utils';
 import Favicon from 'react-favicon';
 import Splash from './splash';
 import NavBarContainer from './nav_bar/nav_bar_container';
-import BookIndexContainer from './books/book_index_container';
-import BookShowContainer from './books/book_show_container';
-import BookshelfShowContainer from './bookshelves/bookshelf_show_container';
+import BookIndexContainer from './books/index/book_index_container';
+import BookShowContainer from './books/show/book_show_container';
+import BookshelfShowContainer from './bookshelves/show/bookshelf_show_container';
 
 const App = () => (
     <div className="app">

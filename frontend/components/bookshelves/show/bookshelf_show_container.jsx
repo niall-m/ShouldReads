@@ -1,13 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import BookshelfShow from './bookshelf_show';
-import { deleteShelving } from '../../actions/shelving_actions';
+import { deleteShelving } from '../../../actions/shelving_actions';
 import {
     fetchBookshelves,
     fetchBookshelf,
     createBookshelf,
     deleteBookshelf
-} from '../../actions/bookshelf_actions';
+} from '../../../actions/bookshelf_actions';
 
 const mapStateToProps = (state, ownProps) => ({
     bookshelf: state.entities.bookshelves[ownProps.match.params.bookshelfId],

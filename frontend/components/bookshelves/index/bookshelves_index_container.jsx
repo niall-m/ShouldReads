@@ -7,7 +7,7 @@ import {
     fetchBookshelf,
     createBookshelf,
     deleteBookshelf
-} from '../../actions/bookshelf_actions';
+} from '../../../actions/bookshelf_actions';
 
 const mapStateToProps = state => ({
     bookshelves: Object.values(state.entities.bookshelves),

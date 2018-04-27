@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import BookIndex from './book_index';
-import { fetchBooks, fetchBook } from '../../actions/book_actions';
+import { fetchBooks, fetchBook } from '../../../actions/book_actions';
 
 const mapStateToProps = state => ({
     books: Object.values(state.entities.books),

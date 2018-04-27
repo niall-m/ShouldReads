@@ -1,6 +1,6 @@
 import React from 'react';
 import BookIndexItem from './book_index_item';
-import Loading from '../loading';
+import Loading from '../../loading';
 
 class BookIndex extends React.Component {
     constructor(props) {

@@ -1,14 +1,12 @@
 import React from 'react';
 import BookshelvesIndexItem from './bookshelves_index_item';
-import BookshelfShowContainer from './bookshelf_show_container';
-import Loading from '../loading';
+import BookshelfShowContainer from '../show/bookshelf_show_container';
+import Loading from '../../loading';
 
 class BookshelvesIndex extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            shelf_name: ''
-        };
+        this.state = { shelf_name: '' };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleInput = this.handleInput.bind(this);
     }
@@ -49,7 +47,8 @@ class BookshelvesIndex extends React.Component {
                             type="text"
                             value={this.state.shelf_name}
                             onChange={this.handleInput('shelf_name')}
-                            placeholder="Shelf Name" />
+                            placeholder="Shelf Name" 
+                        />
                         <button className="create-bookshelf-btn" 
                             onClick={this.handleSubmit}>Create New Bookshelf</button>
                     </div>
@@ -62,9 +61,9 @@ class BookshelvesIndex extends React.Component {
                                 bookshelf={bookshelf}
                                 history={history}
                                 match={match}
-                                deleteBookshelf={deleteBookshelf} />
-                            )
-                        )
+                                deleteBookshelf={deleteBookshelf} 
+                            />
+                        ))
                     }
                 </ul>
             </div>
