@@ -3,7 +3,7 @@ import {
     CLEAR_ERRORS
 } from '../../actions/review_actions';
 
-const reviewsErrorsReducer = (state = [], action) => {
+const ReviewsErrorsReducer = (state = [], action) => {
     Object.freeze(state);
     switch (action.type) {
         case RECEIVE_REVIEW_ERRORS:
@@ -15,4 +15,4 @@ const reviewsErrorsReducer = (state = [], action) => {
     }
 };
 
-export default reviewsErrorsReducer;
+export default ReviewsErrorsReducer;

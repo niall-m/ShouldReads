@@ -5,7 +5,7 @@ import {
     REMOVE_REVIEW
 } from '../actions/review_actions';
 
-const reviewsReducer = (state = {}, action) => {
+const ReviewsReducer = (state = {}, action) => {
     Object.freeze(state);
     switch (action.type) {
         case RECEIVE_ALL_REVIEWS:
@@ -21,4 +21,4 @@ const reviewsReducer = (state = {}, action) => {
     }
 };
 
-export default reviewsReducer;
+export default ReviewsReducer;

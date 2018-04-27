@@ -30,10 +30,16 @@ export const receiveBookErrors = errors => ({
     errors
 });
 
+export const receiveSearchResults = (searchResults) => ({
+    type: RECEIVE_SEARCH_RESULTS,
+    searchResults
+});
+
 export const fetchBooks = () => dispatch => {
     dispatch(loadBooks());
-    return BookApiUtil.fetchBooks()
-        .then(books => dispatch(receiveAllBooks(books)));
+    return BookApiUtil.fetchBooks().then(
+        books => dispatch(receiveAllBooks(books))
+    );
 };
 
 export const fetchBook = bookId => dispatch => {
@@ -44,12 +50,8 @@ export const fetchBook = bookId => dispatch => {
     );
 };
 
-const receiveSearchResults = (searchResults) => ({
-    type: RECEIVE_SEARCH_RESULTS,
-    searchResults
-});
-
 export const searchDatabase = (query) => dispatch => (
-    BookApiUtil.searchBookDatabase(query)
-        .then(results => dispatch(receiveSearchResults(results)))
+    BookApiUtil.searchBookDatabase(query).then(
+        results => dispatch(receiveSearchResults(results))
+    )
 );

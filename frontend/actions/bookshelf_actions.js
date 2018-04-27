@@ -31,27 +31,32 @@ export const loadBookshelves = () => ({
 
 export const fetchBookshelves = () => dispatch => {
     dispatch(loadBookshelves());
-    return BookshelfApiUtil.fetchBookshelves()
-        .then(bookshelves => dispatch(receiveAllBookshelves(bookshelves)));
+    return BookshelfApiUtil.fetchBookshelves().then(
+        bookshelves => dispatch(receiveAllBookshelves(bookshelves))
+    );
 };
 
 export const fetchBookshelf = id => dispatch => {
     dispatch(loadBookshelf());
-    return BookshelfApiUtil.fetchBookshelf(id)
-        .then(bookshelf => dispatch(receiveBookshelf(bookshelf)));
+    return BookshelfApiUtil.fetchBookshelf(id).then(
+        bookshelf => dispatch(receiveBookshelf(bookshelf))
+    );
 };
 
 export const createBookshelf = bookshelf => dispatch => (
-    BookshelfApiUtil.createBookshelf(bookshelf)
-    .then(shelf => dispatch(receiveBookshelf(shelf)))
+    BookshelfApiUtil.createBookshelf(bookshelf).then(
+        shelf => dispatch(receiveBookshelf(shelf))
+    )
 );
 
 export const updateBookshelf = bookshelf => dispatch => (
-    BookshelfApiUtil.updateBookshelf(bookshelf)
-    .then(shelf => dispatch(receiveBookshelf(shelf)))
+    BookshelfApiUtil.updateBookshelf(bookshelf).then(
+        shelf => dispatch(receiveBookshelf(shelf))
+    )
 );
 
 export const deleteBookshelf = bookshelfId => dispatch => (
-    BookshelfApiUtil.deleteBookshelf(bookshelfId)
-    .then(bookshelf => dispatch(removeBookshelf(bookshelfId)))
+    BookshelfApiUtil.deleteBookshelf(bookshelfId).then(
+        bookshelf => dispatch(removeBookshelf(bookshelfId))
+    )
 );

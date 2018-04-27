@@ -5,7 +5,7 @@ import {
     RECEIVE_SEARCH_RESULTS
 } from '../actions/book_actions';
 
-const booksReducer = (state = {}, action) => {
+const BooksReducer = (state = {}, action) => {
     Object.freeze(state);
     switch (action.type) {
         case RECEIVE_ALL_BOOKS:
@@ -19,4 +19,4 @@ const booksReducer = (state = {}, action) => {
     }
 };
 
-export default booksReducer;
+export default BooksReducer;

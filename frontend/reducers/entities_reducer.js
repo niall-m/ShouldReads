@@ -1,15 +1,15 @@
 import { combineReducers } from 'redux';
 
-import booksReducer from './books_reducer';
-import bookshelvesReducer from './bookshelves_reducer';
-import reviewsReducer from './reviews_reducer';
-import searchReducer from './search_reducer';
+import BooksReducer from './books_reducer';
+import BookshelvesReducer from './bookshelves_reducer';
+import ReviewsReducer from './reviews_reducer';
+import SearchReducer from './search_reducer';
 
-const entitiesReducer = combineReducers({
-    books: booksReducer,
-    bookshelves: bookshelvesReducer,
-    reviews: reviewsReducer,
-    searchResults: searchReducer
+const EntitiesReducer = combineReducers({
+    books: BooksReducer,
+    bookshelves: BookshelvesReducer,
+    reviews: ReviewsReducer,
+    searchResults: SearchReducer
 });
 
-export default entitiesReducer;
+export default EntitiesReducer;

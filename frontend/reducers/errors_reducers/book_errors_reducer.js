@@ -3,7 +3,7 @@ import {
     // CLEAR_ERRORS
 } from '../../actions/book_actions';
 
-const bookErrorsReducer = (state = [], action) => {
+const BookErrorsReducer = (state = [], action) => {
     Object.freeze(state);
     switch (action.type) {
         case RECEIVE_BOOK_ERRORS:
@@ -15,4 +15,4 @@ const bookErrorsReducer = (state = [], action) => {
     }
 };
 
-export default bookErrorsReducer;
+export default BookErrorsReducer;

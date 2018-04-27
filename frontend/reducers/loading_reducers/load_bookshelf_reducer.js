@@ -12,7 +12,7 @@ const initialState = {
     loadingBookshelvesIndex: false
 };
 
-const loadBookshelvesReducer = ( state = initialState, action ) => {
+const LoadBookshelvesReducer = ( state = initialState, action ) => {
     Object.freeze(state);
     switch(action.type) {
         case LOAD_BOOKSHELF:
@@ -28,4 +28,4 @@ const loadBookshelvesReducer = ( state = initialState, action ) => {
     }
 };
 
-export default loadBookshelvesReducer;
+export default LoadBookshelvesReducer;

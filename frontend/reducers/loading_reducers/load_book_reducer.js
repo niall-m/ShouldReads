@@ -12,7 +12,7 @@ const initialState = {
     loadingBookIndex: false
 };
 
-const loadBookReducer = ( state = initialState, action ) => {
+const LoadBookReducer = ( state = initialState, action ) => {
     Object.freeze(state);
     switch(action.type) {
         case LOADING_BOOK:
@@ -28,4 +28,4 @@ const loadBookReducer = ( state = initialState, action ) => {
     }
 };
 
-export default loadBookReducer;
+export default LoadBookReducer;
