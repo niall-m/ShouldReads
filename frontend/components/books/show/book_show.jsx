@@ -9,15 +9,18 @@ class BookShow extends React.Component {
         super(props);
     }
 
-    componentWillMount() {
+    componentDidMount() {
         this.props.fetchBook(this.props.match.params.bookId);
     }
 
-    componentWillReceiveProps(nextProps) {
-        if (this.props.match.params.bookId != nextProps.match.params.bookId) {
-            this.props.fetchBook(nextProps.match.params.bookId);
+    componentDidUpdate(prevProps) {
+        if (this.props.match.params.bookId !== prevProps.match.params.bookId) {
+            this.props.fetchBook(this.props.match.params.bookId);
+        } else {
+            return null;
         }
     }
+
 
     render() {
         const { loadingBook, loadingBookshelves, book } = this.props;
