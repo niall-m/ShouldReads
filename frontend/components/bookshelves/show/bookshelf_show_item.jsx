@@ -21,15 +21,15 @@ class BookshelfShowItem extends React.Component {
         const { book, deleteShelving } = this.props;
         
         return (
-            <li className="bookshelf-show-item">
-                <Link to={`/books/${book.id}`} className="bookshelf-book-cover">
+            <li>
+                <Link to={`/books/${book.id}`}>
                     <img src={book.cover_img} alt={book.title}/>
                 </Link>
                 <Link to={`/books/${book.id}`}>
-                    <h2 className="bookshelf-show-title">{book.title}</h2>
+                    <h2>{book.title}</h2>
                 </Link>
                 <h2>{book.author}</h2>
-                <button title="Remove From Shelf" className="delete-shelving-btn" onClick={this.handleSubmit}>
+                <button title="Remove From Shelf" onClick={this.handleSubmit}>
                     <i className="fa fa-times"></i>
                 </button>
             </li>
