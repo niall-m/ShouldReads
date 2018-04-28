@@ -30,7 +30,7 @@ class BookshelfShowItem extends React.Component {
                 </Link>
                 <h2>{book.author}</h2>
                 <button title="Remove From Shelf" className="delete-shelving-btn" onClick={this.handleSubmit}>
-                    <i className="fa fa-times" aria-hidden="true"></i>
+                    <i className="fa fa-times"></i>
                 </button>
             </li>
         );

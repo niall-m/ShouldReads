@@ -130,7 +130,7 @@ header {
     align-content: center;
     width: 100%;
     height: 10vh;
-    border-bottom: 1px solid $boarders;
+    border-bottom: 2px ridge $boarders;
     nav {
         display: flex;
         justify-content: space-between;
@@ -150,7 +150,7 @@ header {
         }
         .book-search {
             padding: 1vh 0;
-            border: 2px solid $boarders;
+            border: 2px inset $boarders;
             border-radius: 5px;
             width: 20vw;
             background-color: $green;
@@ -176,7 +176,7 @@ header {
                             }
                         }
                         &:not(:last-child) {
-                            border-bottom: 1px solid $boarders;
+                            border-bottom: 1px dashed $boarders;
                         }
                     }
                 }
@@ -184,7 +184,7 @@ header {
         }
         button {    
             margin-right: 5vw;
-            border: 2px solid $boarders;
+            border: 2px outset $boarders;
             border-radius: 4px;
             color: $word;
             background-color: $cream;
@@ -194,6 +194,9 @@ header {
             &:hover {
                 background-color: $boarders;
                 color: $cream;
+            }
+            &:active {
+                border-style: inset;
             }
         }
         aside {
@@ -222,7 +225,7 @@ header {
         input {
             padding: 1vh;
             margin: 1vh;
-            border: 1px solid $boarders;
+            border: 1px inset $boarders;
             border-radius: 2px;
         }
         button {
@@ -230,12 +233,15 @@ header {
             padding: 1vh 1vw;
             font-size: 3vmin;
             font-weight: 500;
-            border: 1px solid $boarders;
+            border: 1px outset $boarders;
             border-radius: 4px;
             transition: background-color .3s, color .3s;
             &:hover {
                 background-color: $boarders;
                 color: $cream;
+            }
+            &:active {
+                border-style: inset;
             }
         }
     }
@@ -257,7 +263,7 @@ header {
     width: 25vw;
     color: $word;
     background: $shelvings;
-    border-right: 1px solid $boarders;
+    border-right: 2px ridge $boarders;
     z-index: 9;
     box-shadow: .5vh 0 1vh rgba(0, 0, 0, 0.3);
     form {
@@ -277,20 +283,22 @@ header {
             padding: 1vmin;
             margin: 1vmin 3vmin;
             border-radius: 4px;
-            border: 1px solid $boarders;
+            border: 1px inset $boarders;
             background-color: $cream;
         }
         button {
             padding: 1vh 1vw;
             margin: 1vh 5vw;
             background-color: $cream;
-            border: 1px solid $boarders;
+            border: 1px outset $boarders;
             border-radius: 5px;
             font-weight: 500;
             transition: background .3s, color .3s;
             &:hover {
                 color: $cream;
                 background: $boarders;
+            }    &:active {
+                border-style: inset;
             }
         }
     }
@@ -366,7 +374,7 @@ header {
         height: 100%;
         width: 100%;
         margin-right: 25vw;
-        border-right: 1px solid $boarders;
+        border-right: 2px groove $boarders;
         section {
             text-align: left;
             padding: 5vh 5vw;
@@ -397,7 +405,7 @@ header {
                     background: $shelvings;
                 }
                 button {
-                    border: 1px solid $boarders;
+                    border: 1px outset $boarders;
                     border-radius: 4px;
                     color: $word;
                     background-color: $cream;
@@ -406,6 +414,9 @@ header {
                     &:hover {
                         background-color: $boarders;
                         color: $cream;
+                    }
+                    &:active {
+                        border-style: inset;
                     }
                 }
             }
@@ -449,14 +460,13 @@ header {
                     margin: 1vh;
                     width: 40vw;
                     min-height: 10vh;
-                    border: 1px solid $boarders;
                     border-radius: 3px;
                     background-color: $cream;
                 }
                 button {
                     padding: 1vh 1vw;
                     margin: 1vh;
-                    border: 1px solid $boarders;
+                    border: 1px outset $boarders;
                     border-radius: 4px;
                     background-color: $cream;
                     color: $word;
@@ -464,6 +474,9 @@ header {
                     &:hover {
                         background-color: $boarders;
                         color: $cream;
+                    }
+                    &:active {
+                        border-style: inset;
                     }
                 }
                 .review-errors {
@@ -501,6 +514,11 @@ header {
                             padding: 1vh 1vw;
                             text-align: left;
                             background-color: $cream;
+                        }
+                    }
+                    button i {
+                        &:hover {
+                            color: $hoverword;
                         }
                     }
                 }

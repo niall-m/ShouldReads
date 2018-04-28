@@ -24,7 +24,7 @@ class ShelvingItem extends React.Component {
                     <h2>{name}</h2>
                 </Link>
                 <button title="Remove From Shelf" onClick={this.handleSubmit}>
-                    <i className="fa fa-times" aria-hidden="true"></i>
+                    <i className="fa fa-times"></i>
                 </button>
             </li>
         );
