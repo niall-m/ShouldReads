@@ -34,6 +34,9 @@ class Shelvings extends React.Component {
             shelf => shelf.user_id === currentUser.id
         );
 
+        const noShelves = shelvings.length === 0 ?
+            <h3>none...</h3> : null;
+
         return (
             <div className="shelvings">
                 <form>
@@ -51,6 +54,7 @@ class Shelvings extends React.Component {
                     <button onClick={this.handleSubmit}>Add to Shelf</button>
                 </form>
                 <h3>This book is on the following shelves:</h3>
+                {noShelves}
                 <ul>
                     {
                         shelvings.map(shelf => (

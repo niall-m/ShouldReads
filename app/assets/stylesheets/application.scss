@@ -72,10 +72,10 @@ body {
     margin-left: -50px;
 }
 
-h1::selection, h2::selection, h3::selection, 
-p::selection, span::selection, a::selection {
-    color: $gold;
-}
+// h1::selection, h2::selection, h3::selection, 
+// p::selection, span::selection, a::selection {
+//     color: $gold;
+// }
 
 // Splash
 
@@ -257,6 +257,7 @@ header {
     width: 25vw;
     color: $word;
     background: $shelvings;
+    border-right: 1px solid $boarders;
     z-index: 9;
     box-shadow: .5vh 0 1vh rgba(0, 0, 0, 0.3);
     form {
@@ -366,7 +367,6 @@ header {
         width: 100%;
         margin-right: 25vw;
         border-right: 1px solid $boarders;
-        border-left: 1px solid $boarders;
         section {
             text-align: left;
             padding: 5vh 5vw;
@@ -391,7 +391,7 @@ header {
             height: 25vh;
             background: $shelves;
             form {
-                padding: 1vmin;
+                padding: 2vh;
                 select {
                     color: $word;
                     background: $shelvings;
