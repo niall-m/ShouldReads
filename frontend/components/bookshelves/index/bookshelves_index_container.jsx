@@ -11,6 +11,7 @@ import {
 
 const mapStateToProps = state => ({
     bookshelves: Object.values(state.entities.bookshelves),
+    currentUser: state.session.currentUser,
     loadingIndex: state.ui.bookshelves.loadingBookshelvesIndex
 });
 

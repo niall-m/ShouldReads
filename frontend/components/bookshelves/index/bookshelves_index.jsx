@@ -29,7 +29,8 @@ class BookshelvesIndex extends React.Component {
 
     render() {
         const { 
-            bookshelves, deleteBookshelf, match, history, loadingIndex 
+            bookshelves, deleteBookshelf, loadingIndex, 
+            match, history, currentUser
         } = this.props;
         
         if (loadingIndex || !bookshelves) return <Loading />;
@@ -37,14 +38,14 @@ class BookshelvesIndex extends React.Component {
         return (
             <aside className="bookshelves-index">
                 <form>
-                        <h2>My Shelves</h2>
+                        <h2>{currentUser.username}'s Shelves</h2>
                         <input
                             type="text"
                             value={this.state.shelf_name}
                             onChange={this.handleInput('shelf_name')}
-                            placeholder="shelf name" 
+                            placeholder="New Shelf" 
                         />
-                        <button onClick={this.handleSubmit}>create</button>
+                        <button onClick={this.handleSubmit}>Create</button>
                 </form>
                 <ul>
                     {

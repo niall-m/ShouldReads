@@ -19,15 +19,11 @@ class ShelvingItem extends React.Component {
     render() {
         const { shelfId, name, deleteShelving } = this.props;
         return (
-            <li className="shelving-item">
-                <Link to={`/bookshelves/${shelfId}`} className="bookshelf-link">
-                    <div>
-                        <h2 className="show-shelving-name">
-                            {name}
-                        </h2>
-                    </div>
+            <li>
+                <Link to={`/bookshelves/${shelfId}`}>
+                    <h2>{name}</h2>
                 </Link>
-                <button title="Remove From Shelf" className="delete-shelving-btn" onClick={this.handleSubmit}>
+                <button title="Remove From Shelf" onClick={this.handleSubmit}>
                     <i className="fa fa-times" aria-hidden="true"></i>
                 </button>
             </li>
