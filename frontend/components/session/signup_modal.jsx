@@ -100,39 +100,37 @@ class SignupModal extends React.Component {
             <div>
                 <button onClick={this.openModal}>Sign Up</button>
                 <Modal
-                isOpen={this.state.modalIsOpen}
-                onRequestClose={this.closeModal}
-                style={customStyles}
-                ariaHideApp={false}
-                contentLabel="Signup Modal"
+                    isOpen={this.state.modalIsOpen}
+                    onRequestClose={this.closeModal}
+                    style={customStyles}
+                    ariaHideApp={false}
+                    contentLabel="Signup Modal"
                 >
                     <form className="session-form">
                         <h2>Sign Up</h2>
                         <div>
                             <input
-                            type="text"
-                            value={this.state.username}
-                            onChange={this.handleInput('username')}
-                            placeholder="username"
+                                type="text"
+                                value={this.state.username}
+                                onChange={this.handleInput('username')}
+                                placeholder="username"
                             />
                             <input
-                            type="password"
-                            value={this.state.password}
-                            onChange={this.handleInput('password')}
-                            placeholder="password"
+                                type="password"
+                                value={this.state.password}
+                                onChange={this.handleInput('password')}
+                                placeholder="password"
                             />
                             <input 
-                            type="text"
-                            value={this.state.email}
-                            onChange={this.handleInput('email')}
-                            placeholder="email"
+                                type="text"
+                                value={this.state.email}
+                                onChange={this.handleInput('email')}
+                                placeholder="email"
                             />
                             <button onClick={this.handleSubmit}>Submit</button>
                             <button onClick={this.handleDemo}>Demo</button>
                         </div>
-                        <footer>
-                            {this.errors()}
-                        </footer>
+                        {this.errors()}
                     </form>
                 </Modal>
             </div>

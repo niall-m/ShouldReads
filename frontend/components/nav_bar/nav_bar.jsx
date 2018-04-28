@@ -9,10 +9,7 @@ export default ({ currentUser, logout }) => {
         <nav>
             <Link className="logo" to="/">should<span>Reads</span></Link>
             <BookSearchContainer />
-            <aside>
-                <h3>Welcome, {currentUser.username}.</h3>
-                <button onClick={logout}>Logout</button>
-            </aside>
+            <button onClick={logout}>Logout</button>
         </nav>
     ) : (
         <nav>

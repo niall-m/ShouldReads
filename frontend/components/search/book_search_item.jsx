@@ -17,8 +17,7 @@ class BookSearchItem extends React.Component {
         const { book } = this.props;
         return (
             <li>
-                <Link to={`/books/${book.id}`}
-                onClick={this.handleSubmit}>
+                <Link to={`/books/${book.id}`} onClick={this.handleSubmit}>
                     {book.title}
                 </Link>
             </li>

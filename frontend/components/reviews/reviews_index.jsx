@@ -54,7 +54,7 @@ class ReviewsIndex extends React.Component {
     errors() {
         if (this.props.errors) {
             return (
-                <ul>
+                <ul className="review-errors">
                     {this.props.errors.map((error, idx) => (
                         <li key={`error-${idx}`}>
                             {error}
@@ -123,7 +123,7 @@ class ReviewsIndex extends React.Component {
                         placeholder="Rate your read here!" 
                     />
                     <button onClick={this.handleSubmit}>Post Review</button>
-                    <footer>{this.errors()}</footer>
+                    {this.errors()}
                 </form>
                 {noReviews}
                 <ul>
