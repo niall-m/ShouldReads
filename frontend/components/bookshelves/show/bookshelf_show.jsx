@@ -6,11 +6,21 @@ import Loading from '../../loading';
 class BookshelfShow extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            title: false,
+            author: false,
+        };
+        this.sortByTitle = this.sortByTitle.bind(this);
+        this.sortByAuthor = this.sortByAuthor.bind(this);
     }
 
     componentDidMount() {
         this.props.fetchBookshelf(this.props.match.params.bookshelfId);
     }
+
+    // componentDidUpdate(prevProps) {
+    //     console.log(prevProps, 'prevProps');
+    // }
 
     compareProps(key, order='asc') {
         return function(a, b) {
@@ -34,6 +44,26 @@ class BookshelfShow extends React.Component {
         };
     }
 
+    sortByTitle() {        
+        if (this.state.title === false) {
+            this.props.bookshelf.books.sort(this.compareProps('title'));
+            this.setState({ title: true, author: false });
+        } else {
+            this.props.bookshelf.books.sort(this.compareProps('title', 'desc'));
+            this.setState({ title: false, author: false });
+        }
+    }
+
+    sortByAuthor() {        
+        if (this.state.author === false) {
+            this.props.bookshelf.books.sort(this.compareProps('author'));
+            this.setState({ author: true, title: false });
+        } else {
+            this.props.bookshelf.books.sort(this.compareProps('author', 'desc'));
+            this.setState({ author: false, title: false });
+        }
+    }
+
     render() {
         const { 
             bookshelf, deleteBookshelf, deleteShelving, 
@@ -42,8 +72,7 @@ class BookshelfShow extends React.Component {
 
         if (loadingShow || !bookshelf) return <Loading />;
 
-        const shelvings = bookshelf.books.sort(this.compareProps('author'));
-
+        const shelvings = bookshelf.books;
         const shelvingsHeader = shelvings.length === 0 ? (
             <li className="empty">
                 <span>{bookshelf.shelf_name}</span> is a sad empty shelf.
@@ -51,9 +80,9 @@ class BookshelfShow extends React.Component {
             </li> 
         ) : (
             <li>
-                <h3 className="shelf-name">{bookshelf.shelf_name}</h3>
-                <h3>Title</h3>
-                <h3>Author</h3>
+                <h3>{bookshelf.shelf_name}</h3>
+                <button onClick={this.sortByTitle}>Title</button>
+                <button onClick={this.sortByAuthor}>Author</button>
             </li>
         );
 
@@ -70,7 +99,6 @@ class BookshelfShow extends React.Component {
                                 deleteShelving={deleteShelving}
                                 fetchBookshelves={fetchBookshelves} 
                             />
-                            
                         ))
                     }
                 </ul>

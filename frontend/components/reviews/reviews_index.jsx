@@ -44,10 +44,7 @@ class ReviewsIndex extends React.Component {
     }
 
     successfulSubmit() {
-        this.setState({
-            'body': '',
-            'rating': null
-        });
+        this.setState({ body: '', rating: null });
         this.props.clearErrors();
     }
 
