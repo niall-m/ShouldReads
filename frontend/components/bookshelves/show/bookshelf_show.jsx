@@ -2,6 +2,10 @@ import React from 'react';
 import BookshelfShowContainer from './bookshelf_show_container';
 import BookshelfShowItem from './bookshelf_show_item';
 import Loading from '../../loading';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import { 
+    faFrown, faArrowDown, faArrowUp 
+} from '@fortawesome/fontawesome-free-solid';
 
 class BookshelfShow extends React.Component {
     constructor(props) {
@@ -18,22 +22,12 @@ class BookshelfShow extends React.Component {
         this.props.fetchBookshelf(this.props.match.params.bookshelfId);
     }
 
-    // componentDidUpdate(prevProps) {
-    //     console.log(prevProps, 'prevProps');
-    // }
-
     compareProps(key, order='asc') {
         return function(a, b) {
-            const A = (key === 'author') ? (
-                a[key].split(' ').slice(-1).join(' ').toUpperCase()
-            ) : (
-                a[key].toUpperCase()
-            );
-            const B = (key === 'author') ? (
-                b[key].split(' ').slice(-1).join(' ').toUpperCase()
-            ) : (
-                b[key].toUpperCase()
-            );
+            const A = (key === 'author') ?
+                a[key].split(' ').slice(-1).join(' ') : a[key];
+            const B = (key === 'author') ?
+                b[key].split(' ').slice(-1).join(' ') : b[key];
             let result = 0;
             if (A > B) {
                 result = 1;
@@ -73,16 +67,25 @@ class BookshelfShow extends React.Component {
         if (loadingShow || !bookshelf) return <Loading />;
 
         const shelvings = bookshelf.books;
+        const titleArrow = this.state.title === true ?
+            <FontAwesomeIcon icon="arrow-down" /> : <FontAwesomeIcon icon="arrow-up" />;
+        const authorArrow = this.state.author === true ?
+            <FontAwesomeIcon icon="arrow-down" /> : <FontAwesomeIcon icon="arrow-up" />;
+
         const shelvingsHeader = shelvings.length === 0 ? (
             <li className="empty">
-                <span>{bookshelf.shelf_name}</span> is a sad empty shelf.
-                &nbsp;<i className="fa fa-frown-o"></i>
+                <span>{bookshelf.shelf_name}</span> is a sad empty shelf.&nbsp;
+                <FontAwesomeIcon icon="frown" size="lg" />
             </li> 
         ) : (
             <li>
                 <h3>{bookshelf.shelf_name}</h3>
-                <button onClick={this.sortByTitle}>Title</button>
-                <button onClick={this.sortByAuthor}>Author</button>
+                <button onClick={this.sortByTitle}>
+                    Title&nbsp;{titleArrow}
+                </button>
+                <button onClick={this.sortByAuthor}>
+                    Author&nbsp;{authorArrow}
+                </button>
             </li>
         );
 

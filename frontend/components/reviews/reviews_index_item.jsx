@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import { faTimesCircle } from '@fortawesome/fontawesome-free-solid';
 
 class ReviewsIndexItem extends React.Component {
     constructor(props) {
@@ -19,8 +21,8 @@ class ReviewsIndexItem extends React.Component {
             stars.push(<p className="review-star" key={`star-${i}`}>&#9733;</p>);
         }
         const deleteBtn = (currentUser.id === review.user.id) ? (
-            <button title="Delete Review" >
-                <i className="fa fa-times" onClick={this.handleSubmit}></i>
+            <button title="Delete Review" onClick={this.handleSubmit}>
+                <FontAwesomeIcon icon="times-circle"/>
             </button>
         ) : (
             null

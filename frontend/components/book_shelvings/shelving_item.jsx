@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import { faTimesCircle } from '@fortawesome/fontawesome-free-solid';
 
 class ShelvingItem extends React.Component {
     constructor(props) {
@@ -24,7 +26,7 @@ class ShelvingItem extends React.Component {
                     <h2>{name}</h2>
                 </Link>
                 <button title="Remove From Shelf" onClick={this.handleSubmit}>
-                    <i className="fa fa-times"></i>
+                    <FontAwesomeIcon icon="times-circle" />
                 </button>
             </li>
         );

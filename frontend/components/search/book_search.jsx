@@ -2,6 +2,8 @@ import React from 'react';
 import BookSearchItem from './book_search_item';
 import { Link } from 'react-router-dom';
 import onClickOutside from "react-onclickoutside";
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import { faBook } from '@fortawesome/fontawesome-free-solid';
 
 class BookSearch extends React.Component {
     constructor(props) {
@@ -53,7 +55,7 @@ class BookSearch extends React.Component {
     render() {
         return (
             <div className="book-search">
-                <i className="fa fa-book"></i>
+                <FontAwesomeIcon icon="book" />
                 <input 
                     type="text" 
                     onChange={this.handleInput}

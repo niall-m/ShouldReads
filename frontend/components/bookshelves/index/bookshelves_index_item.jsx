@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import { faTimesCircle, faBookmark } from '@fortawesome/fontawesome-free-solid';
 
 class BookshelvesIndexItem extends React.Component {
     constructor(props) {
@@ -19,20 +21,22 @@ class BookshelvesIndexItem extends React.Component {
 
     render() {
         const { bookshelf, deleteBookshelf } = this.props;
-        const deleteBtn = (bookshelf && !bookshelf.default_shelf) ? (
+        const shelvingsCount = 
+            <span className="fa-layers fa-fw">
+                <FontAwesomeIcon icon="bookmark" size="lg" />
+                <span className="fa-layers-text fa-inverse">{bookshelf.books.length}</span>
+            </span>;
+        const deleteBtn = !bookshelf.default_shelf ?
             <button title="Delete Shelf" onClick={this.handleSubmit}>
-                <i className="fa fa-times"></i>
-            </button>
-        ) : (
-            null
-        );
+                <FontAwesomeIcon icon="times-circle" size="xs" />
+            </button> : null;
         
         return (
             <li>
                 {deleteBtn}
                 <Link to={`/bookshelves/${bookshelf.id}`}>
                     <div>
-                        <h2>{bookshelf.shelf_name}</h2>
+                        <h2>{bookshelf.shelf_name}{shelvingsCount}</h2>
                     </div>
                 </Link>
             </li>

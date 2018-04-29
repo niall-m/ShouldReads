@@ -64,7 +64,7 @@ body {
     display: flex;
 }
 
-.fa-3x {
+#loading {
     position: absolute;
     top: 50vh;
     left: 50%;
@@ -283,14 +283,14 @@ header {
             padding: 1vmin;
             margin: 1vmin 3vmin;
             border-radius: 4px;
-            border: 1px inset $boarders;
+            border: 2px inset $boarders;
             background-color: $cream;
         }
         button {
             padding: 1vh 1vw;
             margin: 1vh 5vw;
             background-color: $cream;
-            border: 1px outset $boarders;
+            border: 2px outset $boarders;
             border-radius: 5px;
             font-weight: 500;
             transition: background .3s, color .3s;
@@ -308,7 +308,7 @@ header {
         font-size: 2.8vmin;
         overflow: auto;
         li {
-            padding: 1vh;
+            padding: 2vh;
             display: flex;
             align-items: center;
             justify-content: flex-start;
@@ -404,7 +404,7 @@ header {
                     background: $shelvings;
                 }
                 button {
-                    border: 1px outset $boarders;
+                    border: 2px outset $boarders;
                     border-radius: 4px;
                     color: $word;
                     background-color: $cream;
@@ -464,7 +464,7 @@ header {
                 button {
                     padding: 1vh 1vw;
                     margin: 1vh;
-                    border: 1px outset $boarders;
+                    border: 2px outset $boarders;
                     border-radius: 4px;
                     background-color: $cream;
                     color: $word;
@@ -514,7 +514,7 @@ header {
                             background-color: $cream;
                         }
                     }
-                    button i {
+                    button svg {
                         &:hover {
                             color: $hoverword;
                         }
