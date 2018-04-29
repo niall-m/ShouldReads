@@ -8,15 +8,12 @@ class BookshelvesIndexItem extends React.Component {
         super(props);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
-
+    
     handleSubmit(e) {
         e.preventDefault();
-        if (this.props.match.params.bookshelfId == this.props.bookshelf.id) {
-            this.props.deleteBookshelf(this.props.bookshelf.id);
-            this.props.history.push("/");
-        } else {
-            this.props.deleteBookshelf(this.props.bookshelf.id);
-        }
+        let path = this.props.location.pathname.split('/').slice(-1).join('');
+        this.props.deleteBookshelf(this.props.bookshelf.id);
+        if (path == this.props.bookshelf.id) this.props.history.push("/books");
     }
 
     render() {

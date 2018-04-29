@@ -30,7 +30,7 @@ class BookshelvesIndex extends React.Component {
     render() {
         const { 
             bookshelves, deleteBookshelf, loadingIndex, 
-            match, history, currentUser
+            history, location, currentUser
         } = this.props;
         
         if (loadingIndex || !bookshelves) return <Loading />;
@@ -53,8 +53,8 @@ class BookshelvesIndex extends React.Component {
                             <BookshelvesIndexItem
                                 key={bookshelf.id}
                                 bookshelf={bookshelf}
+                                location={location}
                                 history={history}
-                                match={match}
                                 deleteBookshelf={deleteBookshelf} 
                             />
                         ))
