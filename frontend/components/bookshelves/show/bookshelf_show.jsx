@@ -4,7 +4,7 @@ import BookshelfShowItem from './bookshelf_show_item';
 import Loading from '../../loading';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import { 
-    faFrown, faArrowDown, faArrowUp 
+    faFrown, faArrowDown, faArrowUp
 } from '@fortawesome/fontawesome-free-solid';
 
 class BookshelfShow extends React.Component {
@@ -25,9 +25,9 @@ class BookshelfShow extends React.Component {
     compareProps(key, order='asc') {
         return function(a, b) {
             const A = (key === 'author') ?
-                a[key].split(' ').slice(-1).join(' ') : a[key];
+                a[key].split(' ').slice(-1).join('') : a[key];
             const B = (key === 'author') ?
-                b[key].split(' ').slice(-1).join(' ') : b[key];
+                b[key].split(' ').slice(-1).join('') : b[key];
             let result = 0;
             if (A > B) {
                 result = 1;

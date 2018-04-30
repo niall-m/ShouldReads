@@ -16,6 +16,7 @@ class ShelvingItem extends React.Component {
             shelf_id: this.props.shelfId
         };
         this.props.deleteShelving(shelving);
+        this.props.fetchBookshelves();
     }
 
     render() {
@@ -26,7 +27,7 @@ class ShelvingItem extends React.Component {
                     <h2>{name}</h2>
                 </Link>
                 <button title="Remove From Shelf" onClick={this.handleSubmit}>
-                    <FontAwesomeIcon icon="times-circle" />
+                    <FontAwesomeIcon icon="times-circle" size="xs" />
                 </button>
             </li>
         );

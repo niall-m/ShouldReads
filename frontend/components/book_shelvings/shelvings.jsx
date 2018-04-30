@@ -5,11 +5,17 @@ class Shelvings extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            book_id: 0,
+            book_id: this.props.book.id,
             shelf_id: 0
         };
         this.handleInput = this.handleInput.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    componentDidUpdate(prevProps) {
+        if (this.state.book_id !== prevProps.match.params.bookId) {
+            this.setState({ book_id: prevProps.match.params.bookId });
+        }
     }
 
     handleInput(type) {
@@ -20,22 +26,21 @@ class Shelvings extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        this.setState({ book_id: this.props.book.id }, () => {
-            this.props.createShelving(this.state);
-        });
+        this.props.createShelving(this.state);
+        this.props.fetchBookshelves();
     }
 
     render() {
         const { 
-            book, bookshelves, deleteShelving, currentUser
+            book, bookshelves, deleteShelving, fetchBookshelves, currentUser
         } = this.props;
 
         const shelvings = book.bookshelves.filter(
             shelf => shelf.user_id === currentUser.id
         );
 
-        const noShelvings = shelvings.length === 0 ?
-            <h3>none...</h3> : null;
+        const currentShelvings = shelvings.length === 0 ?
+            <li>No Shelvings...</li> : <li>Current Shelves:</li>;
 
         return (
             <div className="shelvings">
@@ -50,12 +55,10 @@ class Shelvings extends React.Component {
                             ))
                         }
                     </select>
-                    <br /><br />
                     <button onClick={this.handleSubmit}>Add to Shelf</button>
                 </form>
-                <h3>This book is on the following shelves:</h3>
-                {noShelvings}
                 <ul>
+                    {currentShelvings}
                     {
                         shelvings.map(shelf => (
                             <ShelvingItem
@@ -63,7 +66,8 @@ class Shelvings extends React.Component {
                                 shelfId={shelf.id}
                                 bookId={book.id}
                                 name={shelf.shelf_name}
-                                deleteShelving={deleteShelving} 
+                                deleteShelving={deleteShelving}
+                                fetchBookshelves={fetchBookshelves}
                             />
                         ))
                     }

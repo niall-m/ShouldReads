@@ -35,12 +35,11 @@ class BookShow extends React.Component {
                         <br />
                         <p>{book.description}</p>
                     </section>
-                    <ShelvingsContainer book={book} />
                     <ReviewsIndexContainer />
                 </main>
                 <aside>
                     <img src={book.cover_img} alt={book.title}/>
-                    <p>likes</p>
+                    <ShelvingsContainer book={book} />
                 </aside>
             </div>
         );

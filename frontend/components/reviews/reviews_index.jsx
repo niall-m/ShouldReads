@@ -15,7 +15,6 @@ class ReviewsIndex extends React.Component {
     }
 
     componentDidMount() {
-        this.props.clearErrors();
         this.props.fetchReviews(this.props.match.params.bookId);
     }
 

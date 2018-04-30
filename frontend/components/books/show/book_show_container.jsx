@@ -6,7 +6,6 @@ import { createShelving } from '../../../actions/shelving_actions';
 
 const mapStateToProps = (state, ownProps) => ({
     book: state.entities.books[ownProps.match.params.bookId],
-    shelves: Object.values(state.entities.bookshelves),
     loadingBook: state.ui.books.loadingBook,
     loadingBookshelves: state.ui.bookshelves.loadingBookshelves
 });

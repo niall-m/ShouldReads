@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import Shelvings from './shelvings';
 import { fetchBookshelves } from '../../actions/bookshelf_actions';
 import { 
@@ -18,7 +19,7 @@ const mapDispatchToProps = dispatch => ({
     deleteShelving: shelving => dispatch(deleteShelving(shelving))
 });
 
-export default connect(
+export default withRouter(connect(
     mapStateToProps,
     mapDispatchToProps
-)(Shelvings);
+)(Shelvings));

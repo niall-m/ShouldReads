@@ -130,7 +130,7 @@ header {
     align-content: center;
     width: 100%;
     height: 10vh;
-    border-bottom: 2px ridge $boarders;
+    border-bottom: 3px ridge $boarders;
     nav {
         display: flex;
         justify-content: space-between;
@@ -258,20 +258,17 @@ header {
     display: flex;
     align-items: center;
     flex-direction: column;
-    overflow-x: hidden;
+    overflow: auto;
     height: 100vh;
     width: 25vw;
     color: $word;
     background: $shelvings;
-    border-right: 2px ridge $boarders;
+    border-right: 3px ridge $boarders;
     z-index: 9;
     box-shadow: .5vh 0 1vh rgba(0, 0, 0, 0.3);
     form {
         position: absolute;
-        width: 90%;
-        display: flex;
-        flex-direction: column;
-        margin-top: 15vh;
+        padding-top: 15vh;
         h2 {
             padding: 1vmin;
             margin: 1vmin 3vmin;
@@ -288,7 +285,7 @@ header {
         }
         button {
             padding: 1vh 1vw;
-            margin: 1vh 5vw;
+            margin: 1vh 1vw;
             background-color: $cream;
             border: 2px outset $boarders;
             border-radius: 5px;
@@ -304,11 +301,11 @@ header {
     }
     ul {
         position: absolute;
-        margin-top: 40vh;
+        padding-top: 40vh;
         font-size: 2.8vmin;
-        overflow: auto;
+        width: 100%;
         li {
-            padding: 2vh;
+            padding: 2vh 2vw;
             display: flex;
             align-items: center;
             justify-content: flex-start;
@@ -361,8 +358,6 @@ header {
 .book-show {
     display: flex;
     margin-left: 25vw;
-    height: 100%;
-    padding-top: 10vh;
     background: $cloudy;
     color: $word;    
     main {
@@ -370,20 +365,21 @@ header {
         align-items: center;
         justify-content: center; //?
         flex-direction: column;
-        height: 100%;
-        width: 100%;
+        width: 50vw;
+        padding-top: 10vh;
         margin-right: 25vw;
-        border-right: 2px groove $boarders;
+        border-right: 3px groove $boarders;
         section {
             text-align: left;
             padding: 5vh 5vw;
+            border-bottom: 2px groove $boarders;
             h1 {
                 padding: 0 0 1vh 5vw;
                 font-weight: 700;
                 font-size: 4vmin;
             }
             h3 {
-                padding-left: 10vw;
+                padding-left: 7vw;
                 margin: 0;
                 font-style: italic;
                 font-size: 2.5vmin;
@@ -393,62 +389,13 @@ header {
                 font-size: 3vmin;
             }
         }
-        .shelvings {
-            width: 100%;
-            height: 25vh;
-            background: $shelves;
-            form {
-                padding: 2vh;
-                select {
-                    color: $word;
-                    background: $shelvings;
-                }
-                button {
-                    border: 2px outset $boarders;
-                    border-radius: 4px;
-                    color: $word;
-                    background-color: $cream;
-                    padding: 1vh 1vw;
-                    transition: background-color .3s, color .3s;
-                    &:hover {
-                        background-color: $boarders;
-                        color: $cream;
-                    }
-                    &:active {
-                        border-style: inset;
-                    }
-                }
-            }
-            h3 {
-                font-size: 2.5vmin;
-                padding: 1vmin;
-            }
-            ul {
-                display: flex;
-                align-items: center;
-                justify-content: space-around;
-                width: 100%;
-                li {
-                    a:hover {
-                        color: $hoverword;
-                    }
-                    button {
-                        padding: 1vh;
-                        &:hover {
-                            color: $hoverword;
-                        }
-                    }
-                }
-            }
-        }
         .reviews {
-            width: 100%;
+            padding: 5vh 5vw;
             form {
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 flex-direction: column;
-                padding: 2vh 1vh 1vh 1vh;
                 h2 {
                     font-weight: 400;
                     font-size: 3vmin;
@@ -525,18 +472,77 @@ header {
     }
     aside {
         position: fixed;
-        top: 15vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
         right: 0;
         width: 25vw;
-        height: 70vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
+        height: 100vh;
+        overflow: auto;
         img {
+            position: absolute;
             width: 18vmax;
             height: 24vmax;
             border-radius: 5px;
+            padding-top: 15vh;
+        }
+        .shelvings {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            padding-top: 48vh;
+            width: 100%;
+            form {
+                select {
+                    color: $word;
+                    background: $shelvings;
+                    margin: 1vmin;
+                }
+                button {
+                    padding: 1vh 1vw;
+                    margin: 1vh 1vw;
+                    background-color: $cream;
+                    border: 2px outset $boarders;
+                    border-radius: 5px;
+                    color: $word;
+                    transition: background-color .3s, color .3s;
+                    &:hover {
+                        color: $cream;
+                        background: $boarders;
+                    }
+                    &:active {
+                        border-style: inset;
+                    }
+                }
+                h3 {
+                    font-size: 2.5vmin;
+                    padding: 1vh 1vw;
+                }
+            }
+            ul {
+                font-size: 2.8vmin;
+                li {
+                    &:first-child {
+                        padding: 1vh 1vw 0;
+                        justify-content: center;
+                        font-size: 2.3vmin;
+                    }
+                    padding: 1vh 2vw;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;        
+                    a:hover {
+                        color: $hoverword;
+                    }
+                    button {
+                        padding: 1vh;
+                        &:hover {
+                            color: $hoverword;
+                        }
+                    }
+                }
+            }
         }
     }
 }
