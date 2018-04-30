@@ -40,7 +40,7 @@ class Shelvings extends React.Component {
         );
 
         const currentShelvings = shelvings.length === 0 ?
-            <li>No Shelvings...</li> : <li>Current Shelves:</li>;
+            <li>No Shelvings...</li> : <li>Shelvings:</li>;
 
         return (
             <div className="shelvings">

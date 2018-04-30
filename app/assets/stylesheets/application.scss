@@ -267,6 +267,9 @@ header {
     z-index: 9;
     box-shadow: .5vh 0 1vh rgba(0, 0, 0, 0.3);
     form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         position: absolute;
         padding-top: 15vh;
         h2 {
@@ -278,8 +281,8 @@ header {
         }
         input {
             padding: 1vmin;
-            margin: 1vmin 3vmin;
-            border-radius: 4px;
+            margin: 1vmin 1vmin;
+            border-radius: 5px;
             border: 2px inset $boarders;
             background-color: $cream;
         }
@@ -480,20 +483,20 @@ header {
         height: 100vh;
         overflow: auto;
         img {
-            position: absolute;
+            position: relative;
             width: 18vmax;
             height: 24vmax;
             border-radius: 5px;
             padding-top: 15vh;
         }
         .shelvings {
-            position: absolute;
-            display: flex;
-            flex-direction: column;
-            align-content: center;
-            padding-top: 48vh;
+            position: relative;
+            padding-top: 1vh;
             width: 100%;
             form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;        
                 select {
                     color: $word;
                     background: $shelvings;
@@ -523,15 +526,15 @@ header {
             ul {
                 font-size: 2.8vmin;
                 li {
+                    padding: 1vh 2vw;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;        
                     &:first-child {
                         padding: 1vh 1vw 0;
                         justify-content: center;
                         font-size: 2.3vmin;
                     }
-                    padding: 1vh 2vw;
-                    display: flex;
-                    align-items: center;
-                    justify-content: flex-end;        
                     a:hover {
                         color: $hoverword;
                     }
