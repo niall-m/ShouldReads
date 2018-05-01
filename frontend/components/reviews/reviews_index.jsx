@@ -15,17 +15,19 @@ class ReviewsIndex extends React.Component {
     }
 
     componentDidMount() {
+        this.props.clearErrors();
         this.props.fetchReviews(this.props.match.params.bookId);
     }
 
     componentDidUpdate(prevProps) {
         if (this.props.match.params.bookId !== prevProps.match.params.bookId) {
+            this.props.clearErrors();
             this.props.fetchReviews(this.props.match.params.bookId);
         } else {
             return null;
         }
     }
-
+        
     handleInput(type) {
         if (type === "rating"){
             return (e) => this.setState({ [type]: parseInt(e.target.value) });

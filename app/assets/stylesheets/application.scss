@@ -307,7 +307,7 @@ header {
         position: absolute;
         padding-top: 40vh;
         font-size: 2.8vmin;
-        width: 100%;
+        width: 90%;
         li {
             padding: 2vh 2vw;
             display: flex;
@@ -410,7 +410,7 @@ header {
                     width: 40vw;
                     min-height: 10vh;
                     border-radius: 3px;
-                    background-color: $cream;
+                    background-color: $shelvings;
                 }
                 button {
                     padding: 1vh 1vw;
@@ -462,7 +462,7 @@ header {
                         .body {
                             padding: 1vh 1vw;
                             text-align: left;
-                            background-color: $cream;
+                            background-color: $shelvings;
                         }
                     }
                     button svg {
@@ -492,6 +492,9 @@ header {
         }
         .shelvings {
             position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             padding-top: 1vh;
             width: 100%;
             form {
@@ -525,6 +528,7 @@ header {
                 }
             }
             ul {
+                width: 90%;
                 font-size: 2.8vmin;
                 li {
                     padding: 1vh 2vw;
@@ -532,7 +536,7 @@ header {
                     align-items: center;
                     justify-content: flex-end;        
                     &:first-child {
-                        padding: 1vh 1vw 0;
+                        padding: 1vh 1vw;
                         justify-content: center;
                         font-size: 2.3vmin;
                     }

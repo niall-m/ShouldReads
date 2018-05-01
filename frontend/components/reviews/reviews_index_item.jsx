@@ -20,13 +20,10 @@ class ReviewsIndexItem extends React.Component {
         for (let i = 0; i < review.rating; i++) {
             stars.push(<p className="review-star" key={`star-${i}`}>&#9733;</p>);
         }
-        const deleteBtn = (currentUser.id === review.user.id) ? (
+        const deleteBtn = (currentUser.id === review.user.id) ?
             <button title="Delete Review" onClick={this.handleSubmit}>
                 <FontAwesomeIcon icon="times-circle"/>
-            </button>
-        ) : (
-            null
-        );
+            </button> : null;
 
         return (
             <li>
