@@ -17,6 +17,7 @@ class Bookshelf < ApplicationRecord
     has_many :shelvings,
         primary_key: :id,
         foreign_key: :shelf_id,
-        class_name: :Shelving
+        class_name: :Shelving,
+        dependent: :destroy
     has_many :books, through: :shelvings
 end

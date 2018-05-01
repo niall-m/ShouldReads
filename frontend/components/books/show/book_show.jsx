@@ -21,7 +21,6 @@ class BookShow extends React.Component {
         }
     }
 
-
     render() {
         const { loadingBook, loadingBookshelves, book } = this.props;
         if (loadingBook || loadingBookshelves || !book) return <Loading />;
