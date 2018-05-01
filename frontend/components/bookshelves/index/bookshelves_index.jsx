@@ -24,7 +24,7 @@ class BookshelvesIndex extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.createBookshelf(this.state)
-            .then(this.setState( { shelf_name: '' } ));
+        .then(this.setState( { shelf_name: '' } ));
     }
 
     render() {

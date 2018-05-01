@@ -458,6 +458,9 @@ header {
                                 font-weight: bold;
                                 font-style: italic;
                             }
+                            p {
+                                color: $gold;
+                            }
                         }
                         .body {
                             padding: 1vh 1vw;
@@ -618,32 +621,23 @@ header {
     padding: 1vh;
 }
 
-.rating-input {
+.input {
     float: right;
-    width: 16px;
-    height: 16px;
     padding: 0;
-    margin: 0 0 0 -16px;
-    opacity: 0;
+    position: absolute;
+    visibility: hidden;
 }
 
-.rating:hover .rating-star:hover,
-.rating:hover .rating-star:hover ~ .rating-star,
-.rating-input:checked ~ .rating-star {
-  color: $gold;
-}
-
-.rating-star,
-.rating:hover .rating-star {
-  cursor: pointer;
-  position: relative;
-  float: right;
-  display: block;
-  width: 16px;
-  height: 16px;
-  color: black;
-}
-
-.review-star {
+.rating:hover .star:hover,
+.rating:hover .star:hover ~ .star,
+.input:checked ~ .star {
     color: $gold;
-} 
+}
+
+.star, .rating:hover .star {
+    cursor: pointer;
+    position: relative;
+    float: right;
+    display: block;
+    color: $word;
+}

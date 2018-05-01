@@ -1,6 +1,8 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 import ReviewsIndexItem from './reviews_index_item';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import { faStar } from '@fortawesome/fontawesome-free-solid';
 
 class ReviewsIndex extends React.Component {
     constructor(props) {
@@ -23,8 +25,7 @@ class ReviewsIndex extends React.Component {
         if (this.props.match.params.bookId !== prevProps.match.params.bookId) {
             this.props.clearErrors();
             this.props.fetchReviews(this.props.match.params.bookId);
-        } else {
-            return null;
+            this.setState({ book_id: prevProps.match.params.bookId });
         }
     }
         
@@ -66,36 +67,41 @@ class ReviewsIndex extends React.Component {
     renderRating() {
         return (
             <div className="rating">
-                <input type="radio" value="5"
+                <input type="radio" value="5" id="s5"
                     onChange={this.handleInput('rating')}
-                    className="rating-input"
-                    id="rating-input-1-5" name="rating" />
-                    <label htmlFor="rating-input-1-5"
-                        className="rating-star">&#9733;</label>
-                <input type="radio" value="4"
+                    className="input" name="rating"
+                />
+                <label className="star" htmlFor="s5">
+                    <FontAwesomeIcon icon="star" size="lg" />
+                </label>
+                <input type="radio" value="4" id="s4"
                     onChange={this.handleInput('rating')}
-                    className="rating-input"
-                    id="rating-input-1-4" name="rating" />
-                    <label htmlFor="rating-input-1-4"
-                        className="rating-star">&#9733;</label>
-                <input type="radio" value="3"
+                    className="input" name="rating"
+                />
+                <label className="star" htmlFor="s4">
+                    <FontAwesomeIcon icon="star" size="lg" />
+                </label>
+                <input type="radio" value="3" id="s3"
                     onChange={this.handleInput('rating')}
-                    className="rating-input"
-                    id="rating-input-1-3" name="rating" />
-                    <label htmlFor="rating-input-1-3"
-                        className="rating-star">&#9733;</label>
-                <input type="radio" value="2"
+                    className="input" name="rating"
+                />
+                <label className="star" htmlFor="s3">
+                    <FontAwesomeIcon icon="star" size="lg" />
+                </label>
+                <input type="radio" value="2" id="s2"
                     onChange={this.handleInput('rating')}
-                    className="rating-input"
-                    id="rating-input-1-2" name="rating" />
-                    <label htmlFor="rating-input-1-2"
-                        className="rating-star">&#9733;</label>
-                <input type="radio" value="1"
+                    className="input" name="rating"
+                />
+                <label className="star" htmlFor="s2">
+                    <FontAwesomeIcon icon="star" size="lg" />
+                </label>
+                <input type="radio" value="1" id="s1"
                     onChange={this.handleInput('rating')}
-                    className="rating-input"
-                    id="rating-input-1-1" name="rating" />
-                    <label htmlFor="rating-input-1-1"
-                        className="rating-star">&#9733;</label>
+                    className="input" name="rating"
+                />
+                <label className="star" htmlFor="s1">
+                    <FontAwesomeIcon icon="star" size="lg" />
+                </label>
             </div>
         );
     }
