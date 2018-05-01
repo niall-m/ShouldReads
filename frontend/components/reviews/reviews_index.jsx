@@ -25,7 +25,11 @@ class ReviewsIndex extends React.Component {
         if (this.props.match.params.bookId !== prevProps.match.params.bookId) {
             this.props.clearErrors();
             this.props.fetchReviews(this.props.match.params.bookId);
-            this.setState({ book_id: prevProps.match.params.bookId });
+            this.setState({ 
+                book_id: prevProps.match.params.bookId,
+                body: '',
+                rating: null
+            });
         }
     }
         
