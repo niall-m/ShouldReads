@@ -40,7 +40,7 @@ class Shelvings extends React.Component {
         );
 
         const currentShelvings = shelvings.length === 0 ?
-            <li>No Shelvings...</li> : <li>Shelvings:</li>;
+            <h3>No Shelvings...</h3> : <h3>Shelvings:</h3>;
 
         return (
             <div className="shelvings">
@@ -56,9 +56,9 @@ class Shelvings extends React.Component {
                         }
                     </select>
                     <button onClick={this.handleSubmit}>Add to Shelf</button>
+                    {currentShelvings}
                 </form>
                 <ul>
-                    {currentShelvings}
                     {
                         shelvings.map(shelf => (
                             <ShelvingItem

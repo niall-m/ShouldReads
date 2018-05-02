@@ -23,12 +23,12 @@ class ShelvingItem extends React.Component {
         const { shelfId, name, deleteShelving } = this.props;
         return (
             <li>
-                <Link to={`/bookshelves/${shelfId}`}>
-                    <h2>{name}</h2>
-                </Link>
                 <button title="Remove From Shelf" onClick={this.handleSubmit}>
                     <FontAwesomeIcon icon="times-circle" size="xs" />
                 </button>
+                <Link to={`/bookshelves/${shelfId}`}>
+                    <h2>{name}</h2>
+                </Link>
             </li>
         );
     }
