@@ -1,14 +1,38 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import flow from 'lodash/flow';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { ItemTypes } from '../../../util/dnd';
+import { DropTarget } from 'react-dnd';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import { faTimesCircle, faBookmark } from '@fortawesome/fontawesome-free-solid';
+
+const bookshelfTarget = {
+    drop(props, monitor, component) {
+        const shelf_id = props.bookshelf.id;
+        const book_id = monitor.getItem().bookId;
+        const shelving = { book_id, shelf_id };
+        props.createDropShelving(shelving).then(
+            props.fetchBookshelves()
+        );
+        return {};
+    }
+};
+
+function collect(connect, monitor) {
+    return {
+        connectDropTarget: connect.dropTarget(),
+        isOver: monitor.isOver()
+    };
+}
 
 class BookshelvesIndexItem extends React.Component {
     constructor(props) {
         super(props);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
-    
+
     handleSubmit(e) {
         e.preventDefault();
         let path = this.props.location.pathname.split('/').slice(-1).join('');
@@ -18,6 +42,8 @@ class BookshelvesIndexItem extends React.Component {
 
     render() {
         const { bookshelf, deleteBookshelf } = this.props;
+        const { connectDropTarget, isOver } = this.props;
+        
         const shelvingsCount = 
             <span className="fa-layers fa-fw">
                 <FontAwesomeIcon icon="bookmark" size="lg" />
@@ -28,7 +54,7 @@ class BookshelvesIndexItem extends React.Component {
                 <FontAwesomeIcon icon="times-circle" size="xs" />
             </button> : null;
         
-        return (
+        return connectDropTarget(
             <li>
                 {deleteBtn}
                 <Link to={`/bookshelves/${bookshelf.id}`}>
@@ -41,4 +67,12 @@ class BookshelvesIndexItem extends React.Component {
     }
 }
 
-export default BookshelvesIndexItem;
+BookshelvesIndexItem.propTypes = {
+    connectDropTarget: PropTypes.func.isRequired,
+    isOver: PropTypes.bool.isRequired,
+};
+
+export default flow(
+    DropTarget(ItemTypes.BOOK, bookshelfTarget, collect),
+    connect()
+)(BookshelvesIndexItem);

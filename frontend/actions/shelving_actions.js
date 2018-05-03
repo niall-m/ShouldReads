@@ -14,6 +14,10 @@ export const deleteShelving = shelving => dispatch => (
     )
 );
 
+export const createDropShelving = shelving => dispatch => (
+    ShelvingApiUtil.createShelving(shelving)
+);
+
 // export const deleteShelving = shelving => dispatch => (
 //     ShelvingApiUtil.deleteShelving(shelving)
 //         .then(shelving => dispatch(fetchBookshelf(shelving.shelf_id)))

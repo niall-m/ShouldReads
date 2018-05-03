@@ -2,8 +2,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 import BookshelvesIndex from './bookshelves_index';
 import {
-    fetchBookshelves, fetchBookshelf, createBookshelf, deleteBookshelf
+    fetchBookshelves, createBookshelf, deleteBookshelf
 } from '../../../actions/bookshelf_actions';
+import { createDropShelving } from '../../../actions/shelving_actions';
 
 const mapStateToProps = state => ({
     bookshelves: Object.values(state.entities.bookshelves),
@@ -13,9 +14,9 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
     fetchBookshelves: () => dispatch(fetchBookshelves()),
-    fetchBookshelf: id => dispatch(fetchBookshelf(id)),
     createBookshelf: bookshelf => dispatch(createBookshelf(bookshelf)),
-    deleteBookshelf: bookshelfId => dispatch(deleteBookshelf(bookshelfId))
+    deleteBookshelf: bookshelfId => dispatch(deleteBookshelf(bookshelfId)),
+    createDropShelving: shelving => dispatch(createDropShelving(shelving))
 });
 
 export default connect(
