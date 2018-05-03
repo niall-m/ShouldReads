@@ -35,9 +35,9 @@ class BookIndex extends React.Component {
                         books.map(book => (
                             <BookIndexItem
                                 key={book.id}
-                                book={book} />
-                            )
-                        )
+                                book={book} 
+                            />
+                        ))
                     }
                 </ul>
             </div>

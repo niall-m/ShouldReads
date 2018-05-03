@@ -16,15 +16,16 @@ class BookShow extends React.Component {
     componentDidUpdate(prevProps) {
         if (this.props.match.params.bookId !== prevProps.match.params.bookId) {
             this.props.fetchBook(this.props.match.params.bookId);
-        } else {
-            return null;
+        }
+        if (this.props.bookshelves.length !== prevProps.bookshelves.length) {
+            this.props.fetchBook(this.props.match.params.bookId);
         }
     }
 
     render() {
         const { loadingBook, loadingBookshelves, book } = this.props;
         if (loadingBook || loadingBookshelves || !book) return <Loading />;
-        
+
         return (
             <div className="book-show">
                 <main>
