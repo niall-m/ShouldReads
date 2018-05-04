@@ -513,6 +513,7 @@ header {
                 align-items: center;
                 flex-shrink: 0;     
                 select {
+                    font-size: 2vmin;
                     height: 3vh;
                     width: 90%;
                     color: $word;
@@ -586,8 +587,8 @@ header {
             padding: 5vh 5vw;
             a {
                 img {
-                    width: 12vmax;
-                    height: 16vmax;
+                    width: 12vw;
+                    height: 16vw;
                     transition: all .2s ease-in-out;
                     &:hover {
                         transform: scale(1.01);

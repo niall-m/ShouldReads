@@ -46,7 +46,7 @@ class Shelvings extends React.Component {
             <div className="shelvings">
                 <form>
                     <select value={this.state.shelf_id} onChange={this.handleInput('shelf_id')}>
-                        <option value={0} disabled>select a shelf...</option>
+                        <option value={0} disabled>Select a shelf...</option>
                         {
                             bookshelves.map(shelf => (
                                 <option key={shelf.id} value={shelf.id}>
