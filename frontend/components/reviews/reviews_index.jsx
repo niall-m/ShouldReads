@@ -123,13 +123,13 @@ class ReviewsIndex extends React.Component {
             <article className="reviews">
                 <form>
                     <h2>Write A Review</h2>
-                    {this.renderRating()}
                     <textarea
                         type="text"
                         value={this.state.body}
                         onChange={this.handleInput('body')}
                         placeholder="Rate your read here!" 
                     />
+                    {this.renderRating()}
                     <button onClick={this.handleSubmit}>Post Review</button>
                     {this.errors()}
                 </form>

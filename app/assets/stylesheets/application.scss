@@ -407,6 +407,7 @@ header {
                 justify-content: center;
                 flex-direction: column;
                 h2 {
+                    padding-bottom: 1vh;
                     font-weight: 400;
                     font-size: 3vmin;
                 }
@@ -437,6 +438,7 @@ header {
                 .review-errors {
                     font-size: 1.5vmin;
                     display: block;
+                    color: red;
                 }
             }
             h3 {
@@ -511,6 +513,7 @@ header {
                 align-items: center;
                 flex-shrink: 0;     
                 select {
+                    height: 3vh;
                     width: 90%;
                     color: $word;
                     background: $lightgreen;
