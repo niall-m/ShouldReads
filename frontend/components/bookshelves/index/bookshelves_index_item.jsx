@@ -59,7 +59,7 @@ class BookshelvesIndexItem extends React.Component {
                 {deleteBtn}
                 <Link to={`/bookshelves/${bookshelf.id}`}>
                     <div>
-                        <h2>{bookshelf.shelf_name}{shelvingsCount}</h2>
+                        <h2>{bookshelf.shelf_name}&nbsp;{shelvingsCount}</h2>
                     </div>
                 </Link>
             </li>

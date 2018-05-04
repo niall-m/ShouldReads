@@ -234,7 +234,7 @@ header {
             padding: 1vh 1vw;
             font-size: 3vmin;
             font-weight: 500;
-            border: 1px outset $boarders;
+            border: 2px outset $boarders;
             border-radius: 4px;
             transition: background-color .3s, color .3s;
             &:hover {
@@ -281,6 +281,7 @@ header {
             text-decoration: underline;
         }
         input {
+            width: 70%;
             padding: 1vmin;
             margin: 1vmin 1vmin;
             border-radius: 5px;
@@ -324,6 +325,9 @@ header {
                     color: $hoverword;
                 }
             }
+            .fa-layers-text {
+                font-size: 1.8vmin;
+            }
         }
     }
 }
@@ -346,8 +350,8 @@ header {
         li {
             margin: 2vh 1vw;
             img {
-                width: 21vmax;
-                height: 28vmax;
+                width: 21vw;
+                height: 28vw;
                 border-radius: 5px;
                 transition: all .2s ease-in-out;
                 &:hover {
@@ -489,8 +493,8 @@ header {
         height: 100vh;
         img {
             position: relative;
-            width: 18vmax;
-            height: 24vmax;
+            width: 18vw;
+            height: 24vw;
             border-radius: 5px;
             padding-top: 15vh;
         }
@@ -507,6 +511,7 @@ header {
                 align-items: center;
                 flex-shrink: 0;     
                 select {
+                    width: 90%;
                     color: $word;
                     background: $lightgreen;
                     margin: 1vmin;
@@ -572,14 +577,14 @@ header {
         text-align: left;
         li {
             display: grid;
-            grid-template-columns: 20% 20% 20% 5%;
+            grid-template-columns: 25% 20% 20% 5%;
             justify-content: space-between;
             align-items: center;
             padding: 5vh 5vw;
             a {
                 img {
-                    width: 9vmax;
-                    height: 12vmax;
+                    width: 12vmax;
+                    height: 16vmax;
                     transition: all .2s ease-in-out;
                     &:hover {
                         transform: scale(1.01);
