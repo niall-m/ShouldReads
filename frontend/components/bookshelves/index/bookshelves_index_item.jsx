@@ -67,7 +67,7 @@ class BookshelvesIndexItem extends React.Component {
             </button> 
             : null;
         const onHover = this.state.hover === true ?
-            <FontAwesomeIcon icon="hand-point-right" size="xs" className="hand"/>
+            <FontAwesomeIcon icon="hand-point-right" className="hand" />
             : null;
         
         return connectDropTarget(
