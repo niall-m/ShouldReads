@@ -6,7 +6,9 @@ import PropTypes from 'prop-types';
 import { ItemTypes } from '../../../util/dnd';
 import { DropTarget } from 'react-dnd';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-import { faTimesCircle, faBookmark } from '@fortawesome/fontawesome-free-solid';
+import { 
+    faTimesCircle, faBookmark, faHandPointRight 
+} from '@fortawesome/fontawesome-free-solid';
 
 const bookshelfTarget = {
     drop(props, monitor, component) {
@@ -30,7 +32,17 @@ function collect(connect, monitor) {
 class BookshelvesIndexItem extends React.Component {
     constructor(props) {
         super(props);
+        this.state = { hover: false };
         this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    componentWillReceiveProps(nextProps) {
+        if (!this.props.isOver && nextProps.isOver) {
+            this.setState({ hover: true });
+        }
+        if (this.props.isOver && !nextProps.isOver) {
+            this.setState({ hover: false });
+        }
     }
 
     handleSubmit(e) {
@@ -52,10 +64,15 @@ class BookshelvesIndexItem extends React.Component {
         const deleteBtn = !bookshelf.default_shelf ?
             <button title="Delete Shelf" onClick={this.handleSubmit}>
                 <FontAwesomeIcon icon="times-circle" size="xs" />
-            </button> : null;
+            </button> 
+            : null;
+        const onHover = this.state.hover === true ?
+            <FontAwesomeIcon icon="hand-point-right" size="xs" className="hand"/>
+            : null;
         
         return connectDropTarget(
             <li>
+                {onHover}
                 {deleteBtn}
                 <Link to={`/bookshelves/${bookshelf.id}`}>
                     <div>
