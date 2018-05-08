@@ -97,16 +97,13 @@ body {
     justify-content: space-evenly;
     h1 {
         font-size: 5vmax;
-        text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
-        background: #f4f1eb4d;
-        border-radius: 3px;
-        padding: 1vh 1vw;
+        text-shadow: 1vh 1vh 1vh rgba(0, 0, 0, 1);
     }
     .about {
         display: flex;
         justify-content: space-evenly;
         width: 100%;
-        background: rgba(69, 47, 33, 0.7);
+        background: rgba(69, 47, 33, 0.4);
         div {
             display: flex;
             justify-content: center;
@@ -120,6 +117,7 @@ body {
     }
     .gifs {
         display: flex;
+        align-items: center;
         justify-content: space-evenly;
         width: 100%;
         div {
@@ -127,6 +125,7 @@ body {
             justify-content: center;
             align-items: center;
             width: 20vw;
+            box-shadow: 1vh 1vh 1vh rgba(0, 0, 0, 0.7);
         }
     }
 }
