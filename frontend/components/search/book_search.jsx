@@ -49,6 +49,12 @@ class BookSearch extends React.Component {
                     }
                 </ul>
             );
+        } else { 
+            return (
+                <ul>
+                    <li>no matching results</li>
+                </ul>
+            );
         }
     }
 
