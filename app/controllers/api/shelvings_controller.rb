@@ -2,7 +2,7 @@ class Api::ShelvingsController < ApplicationController
 
   def create
     @shelving = Shelving.new(shelving_params)
-    if @shelving.save!
+    if @shelving.save
       render :show
     else
       render json: @shelving.errors.full_messages, status: 422
