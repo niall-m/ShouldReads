@@ -12,8 +12,6 @@
 - Drag n' Drop books from catalogue to shelf
 - Search functionality
 
-![Search Bar](https://github.com/niall-m/ShouldReads/blob/master/app/assets/images/search.png)
-
 ## Project Design
 
 ShouldReads was originally designed and built in 2 weeks. A proposal was drafted to help provide an implementation timeline during the development process. Relevant items of the proposal included:
@@ -50,6 +48,60 @@ Frontend dependencies:
     - React Router
 - React DnD: external library for drag n' drop, developed by Abramov, creator of Redux
 - FontAwesome: external library for FontAwesome icons
+
+## Book Search
+
+![Search Bar](https://github.com/niall-m/ShouldReads/blob/master/app/assets/images/search.png)
+
+The BookSearch component sets the user input as the state, which is sent out as a query to search the database. The input is dynamically searched and rendered.
+
+```js
+class BookSearch extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { searchValue: ''};
+        this.handleInput = this.handleInput.bind(this);
+        this.clearState = this.clearState.bind(this);
+    }
+
+    handleInput(e) {
+        e.preventDefault();
+        const val = e.target.value;
+        this.setState({ searchValue: val }, () => {
+            this.props.searchDatabase(this.state.searchValue);
+        });
+    }
+
+    // code for rendering results
+
+    render() {
+        return (
+            <div className="book-search">
+                <FontAwesomeIcon icon="book" />
+                <input 
+                    type="text" 
+                    onChange={this.handleInput}
+                    placeholder="search for a book"
+                    value={this.state.searchValue} 
+                />
+                <div>
+                    {this.renderResults()}
+                </div>
+            </div>
+        );
+    }
+}
+```
+
+This asynchronous Ajax request is used to send the query to be processed by the backend.
+
+```js
+export const searchDatabase = (query) => dispatch => (
+    BookApiUtil.searchBookDatabase(query).then(
+        results => dispatch(receiveSearchResults(results))
+    )
+);
+```
 
 ## Future Implementations
 
