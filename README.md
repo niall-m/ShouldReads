@@ -2,7 +2,7 @@
 
 [ShouldReads](https://stark-coast-59940.herokuapp.com), a personal project by Niall Mahford, is a web application inspired by GoodReads for users to create their own personal online library.
 
-![Login Page](https://github.com/niall-m/ShouldReads/app/assets/images/login_page.png)
+![Login Page](https://github.com/niall-m/ShouldReads/blob/master/app/assets/images/login_page.png)
 
 ## Features
 - User accounts with secure authentication
