@@ -10,6 +10,9 @@
 - Create and manage bookshelves
 - Write book reviews with 1-5 star ratings
 - Drag n' Drop books from catalogue to shelf
+- Search functionality
+
+![Search Bar](https://github.com/niall-m/ShouldReads/blob/master/app/assets/images/search.png)
 
 ## Project Design
 
@@ -22,7 +25,7 @@ ShouldReads was originally designed and built in 2 weeks. A proposal was drafted
 + [Routes](https://github.com/niall-m/ShouldReads/wiki/routes)
 + [Schema](https://github.com/niall-m/ShouldReads/wiki/schema)
 
-To improve the UI/UX, ShouldReads underwent a significant overhaul to implement drag n' drop functionality. This experience yielded the most valuable lessons regarding project planning.
+To improve the UI/UX, ShouldReads underwent a significant overhaul to implement search and drag n' drop functionality. This experience yielded the most valuable lessons regarding UI/UX in project planning.
 
 ## Technology
 
@@ -52,7 +55,5 @@ Frontend dependencies:
 
 Possible future features:
 - Display a "Read Status" for each book
-- Liking Books
-- Adding Book Tags for genres
-- Search for books or authors
-- Drag and drop books to shelvings
+- Genre tags
+- Likes
