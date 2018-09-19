@@ -12,19 +12,6 @@
 - Drag n' Drop books from catalogue to shelf
 - Search functionality
 
-## Project Design
-
-ShouldReads was originally designed and built in 2 weeks. A proposal was drafted to help provide an implementation timeline during the development process. Relevant items of the proposal included:
-
-+ [MVP list](https://github.com/niall-m/ShouldReads/wiki/mvp-list)
-+ [Wireframes](https://github.com/niall-m/ShouldReads/wiki/wireframes)
-+ [Component Hierarchy](https://github.com/niall-m/ShouldReads/wiki/component-hierarchy)
-+ [Sample State](https://github.com/niall-m/ShouldReads/wiki/sample-state)
-+ [Routes](https://github.com/niall-m/ShouldReads/wiki/routes)
-+ [Schema](https://github.com/niall-m/ShouldReads/wiki/schema)
-
-To improve the UI/UX, ShouldReads underwent a significant overhaul to implement search and drag n' drop functionality. This experience yielded the most valuable lessons regarding UI/UX in project planning.
-
 ## Technology
 
 ShouldReads is a single-page application. The backend was built with Ruby on Rails (RoR), which was used to create RESTful API routes and JSON data retrieval from the PostgreSQL database.
@@ -48,6 +35,71 @@ Frontend dependencies:
     - React Router
 - React DnD: external library for drag n' drop, developed by Abramov, creator of Redux
 - FontAwesome: external library for FontAwesome icons
+
+## Project Design
+
+ShouldReads was originally designed and built in 2 weeks. A proposal was drafted to help provide an implementation timeline during the development process. Relevant items of the proposal included:
+
++ [MVP list](https://github.com/niall-m/ShouldReads/wiki/mvp-list)
++ [Wireframes](https://github.com/niall-m/ShouldReads/wiki/wireframes)
++ [Component Hierarchy](https://github.com/niall-m/ShouldReads/wiki/component-hierarchy)
++ [Sample State](https://github.com/niall-m/ShouldReads/wiki/sample-state)
++ [Routes](https://github.com/niall-m/ShouldReads/wiki/routes)
++ [Schema](https://github.com/niall-m/ShouldReads/wiki/schema)
+
+To improve the UI/UX, ShouldReads underwent a significant overhaul to implement search and drag n' drop functionality. This experience yielded the most valuable lessons regarding UI/UX in project planning.
+
+## Drag n' Drop with ReactDnD
+
+- Drag n' Drop is an essential aspect of any modern UI/UX. It's difficult to implement and the beauty in its simplicity is often taken for granted. 
+The ReactDnD library accomplishes this by defining draggable objects and droppable targets.
+- When a draggable item is clicked and dragged, a snapshot of the component is taken and can then be moved throughout the UI. It is monitored by the DOM. The original component and its data persists in the DOM.
+
+```js
+const bookSource = {
+    beginDrag(props) {
+        return {
+            bookId: props.book.id
+        };
+    }
+};
+
+const collect = (connect, monitor) => ({
+    connectDragSource: connect.dragSource(),
+    isDragging: monitor.isDragging()
+});
+```
+
+- When hovering over a droppable target (e.g. a bookshelf index item), that components's state is toggled. The corresponding logic decides whether to display an icon that will show the user over which target they are currently hovering.
+
+```js
+    componentWillReceiveProps(nextProps) {
+        if (!this.props.isOver && nextProps.isOver) {
+            this.setState({ hover: true });
+        }
+        if (this.props.isOver && !nextProps.isOver) {
+            this.setState({ hover: false });
+        }
+    }
+```
+
+- When the drop action is initiated by the user, an AJAX call is sent to the backend to attempt to create a new shelving with the props from the snapshotted component. If successful, the frontend reducer triggers a rerender of the relevent components.
+
+```js
+const bookshelfTarget = {
+    drop(props, monitor, component) {
+        const shelf_id = props.bookshelf.id;
+        const book_id = monitor.getItem().bookId;
+        const shelving = { book_id, shelf_id };
+        props.createDropShelving(shelving).then(
+            props.fetchBookshelves()
+        );
+        return {};
+    }
+};
+```
+
+![Search Bar](https://github.com/niall-m/ShouldReads/blob/master/app/assets/images/dnd.png)
 
 ## Book Search
 
@@ -93,7 +145,7 @@ class BookSearch extends React.Component {
 }
 ```
 
-This asynchronous Ajax request is used to send the query to be processed by the backend.
+This asynchronous AJAX request is used to send the query to be processed by the backend.
 
 ```js
 export const searchDatabase = (query) => dispatch => (
