@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { DragDropContext } from 'react-dnd';
-import HTML5Backend from 'react-dnd-html5-backend';
+import { HTML5Backend } from 'react-dnd-html5-backend';
 import Favicon from 'react-favicon';
 import { AuthRoute, ProtectedRoute } from '../util/route_utils';
 import NavBarContainer from './nav_bar/nav_bar_container';

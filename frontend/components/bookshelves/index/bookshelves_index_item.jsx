@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { ItemTypes } from '../../../util/dnd';
 import { DropTarget } from 'react-dnd';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
     faTimesCircle, faBookmark, faHandPointRight 
 } from '@fortawesome/fontawesome-free-solid';

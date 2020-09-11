@@ -2,7 +2,7 @@ import React from 'react';
 import BookshelfShowContainer from './bookshelf_show_container';
 import BookshelfShowItem from './bookshelf_show_item';
 import Loading from '../../loading';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
     faFrown, faArrowDown, faArrowUp
 } from '@fortawesome/fontawesome-free-solid';
